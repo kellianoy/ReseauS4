@@ -27,7 +27,7 @@ class Graphe
         Arete* seekArete(int id1, int id2);
         Arete* seekAreteId(int id);
         void lecture_poids(std::string fichier);
-
+        void affichageTextuel();
     private:
 
         int m_taille;
