@@ -42,6 +42,7 @@ void Graphe::lecture_topo(std::string fichier)
     ifs >> ordre;
     if ( ifs.fail() )
         throw std::runtime_error("Probleme avec l'ordre.");
+    m_ordre=ordre;
 
     for(int i=0;i<ordre;i++)
     {
