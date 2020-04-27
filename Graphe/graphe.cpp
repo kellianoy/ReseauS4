@@ -147,7 +147,7 @@ void Graphe::affichageTextuel()
     for (auto s : m_vectS)
         std::cout << "Sommets : " << s->getIndice() << " | Nom : " << s->getNom() << std::endl;
     std::cout << std::endl;
-    std::cout << "Liste des aretes: " << std::endl;
+    std::cout << "Liste des aretes : " << std::endl;
     for (auto a : m_vectA)
         std::cout << "Arete : " << a->getIndice() << " | S1 : " << a->getS1()->getNom() << " | S2 : " << a->getS2()->getNom() << std::endl;
 }
