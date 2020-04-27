@@ -1,6 +1,5 @@
 #ifndef CENTRALITE_H
 #define CENTRALITE_H
-
 #include "indice.h"
 
 

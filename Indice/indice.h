@@ -1,6 +1,5 @@
 #ifndef INDICE_H
 #define INDICE_H
-
 #include "graphe.h"
 
 class Indice

@@ -10,5 +10,10 @@ Graphe::Graphe()
 
 Graphe::~Graphe()
 {
-    //dtor
+    for (auto s : m_vectS)
+        delete s;
+
+    for (auto a : m_vectA)
+        delete a;
+
 }

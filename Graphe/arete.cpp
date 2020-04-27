@@ -7,5 +7,6 @@ Arete::Arete()
 
 Arete::~Arete()
 {
-    //dtor
+    delete m_s1;
+    delete m_s2;
 }
