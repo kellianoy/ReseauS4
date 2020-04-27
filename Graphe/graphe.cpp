@@ -8,13 +8,14 @@ Graphe::Graphe()
 
 
 
-Graphe::~Graphe()
+Graphe::~Graphe()/** le destructeur est cassé**/
 {
+    /*
     for (auto s : m_vectS)
         delete s;
 
     for (auto a : m_vectA)
-        delete a;
+        delete a;*/
 
 }
 
@@ -67,6 +68,7 @@ void Graphe::lecture_topo(std::string fichier)
     if ( ifs.fail() )
         throw std::runtime_error("Probleme avec la taille");
 
+    m_taille=taille;
     for (int i=0; i<taille; ++i)
     {
         int id1, id2;
@@ -75,6 +77,7 @@ void Graphe::lecture_topo(std::string fichier)
         ifs >> id2;
         m_vectA.push_back(new Arete(id, seekSommet(id1), seekSommet(id2)));
     }
+
 }
 
 Sommet* Graphe::seekSommet(int id)
@@ -85,4 +88,53 @@ Sommet* Graphe::seekSommet(int id)
                 return it;
     return nullptr;
 }
+
+
+/** renvoie arête affilier à deux sommets**/
+Arete* Graphe::seekArete(int id1, int id2)
+{
+    if (m_vectA.size())
+        for (auto it : m_vectA)
+            if ((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))
+                return it;
+    return nullptr;
+}
+
+/** renvoie arête avec l'ID correspondant**/
+Arete* Graphe::seekAreteId(int id)
+{
+    if (m_vectA.size())
+        for (auto it : m_vectA)
+            if (id==it->getIndice()) /** penser à changer le nom d'indice **/
+                return it;
+    return nullptr;
+}
+
+
+/** charge les poids des arête**/
+void Graphe::lecture_poids(std::string fichier)
+{
+    std::ifstream ifs{fichier};
+    if (!ifs)
+        throw std::runtime_error( "Impossible d'ouvrir en lecture " + fichier );
+
+
+    int taille;
+    ifs >> taille;
+    if ( ifs.fail() || taille!=m_taille)
+	{
+        	throw std::runtime_error("Probleme avec la taille");
+	}
+
+    for (int i=0; i<taille; ++i)
+    {
+        int id, value;
+        ifs >> id;
+        ifs >> value;
+	seekAreteId(id)->setPoids(value);
+
+    }
+}
+
+
 

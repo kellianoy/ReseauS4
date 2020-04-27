@@ -24,6 +24,9 @@ class Graphe
         void setOrientation(bool val) { m_orientation = val; }
 
         Sommet* seekSommet(int id);
+        Arete* seekArete(int id1, int id2);
+        Arete* seekAreteId(int id);
+        void lecture_poids(std::string fichier);
 
     private:
 
