@@ -17,3 +17,4 @@ Sommet::~Sommet()
     for (auto i : m_vectI)
         delete i;
 }
+

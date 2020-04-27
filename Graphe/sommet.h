@@ -21,6 +21,7 @@ class Sommet
         void setIndice(int val) { m_indice = val; }
         void setNom(std::string val) { m_nom = val; }
         void setAspect(Aspect a) { m_aspect = a; }
+        void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
 
     private:
 

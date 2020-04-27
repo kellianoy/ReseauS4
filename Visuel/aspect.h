@@ -1,11 +1,6 @@
 #ifndef ASPECT_H
 #define ASPECT_H
-#include <vector>
-#include <fstream>
-#include <string>
-#include <iostream>
-#include <queue>
-#include <utility>
+#include "svgfile.h"
 
 class Aspect
 {
@@ -23,6 +18,8 @@ class Aspect
         void setX(int val) { m_x = val; }
         void setY(int val) { m_y = val; }
         void setColor(std::string val) { m_color = val; }
+
+        void dessin(Svgfile& svgout, std::string nom) const;
 
     private:
         int m_x;
