@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ReseauS4" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ReseauS4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="Graphe" />
+					<Add directory="Visuel" />
+					<Add directory="Indice" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ReseauS4" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="Graphe" />
+					<Add directory="Visuel" />
+					<Add directory="Indice" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="Graphe/arete.cpp" />
+		<Unit filename="Graphe/arete.h" />
+		<Unit filename="Graphe/graphe.cpp" />
+		<Unit filename="Graphe/graphe.h" />
+		<Unit filename="Graphe/sommet.cpp" />
+		<Unit filename="Graphe/sommet.h" />
+		<Unit filename="Indice/centralite.cpp" />
+		<Unit filename="Indice/centralite.h" />
+		<Unit filename="Indice/indice.cpp" />
+		<Unit filename="Indice/indice.h" />
+		<Unit filename="Indice/intermediarite.cpp" />
+		<Unit filename="Indice/intermediarite.h" />
+		<Unit filename="Indice/proximite.cpp" />
+		<Unit filename="Indice/proximite.h" />
+		<Unit filename="Indice/vecteur.cpp" />
+		<Unit filename="Indice/vecteur.h" />
+		<Unit filename="Visuel/aspect.cpp" />
+		<Unit filename="Visuel/aspect.h" />
+		<Unit filename="main.cpp" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
