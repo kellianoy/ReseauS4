@@ -19,6 +19,7 @@ class Aspect
         void setY(int val) { m_y = val; }
         void setColor(std::string val) { m_color = val; }
 
+        //Dessin
         void dessin(Svgfile& svgout, std::string nom) const;
 
     private:

@@ -25,6 +25,6 @@ void Arete::dessin(Svgfile& svgout) const
     y2=m_s2->getAspect().getY()*100+100;
     svgout.addLine(x1, y1, x2, y2, "black");
 
-    svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "white", "FireBrick", 2.5);
+    svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "FireBrick", "FireBrick", 2.5);
     svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "white", "FireBrick", 0);
 }

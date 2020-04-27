@@ -115,25 +115,27 @@ Arete* Graphe::seekAreteId(int id)
 /** charge les poids des arête**/
 void Graphe::lecture_poids(std::string fichier)
 {
-    std::ifstream ifs{fichier};
-    if (!ifs)
-        throw std::runtime_error( "Impossible d'ouvrir en lecture " + fichier );
-
-
-    int taille;
-    ifs >> taille;
-    if ( ifs.fail() || taille!=m_taille)
-	{
-        	throw std::runtime_error("Probleme avec la taille");
-	}
-
-    for (int i=0; i<taille; ++i)
+    if (fichier!="")
     {
-        int id, value;
-        ifs >> id;
-        ifs >> value;
-	seekAreteId(id)->setPoids(value);
+        std::ifstream ifs{fichier};
+        if (!ifs)
+            throw std::runtime_error( "Impossible d'ouvrir en lecture " + fichier );
 
+
+        int taille;
+        ifs >> taille;
+        if ( ifs.fail() || taille!=m_taille)
+        {
+                throw std::runtime_error("Probleme avec la taille");
+        }
+
+        for (int i=0; i<taille; ++i)
+        {
+            int id, value;
+            ifs >> id;
+            ifs >> value;
+        seekAreteId(id)->setPoids(value);
+        }
     }
 }
 
