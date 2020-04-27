@@ -20,6 +20,7 @@ class Arete
         void setIndice(int val) { m_indice = val; }
         void setPoids(double val) { m_poids = val; }
 
+        //Dessin
         void dessin(Svgfile& svgout) const;
 
     private:

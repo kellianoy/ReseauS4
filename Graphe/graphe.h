@@ -9,7 +9,10 @@ class Graphe
         Graphe();
         ~Graphe();
 
+        //Chargement du graphe
         void lecture_topo(std::string fichier);
+        void lecture_poids(std::string fichier);
+        void chargerGraphe(std::string s1, std::string s2="") {lecture_topo(s1); lecture_poids(s2);}
 
         //Get
         int getTaille() { return m_taille; }
@@ -23,12 +26,13 @@ class Graphe
         void setOrdre(int val) { m_ordre = val; }
         void setOrientation(bool val) { m_orientation = val; }
 
+        //Recherche
         Sommet* seekSommet(int id);
         Arete* seekArete(int id1, int id2);
         Arete* seekAreteId(int id);
-        void lecture_poids(std::string fichier);
-        void affichageTextuel();
 
+        //Dessin
+        void affichageTextuel();
         void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
 
     private:
