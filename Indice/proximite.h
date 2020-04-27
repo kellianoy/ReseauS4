@@ -1,7 +1,7 @@
 #ifndef PROXIMITE_H
 #define PROXIMITE_H
 
-#include <indice.h>
+#include "indice.h"
 
 
 class Proximite : public Indice

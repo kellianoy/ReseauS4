@@ -1,6 +1,6 @@
 #ifndef INTERMEDIARITE_H
 #define INTERMEDIARITE_H
-#include <indice.h>
+#include "indice.h"
 
 
 class Intermediarite : public Indice

@@ -1,7 +1,7 @@
 #ifndef VECTEUR_H
 #define VECTEUR_H
 
-#include <indice.h>
+#include "indice.h"
 
 
 class Vecteur : public Indice
