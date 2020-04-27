@@ -1,11 +1,5 @@
 #ifndef ASPECT_H
 #define ASPECT_H
-#include <vector>
-#include <fstream>
-#include <string>
-#include <iostream>
-#include <queue>
-#include <utility>
 #include "svgfile.h"
 
 class Aspect

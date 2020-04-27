@@ -4,6 +4,14 @@
 #include <string>
 #include <fstream>
 #include <set>
+#include <iostream>
+#include <sstream>
+#include <vector>
+#include <fstream>
+#include <string>
+#include <iostream>
+#include <queue>
+#include <utility>
 
 constexpr char defcol[] = "black";
 

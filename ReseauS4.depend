@@ -132,51 +132,46 @@
 	"sommet.h"
 	"indice.h"
 
-1587992015 source:d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.cpp
+1587999921 source:d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.cpp
 	"centralite.h"
 
-1587993087 d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.h
+1587999921 d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.h
 	"indice.h"
 
-1587993087 d:\école\info ingé 2\projet s4\reseaus4\indice\indice.h
+1587999921 d:\école\info ingé 2\projet s4\reseaus4\indice\indice.h
 	"graphe.h"
 
-1587999152 d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.h
+1588004931 d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.h
 	"arete.h"
 
-1587998076 d:\école\info ingé 2\projet s4\reseaus4\graphe\arete.h
+1588004931 d:\école\info ingé 2\projet s4\reseaus4\graphe\arete.h
 	"sommet.h"
 
-1587998076 d:\école\info ingé 2\projet s4\reseaus4\graphe\sommet.h
+1588004931 d:\école\info ingé 2\projet s4\reseaus4\graphe\sommet.h
 	"aspect.h"
 
-1587998076 d:\école\info ingé 2\projet s4\reseaus4\visuel\aspect.h
-	<vector>
-	<fstream>
-	<string>
-	<iostream>
-	<queue>
-	<utility>
+1588005166 d:\école\info ingé 2\projet s4\reseaus4\visuel\aspect.h
+	"svgfile.h"
 
-1587992015 source:d:\école\info ingé 2\projet s4\reseaus4\indice\indice.cpp
+1587999921 source:d:\école\info ingé 2\projet s4\reseaus4\indice\indice.cpp
 	"indice.h"
 
-1587992015 source:d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.cpp
+1587999921 source:d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.cpp
 	"intermediarite.h"
 
-1587992015 d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.h
+1587999921 d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.h
 	"indice.h"
 
-1587992015 source:d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.cpp
+1587999921 source:d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.cpp
 	"proximite.h"
 
-1587992015 d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.h
+1587999921 d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.h
 	"indice.h"
 
-1587992015 source:d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.cpp
+1587999921 source:d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.cpp
 	"vecteur.h"
 
-1587992015 d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.h
+1587999921 d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.h
 	"indice.h"
 
 1587998076 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\arete.cpp
@@ -208,4 +203,17 @@
 	<string>
 	<fstream>
 	<set>
+
+1588005166 d:\école\info ingé 2\projet s4\reseaus4\visuel\svgfile.h
+	<string>
+	<fstream>
+	<set>
+	<iostream>
+	<sstream>
+	<vector>
+	<fstream>
+	<string>
+	<iostream>
+	<queue>
+	<utility>
 
