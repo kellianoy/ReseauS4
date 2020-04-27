@@ -11,6 +11,7 @@ class Aspect
 {
     public:
         Aspect();
+        Aspect(int x, int y, std::string color = "black");
         ~Aspect();
 
         //Get

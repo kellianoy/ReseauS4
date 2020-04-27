@@ -8,6 +8,7 @@ class Sommet
 {
     public:
         Sommet();
+        Sommet(int identifiant, std::string nom, int x, int y) ;
         ~Sommet();
 
         //Get

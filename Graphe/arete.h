@@ -7,6 +7,7 @@ class Arete
     public:
 
         Arete();
+        Arete(int id, Sommet* s1, Sommet* s2);
         ~Arete();
 
         //Get

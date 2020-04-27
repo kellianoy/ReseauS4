@@ -9,6 +9,8 @@ class Graphe
         Graphe();
         ~Graphe();
 
+        void lecture_topo(std::string fichier);
+
         //Get
         int getTaille() { return m_taille; }
         int getOrdre() { return m_ordre; }
@@ -21,12 +23,13 @@ class Graphe
         void setOrdre(int val) { m_ordre = val; }
         void setOrientation(bool val) { m_orientation = val; }
 
+        Sommet* seekSommet(int id);
 
     private:
 
         int m_taille;
         int m_ordre;
-        bool m_orientation;
+        bool m_orientation; //false : non orienté - true : orienté
         std::vector<Sommet*> m_vectS;
         std::vector<Arete*> m_vectA;
 };
