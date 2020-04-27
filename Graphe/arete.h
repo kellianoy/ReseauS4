@@ -12,18 +12,20 @@ class Arete
 
         //Get
         int getIndice() { return m_indice; }
-        int getPoids() { return m_poids; }
+        double getPoids() { return m_poids; }
         Sommet* getS1() { return m_s1; }
         Sommet* getS2() { return m_s2; }
 
         //Set
         void setIndice(int val) { m_indice = val; }
-        void setPoids(int val) { m_poids = val; }
+        void setPoids(double val) { m_poids = val; }
+
+        void dessin(Svgfile& svgout) const;
 
     private:
 
         int m_indice;
-        int m_poids;
+        double m_poids;
         Sommet* m_s1;
         Sommet* m_s2;
 };

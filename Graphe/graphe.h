@@ -28,6 +28,9 @@ class Graphe
         Arete* seekAreteId(int id);
         void lecture_poids(std::string fichier);
         void affichageTextuel();
+
+        void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
+
     private:
 
         int m_taille;

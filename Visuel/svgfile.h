@@ -10,7 +10,7 @@ constexpr char defcol[] = "black";
 class Svgfile
 {
     public:
-        Svgfile(std::string _filename = "output.svg", int _width=1000, int _height=800);
+        Svgfile(std::string _filename = "output.svg", int _width=1200, int _height=1200);
         ~Svgfile();
 
         void addDisk(double x, double y, double r, std::string color=defcol);
@@ -25,6 +25,7 @@ class Svgfile
 
         void addText(double x, double y, std::string text, std::string color=defcol);
         void addText(double x, double y, double val, std::string color=defcol);
+        void addText(double x, double y, double val, std::string color, std::string strokecolor, double width);
 
         void addGrid(double span=100.0, bool numbering=true, std::string color="lightgrey");
 
