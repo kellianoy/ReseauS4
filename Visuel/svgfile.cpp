@@ -137,6 +137,20 @@ void Svgfile::addText(double x, double y, double val, std::string color, std::st
 
 }
 
+void Svgfile::addText(double x, double y, std::string text, std::string color, std::string strokecolor, double width)
+{
+    /// <text x="180" y="60">Un texte</text>
+         m_ostrm << "<text "
+            << attrib("x", x)
+            << attrib("y", y)
+            << attrib("stroke", strokecolor)
+            << attrib ("stroke-width", width)
+            << attrib("fill", color)
+            << attrib("style", "text-anchor: middle")
+            << ">" << text << "</text>\n";
+
+}
+
 void Svgfile::addCross(double x, double y, double span, std::string color)
 {
     addLine(x-span, y-span, x+span, y+span, color);
