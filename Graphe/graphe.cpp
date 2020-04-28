@@ -77,6 +77,8 @@ void Graphe::lecture_topo(std::string fichier)
         ifs >> id1;
         ifs >> id2;
         m_vectA.push_back(new Arete(id, seekSommet(id1), seekSommet(id2)));
+        seekSommet(id1)->pushAdjacent(seekSommet(id2));
+        seekSommet(id2)->pushAdjacent(seekSommet(id1));
     }
 
 }
@@ -147,7 +149,14 @@ void Graphe::affichageTextuel()
     std::cout << std::endl;
     std::cout << "Liste des sommets : " << std::endl;
     for (auto s : m_vectS)
-        std::cout << "Sommets : " << s->getIndice() << " | Nom : " << s->getNom() << std::endl;
+    {
+        std::cout << "Sommets : " << s->getIndice() << " | Nom : " << s->getNom() << " | Adjacents : ";
+        for (auto a : s->getVectAdj())
+            std::cout << " "  << a->getNom();
+        std::cout << std::endl;
+    }
+
+
     std::cout << std::endl;
     std::cout << "Liste des aretes : " << std::endl;
     for (auto a : m_vectA)

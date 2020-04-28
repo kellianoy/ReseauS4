@@ -16,6 +16,8 @@ class Indice
         Graphe* getGraphe(){return m_graphe;}
         Sommet* getSommet(){return m_sommet;}
 
+        //Set
+        void setCritere(double c) {m_critere=c;}
     protected:
 
     double m_critere;
