@@ -8,16 +8,20 @@ class Indice
 
         Indice();
         Indice(double critere);
-        Indice(Graphe * mongraphe);
+        Indice(Graphe* G, Sommet* S);
         virtual ~Indice();
 
         //Get
         double getCritere(){return m_critere;}
+        Graphe* getGraphe(){return m_graphe;}
+        Sommet* getSommet(){return m_sommet;}
 
     protected:
 
     double m_critere;
-    Graphe * m_graph ;
+
+    Graphe* m_graphe;
+    Sommet* m_sommet;
 
 };
 
