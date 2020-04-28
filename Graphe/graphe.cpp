@@ -77,6 +77,21 @@ void Graphe::lecture_topo(std::string fichier)
 
 }
 
+bool Graphe::grapheVide()
+{
+            if(m_vectS.size() == 0 )
+                return false ;
+            else
+                return true ;
+}
+
+bool Graphe::grapheIdentique(Graphe*Copie)
+ {
+            if(Copie->getVectA().size() != m_vectA.size())
+                return true ;
+            else return false ;
+}
+
 Sommet* Graphe::seekSommet(int id)
 {
     if (m_vectS.size())
