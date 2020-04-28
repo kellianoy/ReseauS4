@@ -166,6 +166,7 @@ void Graphe::affichageTextuel()
 void Graphe::sauvegardeIndice()
 {
     std::ofstream ofs{"Indice.txt"};
+    ofs.precision(3);
     if (!ofs)
         throw std::runtime_error( "Impossible d'ouvrir en lecture indice.txt" );
 
