@@ -7,7 +7,7 @@ class Intermediarite : public Indice
 {
     public:
         Intermediarite();
-        Intermediarite(double c);
+        Intermediarite(Graphe* G, Sommet* S);
         ~Intermediarite();
         void calculIndice() {m_critere = 1 ;}
         double normalisation() {return 0.2 ; }

@@ -8,18 +8,12 @@ class Vecteur : public Indice
 {
     public:
         Vecteur();
-        Vecteur(double c);
+        Vecteur(Graphe* G, Sommet* S);
         ~Vecteur();
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-=======
->>>>>>> Stashed changes
-        void calculIndice() {m_critere = 4 ;}
-        double normalisation() {return 0.2 ; }
+        void calculIndice();
 
->>>>>>> Stashed changes
+        double normalisation() {return 0.2 ; }
     private:
 };
 

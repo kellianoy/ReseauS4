@@ -5,7 +5,7 @@ Centralite::Centralite()
     //ctor
 }
 
-Centralite::Centralite(double c) : Indice(c)
+Centralite::Centralite(Graphe* G, Sommet* S) : Indice(G,S)
 {
     //ctor
 }

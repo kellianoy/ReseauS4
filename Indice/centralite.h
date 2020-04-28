@@ -7,12 +7,12 @@ class Centralite : public Indice
 {
     public:
         Centralite();
-        Centralite(double c);
+        Centralite(Graphe* G, Sommet* S);
         ~Centralite();
 
         void calculIndice();
         double normalisation();
-        void sauvegarder(std::ofstream ofs){ofs << "Critère de degré : "<< m_critere<< " " << normalisation() << std::endl; } ;
+        void sauvegarder(std::ofstream ofs){ofs << "Critï¿½re de degrï¿½ : "<< m_critere<< " " << normalisation() << std::endl; } ;
 
     private:
 };

@@ -12,6 +12,7 @@ Indice::Indice(double critere) : m_critere{critere}
 
 Indice::Indice(Graphe* G, Sommet* S) : m_graphe{G}, m_sommet{S}
 {
+
 }
 
 Indice::~Indice()

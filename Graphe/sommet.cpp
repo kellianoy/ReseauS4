@@ -11,12 +11,12 @@ Sommet::Sommet()
     //ctor
 }
 
-Sommet::Sommet(int identifiant, std::string nom, int x, int y, Graphe* mongraph) : m_indice{identifiant}, m_nom{nom}, m_aspect{x,y}
+Sommet::Sommet(int identifiant, std::string nom, int x, int y, Graphe* G) : m_indice{identifiant}, m_nom{nom}, m_aspect{x,y}
 {
-    m_vectI.push_back(new Centralite());
-    m_vectI.push_back(new Vecteur());
-    m_vectI.push_back(new Proximite());
-    m_vectI.push_back(new Intermediarite());
+    m_vectI.push_back(new Centralite(G, this));
+    m_vectI.push_back(new Vecteur(G, this));
+    m_vectI.push_back(new Proximite(G, this));
+    m_vectI.push_back(new Intermediarite(G, this));
 }
 
 Sommet::~Sommet()
