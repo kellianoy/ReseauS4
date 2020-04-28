@@ -25,3 +25,11 @@ Sommet::~Sommet()
         delete i;
 }
 
+void Sommet::sauvegardeIndice(std::ofstream &ofs)
+{
+    ofs << m_nom << " " ;
+    for(int i = 0 ; i < 4 ; i++)
+        m_vectI[i]->sauvegarder(ofs);
+    ofs << std::endl;
+}
+

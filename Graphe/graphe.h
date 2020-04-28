@@ -35,6 +35,8 @@ class Graphe
         void affichageTextuel();
         void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
 
+        void sauvegardeIndice();
+
     private:
 
         int m_taille;

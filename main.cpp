@@ -7,10 +7,12 @@
 int main()
 {
     Svgfile svgout;
-    Graphe* G=new Graphe();
-    G->chargerGraphe("graphe_cycle4_topo.txt", "graphe_cycle4_poids.txt" );
-    G->affichageTextuel();
-    G->dessinGraphe(svgout);
+    Graphe* a=new Graphe();
+    a->chargerGraphe("graphe_cycle4_topo.txt", "graphe_cycle4_poids.txt" );
+    a->affichageTextuel();
+    a->dessinGraphe(svgout);
+    a->getVectS()[0]->getVectI()[0]->calculIndice();
+    a->sauvegardeIndice();
 
     std::cout<< "\n";
 

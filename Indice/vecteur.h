@@ -13,6 +13,7 @@ class Vecteur : public Indice
 
         void calculIndice();
 
+        double normalisation() {return 0.2 ; }
     private:
 };
 
