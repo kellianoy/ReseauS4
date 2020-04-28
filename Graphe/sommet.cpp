@@ -33,3 +33,12 @@ void Sommet::sauvegardeIndice(std::ofstream &ofs)
     ofs << std::endl;
 }
 
+//affichage les indices en console
+void Sommet::afficherIndice()
+{
+    std::cout << "Sommet n" << m_indice << ", nom : " << m_nom<< std::endl;
+    for(auto i : m_vectI)
+        i->afficher();
+    std::cout << "\n" ;
+}
+

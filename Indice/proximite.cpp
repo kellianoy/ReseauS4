@@ -30,3 +30,8 @@ double Proximite::normalisation()
 {
     return (m_graphe->getOrdre()-1)*m_critere;
 }
+
+void Proximite::afficher()
+{
+    std::cout << "    -> Centralite de proximite : " << m_critere << " | normalise : " << normalisation()<< std::endl ;
+}

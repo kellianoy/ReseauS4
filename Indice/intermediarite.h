@@ -11,6 +11,7 @@ class Intermediarite : public Indice
         ~Intermediarite();
         void calculIndice() {m_critere = 1 ;}
         double normalisation() {return 0.2 ; }
+        void afficher() ;
 
     private:
 };
