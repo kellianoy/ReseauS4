@@ -7,7 +7,7 @@ class Intermediarite : public Indice
 {
     public:
         Intermediarite();
-        Intermediarite(double c);
+        Intermediarite(Graphe* G, Sommet* S);
         ~Intermediarite();
 
     private:

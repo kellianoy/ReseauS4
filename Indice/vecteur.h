@@ -8,7 +8,7 @@ class Vecteur : public Indice
 {
     public:
         Vecteur();
-        Vecteur(double c);
+        Vecteur(Graphe* G, Sommet* S);
         ~Vecteur();
 
     private:

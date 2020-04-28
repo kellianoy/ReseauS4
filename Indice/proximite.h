@@ -8,7 +8,7 @@ class Proximite : public Indice
 {
     public:
         Proximite();
-        Proximite(double c);
+        Proximite(Graphe* G, Sommet* S);
         ~Proximite();
 
     private:
