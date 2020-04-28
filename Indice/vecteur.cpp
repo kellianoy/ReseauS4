@@ -40,7 +40,6 @@ void Vecteur::calculIndice()
         for (auto s : somme)
         {
             A+=s*s;
-            std::cout << "s : " << s << " | A : " << A << std::endl;
         }
         A=sqrt(A);
         for (size_t i=0 ; i<somme.size() ; ++i)
