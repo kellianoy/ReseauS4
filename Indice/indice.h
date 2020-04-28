@@ -8,6 +8,7 @@ class Indice
 
         Indice();
         Indice(double critere);
+        Indice(Graphe * mongraphe);
         virtual ~Indice();
 
         //Get
@@ -16,6 +17,7 @@ class Indice
     protected:
 
     double m_critere;
+    Graphe * m_graph ;
 
 };
 

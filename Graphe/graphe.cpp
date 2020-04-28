@@ -60,7 +60,7 @@ void Graphe::lecture_topo(std::string fichier)
         if ( ifs.fail() )
             throw std::runtime_error("Probleme avec les coordonnées.");
 
-         m_vectS.push_back(new Sommet(id, nom, x, y));
+         m_vectS.push_back(new Sommet(id, nom, x, y, this));
 
     }
 

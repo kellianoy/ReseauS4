@@ -3,12 +3,13 @@
 #include "aspect.h"
 
 class Indice; //OUI JE SAIS C'EST UN FORWARD MAIS ON VA Y REREFLECHIR #triste
+class Graphe;
 
 class Sommet
 {
     public:
         Sommet();
-        Sommet(int identifiant, std::string nom, int x, int y) ;
+        Sommet(int identifiant, std::string nom, int x, int y, Graphe* mongraph);
         ~Sommet();
 
         //Get
