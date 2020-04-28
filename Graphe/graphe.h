@@ -33,6 +33,8 @@ class Graphe
         void deleteArete(int id);
 
         //Dessin
+        void affichageAretes();
+        void affichageSommets();
         void affichageTextuel();
         void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
 

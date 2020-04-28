@@ -56,6 +56,8 @@
 		<Unit filename="Indice/vecteur.h" />
 		<Unit filename="Visuel/aspect.cpp" />
 		<Unit filename="Visuel/aspect.h" />
+		<Unit filename="Visuel/menu.cpp" />
+		<Unit filename="Visuel/menu.h" />
 		<Unit filename="Visuel/svgfile.cpp" />
 		<Unit filename="Visuel/svgfile.h" />
 		<Unit filename="main.cpp" />

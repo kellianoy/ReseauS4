@@ -155,13 +155,8 @@ void Graphe::lecture_poids(std::string fichier)
     }
 }
 
-void Graphe::affichageTextuel()
+void Graphe::affichageSommets()
 {
-    std::cout << "__________Affichage du Graphe___________\n" << std::endl;
-    std::cout << "Orientation : " << m_orientation << std::endl;
-    std::cout << "Ordre : " << m_ordre << std::endl;
-    std::cout << std::endl;
-    std::cout << "Liste des sommets : " << std::endl;
     for (auto s : m_vectS)
     {
         std::cout << "Sommets : " << s->getIndice() << " | Nom : " << s->getNom() << " | Adjacents : ";
@@ -169,12 +164,23 @@ void Graphe::affichageTextuel()
             std::cout << " "  << a->getNom();
         std::cout << std::endl;
     }
-
-
     std::cout << std::endl;
-    std::cout << "Liste des aretes : " << std::endl;
+}
+
+void Graphe::affichageAretes()
+{
     for (auto a : m_vectA)
         std::cout << "Arete : " << a->getIndice() << " | S1 : " << a->getS1()->getNom() << " | S2 : " << a->getS2()->getNom() << std::endl;
+    std::cout << std::endl;
+}
+
+void Graphe::affichageTextuel()
+{
+    std::cout << "__________Affichage du Graphe___________\n" << std::endl;
+    std::cout << "Orientation : " << m_orientation << std::endl;
+    std::cout << "Ordre : " << m_ordre << std::endl;
+    std::cout << std::endl;
+    affichageSommets();
 }
 
 ///sauvegarde de tous les indices dans un fichier texte
