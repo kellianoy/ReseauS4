@@ -27,6 +27,8 @@ int main()
         {
             case 1:
             {
+                G->deleteGraphe();
+
                 std::string topo, ponderation;
                 std::cout << "Entrez le nom du fichier topologique puis du fichier de ponderation s'il y en a un"<<std::endl;
                 std::cin >> topo;
