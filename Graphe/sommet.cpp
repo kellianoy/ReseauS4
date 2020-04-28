@@ -21,8 +21,7 @@ Sommet::Sommet(int identifiant, std::string nom, int x, int y, Graphe* G) : m_in
 
 Sommet::~Sommet()
 {
-    for (auto i : m_vectI)
-        delete i;
+
 }
 
 void Sommet::sauvegardeIndice(std::ofstream &ofs)
@@ -40,5 +39,16 @@ void Sommet::afficherIndice()
     for(auto i : m_vectI)
         i->afficher();
     std::cout << "\n" ;
+}
+
+void Sommet::deleteAdj(Sommet* s1)
+{
+    if (m_vectAdj.size())
+        for (size_t i = 0 ; i<m_vectAdj.size() ; ++i)
+            if (s1->getIndice()==m_vectAdj[i]->getIndice())
+            {
+                m_vectAdj.erase(m_vectAdj.begin()+i);
+                break;
+            }
 }
 

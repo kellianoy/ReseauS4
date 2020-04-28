@@ -1,5 +1,5 @@
 #include "graphe.h"
-
+#include "indice.h"
 
 Graphe::Graphe()
 {
@@ -10,11 +10,7 @@ Graphe::Graphe()
 
 Graphe::~Graphe()/** le destructeur est cass�**/
 {
-    for (auto s : m_vectS)
-        delete s;
 
-    for (auto a : m_vectA)
-        delete a;
 }
 
 
@@ -117,6 +113,20 @@ Arete* Graphe::seekAreteId(int id)
     return nullptr;
 }
 
+void Graphe::deleteArete(int id)
+{
+    if (m_vectA.size())
+        for (size_t i = 0 ; i<m_vectA.size() ; ++i)
+            if (id==m_vectA[i]->getIndice()) /** penser � changer le nom d'indice **/
+            {
+                m_vectA[i]->getS1()->deleteAdj(m_vectA[i]->getS2());
+                m_vectA[i]->getS2()->deleteAdj(m_vectA[i]->getS1());
+                m_vectA.erase(m_vectA.begin()+i);
+                m_taille-=1;
+                break;
+            }
+
+}
 
 /** charge les poids des ar�te**/
 void Graphe::lecture_poids(std::string fichier)
@@ -245,12 +255,12 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
         for(const auto elt : m_vectS[parcours]->getVectAdj())
         {
 
-
-            if(! ( elt->getMarquage() ) && ( AscendantDistance[elt->getIndice()].second > AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids()) )
-            {
-                AscendantDistance[elt->getIndice()].first=m_vectS[parcours];
-                AscendantDistance[elt->getIndice()].second=AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids();
-            }
+            if (seekArete(parcours,elt->getIndice())!=nullptr)
+                if(! ( elt->getMarquage() ) && ( AscendantDistance[elt->getIndice()].second > AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids()) )
+                {
+                    AscendantDistance[elt->getIndice()].first=m_vectS[parcours];
+                    AscendantDistance[elt->getIndice()].second=AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids();
+                }
         }
 
 
@@ -340,3 +350,17 @@ void Graphe::connexite()
     while(colored.size()!=m_vectS.size());
 
 }
+
+void Graphe::calculIndice()
+{
+
+    for (auto s : m_vectS)
+    {
+        s->getVectI()[0]->calculIndice();
+        s->getVectI()[2]->calculIndice();
+        s->getVectI()[3]->calculIndice();
+    }
+      m_vectS[0]->getVectI()[1]->calculIndice();
+
+}
+
