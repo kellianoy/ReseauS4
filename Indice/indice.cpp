@@ -10,7 +10,7 @@ Indice::Indice(double critere) : m_critere{critere}
     //ctor
 }
 
-Indice::Indice(Graphe * mongraphe) : m_graph{mongraphe}
+Indice::Indice(Graphe* G, Sommet* S) : m_graphe{G}, m_sommet{S}
 {
 }
 
