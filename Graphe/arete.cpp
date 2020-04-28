@@ -12,8 +12,6 @@ Arete::Arete(int id, Sommet* s1, Sommet* s2) : m_indice{id}, m_s1{s1}, m_s2{s2}
 
 Arete::~Arete()
 {
-    delete m_s1;
-    delete m_s2;
 }
 
 void Arete::dessin(Svgfile& svgout) const

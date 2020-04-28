@@ -30,6 +30,7 @@ class Graphe
         Sommet* seekSommet(int id);
         Arete* seekArete(int id1, int id2);
         Arete* seekAreteId(int id);
+        void deleteArete(int id);
 
         //Dessin
         void affichageTextuel();
@@ -38,11 +39,7 @@ class Graphe
         void sauvegardeIndice();
         void afficherIndice() ;
 
-        void deleteGraphe()
-        {
-            m_vectS.clear();
-            m_vectA.clear();
-        }
+        void deleteGraphe(){   m_vectS.clear(); m_vectA.clear();     }
 
         //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
@@ -54,6 +51,7 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
+        void calculIndice();
     private:
 
         int m_taille;

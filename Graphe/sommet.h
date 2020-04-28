@@ -33,6 +33,8 @@ class Sommet
         void sauvegardeIndice(std::ofstream &ofs);
         void afficherIndice() ;
 
+        void deleteAdj(Sommet* s1);
+
     private:
         int m_indice;
         std::string m_nom;
