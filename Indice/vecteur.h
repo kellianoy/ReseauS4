@@ -12,7 +12,10 @@ class Vecteur : public Indice
         ~Vecteur();
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 =======
+=======
+>>>>>>> Stashed changes
         void calculIndice() {m_critere = 4 ;}
         double normalisation() {return 0.2 ; }
 

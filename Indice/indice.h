@@ -25,6 +25,9 @@ class Indice
         virtual double normalisation()=0;
         void sauvegarder(std::ofstream &ofs) {ofs << m_critere << " " << normalisation(); } ;
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
     protected:
 
