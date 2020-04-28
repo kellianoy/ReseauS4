@@ -45,7 +45,7 @@ void Vecteur::calculIndice()
         for (size_t i=0 ; i<somme.size() ; ++i)
             m_graphe->getVectS()[i]->getVectI()[1]->setCritere(somme[i]/A);
     }
-    while(A>lastA+10 || A<lastA-10);
+    while(A<lastA+0.1*lastA/100 && A>lastA-0.1*lastA/100);
 }
 
 void Vecteur::afficher()
