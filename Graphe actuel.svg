@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="1200">
 
+<line x1="300" y1="200" x2="400" y2="300" stroke="black" />
+<text x="350" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
+<text x="350" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
 <line x1="700" y1="200" x2="600" y2="300" stroke="black" />
 <text x="650" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
 <text x="650" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>

@@ -36,7 +36,6 @@ class Svgfile
         void addText(double x, double y, std::string text, std::string color, std::string strokecolor, double width);
 
         void addGrid(double span=100.0, bool numbering=true, std::string color="lightgrey");
-
         static std::string makeRGB(int r, int g, int b);
 
         /// Type non copiable

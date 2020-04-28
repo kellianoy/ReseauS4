@@ -17,22 +17,22 @@
 1588082752 a:\riset\documents\code & programmation\reseaus4\indice\centralite.h
 	"indice.h"
 
-1588085832 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
+1588091833 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
 	"arete.h"
 
 1588073377 a:\riset\documents\code & programmation\reseaus4\graphe\arete.h
 	"sommet.h"
 
-1588087516 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
+1588089318 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
 	"aspect.h"
 
 1588082752 source:a:\riset\documents\code & programmation\reseaus4\indice\intermediarite.cpp
 	"intermediarite.h"
 
-1588084333 a:\riset\documents\code & programmation\reseaus4\indice\intermediarite.h
+1588089318 a:\riset\documents\code & programmation\reseaus4\indice\intermediarite.h
 	"indice.h"
 
-1588087928 source:a:\riset\documents\code & programmation\reseaus4\indice\proximite.cpp
+1588089313 source:a:\riset\documents\code & programmation\reseaus4\indice\proximite.cpp
 	"proximite.h"
 
 1588082752 a:\riset\documents\code & programmation\reseaus4\indice\proximite.h
@@ -45,14 +45,14 @@
 1588082887 a:\riset\documents\code & programmation\reseaus4\indice\vecteur.h
 	"indice.h"
 
-1588088497 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
+1588091802 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
 	"graphe.h"
 	"indice.h"
 
-1588086395 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
+1588089318 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
 	"arete.h"
 
-1588087536 source:a:\riset\documents\code & programmation\reseaus4\graphe\sommet.cpp
+1588089318 source:a:\riset\documents\code & programmation\reseaus4\graphe\sommet.cpp
 	"sommet.h"
 	"indice.h"
 	"centralite.h"
@@ -61,12 +61,8 @@
 	"intermediarite.h"
 	"graphe.h"
 
-1588089260 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
-	"graphe.h"
-	"centralite.h"
-	"vecteur.h"
-	"proximite.h"
-	"intermediarite.h"
+1588094319 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
+	"menu.h"
 
 1588080523 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\centralite.cpp
 	"centralite.h"
@@ -203,7 +199,7 @@
 
 1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
 
-1588082547 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
+1588090984 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>
@@ -249,8 +245,13 @@
 
 1588060306 source:d:\école\info ingé 2\projet s4\reseaus4\visuel\svgfile.cpp
 
-1588089259 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+1588094290 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
 	"menu.h"
 
-1588089267 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h
+1588090545 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h
+	"graphe.h"
+	"centralite.h"
+	"vecteur.h"
+	"proximite.h"
+	"intermediarite.h"
 
