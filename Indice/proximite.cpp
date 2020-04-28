@@ -21,12 +21,12 @@ void Proximite::calculIndice()
     double i=0;
     for(const auto it : tab)
     {
-        i=it.second;
+        i+=it.second;
     }
     m_critere=1/i;
 }
 
-double Proximite::normaliser()
+double Proximite::normalisation()
 {
     return (m_graphe->getOrdre()-1)*m_critere;
 }

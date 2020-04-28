@@ -131,22 +131,22 @@
 	"intermediarite.h"
 	"graphe.h"
 
-1588061914 source:d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.cpp
+1588075974 source:d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.cpp
 	"centralite.h"
 
-1588061914 d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.h
+1588075974 d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.h
 	"indice.h"
 
-1588064194 d:\école\info ingé 2\projet s4\reseaus4\indice\indice.h
+1588075974 d:\école\info ingé 2\projet s4\reseaus4\indice\indice.h
 	"graphe.h"
 
-1588070799 d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.h
+1588076007 d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.h
 	"arete.h"
 
 1588060306 d:\école\info ingé 2\projet s4\reseaus4\graphe\arete.h
 	"sommet.h"
 
-1588068296 d:\école\info ingé 2\projet s4\reseaus4\graphe\sommet.h
+1588075975 d:\école\info ingé 2\projet s4\reseaus4\graphe\sommet.h
 	"aspect.h"
 
 1588060306 d:\école\info ingé 2\projet s4\reseaus4\visuel\aspect.h
@@ -158,25 +158,26 @@
 1588061914 source:d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.cpp
 	"intermediarite.h"
 
-1588061914 d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.h
+1588075974 d:\école\info ingé 2\projet s4\reseaus4\indice\intermediarite.h
 	"indice.h"
 
-1588075372 source:d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.cpp
+1588076107 source:d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.cpp
 	"proximite.h"
 
-1588075674 d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.h
+1588076107 d:\école\info ingé 2\projet s4\reseaus4\indice\proximite.h
 	"indice.h"
 
-1588064194 source:d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.cpp
+1588075974 source:d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.cpp
 	"vecteur.h"
+	<math.h>
 
-1588064194 d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.h
+1588075974 d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.h
 	"indice.h"
 
 1588060306 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\arete.cpp
 	"arete.h"
 
-1588061914 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\sommet.cpp
+1588075974 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\sommet.cpp
 	"sommet.h"
 	"indice.h"
 	"centralite.h"
@@ -185,7 +186,7 @@
 	"intermediarite.h"
 	"graphe.h"
 
-1588072999 source:d:\école\info ingé 2\projet s4\reseaus4\main.cpp
+1588076258 source:d:\école\info ingé 2\projet s4\reseaus4\main.cpp
 	"graphe.h"
 	"centralite.h"
 	"vecteur.h"
@@ -195,7 +196,7 @@
 1588060306 source:d:\école\info ingé 2\projet s4\reseaus4\visuel\aspect.cpp
 	"aspect.h"
 
-1588075372 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.cpp
+1588076000 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.cpp
 	"graphe.h"
 
 1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
@@ -213,7 +214,7 @@
 	<queue>
 	<utility>
 
-1588066092 d:\école\info ingé 2\projet s4\reseaus4\visuel\svgfile.h
+1588075975 d:\école\info ingé 2\projet s4\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>

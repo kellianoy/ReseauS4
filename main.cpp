@@ -51,7 +51,10 @@ int main()
                 break;
             case 4:
                 for (auto s : G->getVectS())
-                    s->getVectI()[0]->calculIndice();
+                {
+                   s->getVectI()[0]->calculIndice();
+                   s->getVectI()[2]->calculIndice();
+                }
                 G->getVectS()[0]->getVectI()[1]->calculIndice();
                 G->sauvegardeIndice();
                 std::cout<< "Le calcul est effectue et exporte\n\n";

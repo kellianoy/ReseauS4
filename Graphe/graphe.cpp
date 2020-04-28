@@ -250,11 +250,11 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
     }
 
-    for(size_t i =0;i<AscendantDistance.size();++i)
+    /**for(size_t i =0;i<AscendantDistance.size();++i)
     {
 
         std::cout<<m_vectS[i]->getNom()<<" =>  "<<AscendantDistance[i].second<<std::endl;
-    }
+    }**/
 
 return AscendantDistance;
 }

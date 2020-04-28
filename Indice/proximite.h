@@ -11,7 +11,7 @@ class Proximite : public Indice
         Proximite(Graphe* G, Sommet* S);
         ~Proximite();
         void calculIndice();
-        double normaliser();
+        double normalisation();
 
     private:
 };
