@@ -28,8 +28,9 @@ class Sommet
         //Dessin
         void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
 
-    private:
+        void sauvegardeIndice(std::ofstream &ofs);
 
+    private:
         int m_indice;
         std::string m_nom;
         Aspect m_aspect;

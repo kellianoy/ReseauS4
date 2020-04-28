@@ -10,6 +10,10 @@ class Centralite : public Indice
         Centralite(Graphe* G, Sommet* S);
         ~Centralite();
 
+        void calculIndice();
+        double normalisation();
+        void sauvegarder(std::ofstream ofs){ofs << "Crit�re de degr� : "<< m_critere<< " " << normalisation() << std::endl; } ;
+
     private:
 };
 
