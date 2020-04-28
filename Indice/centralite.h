@@ -9,7 +9,7 @@ class Centralite : public Indice
         Centralite();
         Centralite(Graphe* G, Sommet* S);
         ~Centralite();
-
+        void calculIndice(){std::cout << " calcul :)"; }
     private:
 };
 

@@ -18,6 +18,9 @@ class Indice
 
         //Set
         void setCritere(double c) {m_critere=c;}
+
+        virtual void calculIndice()=0;
+
     protected:
 
     double m_critere;

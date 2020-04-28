@@ -9,7 +9,7 @@ class Intermediarite : public Indice
         Intermediarite();
         Intermediarite(Graphe* G, Sommet* S);
         ~Intermediarite();
-
+        void calculIndice(){std::cout << " calcul :)"; }
     private:
 };
 

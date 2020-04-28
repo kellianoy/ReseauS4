@@ -10,7 +10,7 @@ class Proximite : public Indice
         Proximite();
         Proximite(Graphe* G, Sommet* S);
         ~Proximite();
-
+        void calculIndice(){std::cout << " calcul :)"; }
     private:
 };
 
