@@ -120,6 +120,7 @@ void Graphe::deleteArete(int id)
             if (id==m_vectA[i]->getIndice()) /** penser � changer le nom d'indice **/
             {
                 m_vectA[i]->getS1()->deleteAdj(m_vectA[i]->getS2());
+                m_vectA[i]->getS2()->deleteAdj(m_vectA[i]->getS1());
                 m_vectA.erase(m_vectA.begin()+i);
                 m_taille-=1;
                 break;
@@ -254,12 +255,12 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
         for(const auto elt : m_vectS[parcours]->getVectAdj())
         {
 
-
-            if(! ( elt->getMarquage() ) && ( AscendantDistance[elt->getIndice()].second > AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids()) )
-            {
-                AscendantDistance[elt->getIndice()].first=m_vectS[parcours];
-                AscendantDistance[elt->getIndice()].second=AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids();
-            }
+            if (seekArete(parcours,elt->getIndice())!=nullptr)
+                if(! ( elt->getMarquage() ) && ( AscendantDistance[elt->getIndice()].second > AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids()) )
+                {
+                    AscendantDistance[elt->getIndice()].first=m_vectS[parcours];
+                    AscendantDistance[elt->getIndice()].second=AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids();
+                }
         }
 
 

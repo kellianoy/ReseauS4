@@ -9,8 +9,9 @@ int main()
 {
 
     Graphe* G=new Graphe();
-    int choix=0;
+    {
 
+    int choix=0;
     while (choix!=9)
     {
 
@@ -49,7 +50,6 @@ int main()
                 {
                     Svgfile svgout;
                     G->dessinGraphe(svgout);
-                    std::cout<< "Le dessin est effectue\n\n";
                     break;
                 }
             case 3:
@@ -64,6 +64,8 @@ int main()
                 G->connexite();
                 break;
             case 6 :
+
+                std::cout<< "Selectionner le numero de l'arete a supprimer\n\n";
                 int numArete=0;
                 std::cin >> numArete;
                 G->deleteArete(numArete);
@@ -73,6 +75,7 @@ int main()
 
                 break;
 
+            }
         }
     }
     delete G;
