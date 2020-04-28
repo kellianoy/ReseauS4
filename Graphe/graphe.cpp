@@ -8,7 +8,7 @@ Graphe::Graphe()
 
 
 
-Graphe::~Graphe()/** le destructeur est cassé**/
+Graphe::~Graphe()/** le destructeur est cassï¿½**/
 {
     for (auto s : m_vectS)
         delete s;
@@ -22,7 +22,7 @@ void Graphe::lecture_topo(std::string fichier)
 {
     int ordre = 0 , orientation = 0, id = 0 ;
 
-    //vérifier que le fichier est bien un fichiier topo
+    //vï¿½rifier que le fichier est bien un fichiier topo
     if(fichier.compare(fichier.size()- 8, 8, "topo.txt") != 0 )
         throw std::runtime_error("Il ne s'agit pas d'un fichier topologie.");
 
@@ -56,7 +56,7 @@ void Graphe::lecture_topo(std::string fichier)
         int x = 0 , y = 0 ;
         ifs >> x >> y ;
         if ( ifs.fail() )
-            throw std::runtime_error("Probleme avec les coordonnées.");
+            throw std::runtime_error("Probleme avec les coordonnï¿½es.");
 
          m_vectS.push_back(new Sommet(id, nom, x, y, this));
 
@@ -91,28 +91,34 @@ Sommet* Graphe::seekSommet(int id)
 }
 
 
-/** renvoie arête affilier à deux sommets**/
+/** renvoie arï¿½te affilier ï¿½ deux sommets**/
 Arete* Graphe::seekArete(int id1, int id2)
 {
     if (m_vectA.size())
+    {
         for (auto it : m_vectA)
-            if ((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))
-                return it;
+        {
+            if (((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))||((id1==it->getS2()->getIndice()) && (id2==it->getS1()->getIndice())))
+            {
+               return it;
+            }
+        }
+    }
     return nullptr;
 }
 
-/** renvoie arête avec l'ID correspondant**/
+/** renvoie arï¿½te avec l'ID correspondant**/
 Arete* Graphe::seekAreteId(int id)
 {
     if (m_vectA.size())
         for (auto it : m_vectA)
-            if (id==it->getIndice()) /** penser à changer le nom d'indice **/
+            if (id==it->getIndice()) /** penser ï¿½ changer le nom d'indice **/
                 return it;
     return nullptr;
 }
 
 
-/** charge les poids des arête**/
+/** charge les poids des arï¿½te**/
 void Graphe::lecture_poids(std::string fichier)
 {
     if (fichier!="")
@@ -170,4 +176,85 @@ void Graphe::sauvegardeIndice()
 
     for(auto s : m_vectS)
         s->sauvegardeIndice(ofs);
+}
+
+
+
+
+
+                             /**Dijkstra**/
+
+std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
+{
+
+
+    int parcours=-1;///variable buffer qui contient l'ï¿½lement avec le poid le plus faible
+    int marquage=0;///nb de sommet marquer
+    int cpt=0;
+
+
+
+    /** reset des marquage de tout le monde et crï¿½ation du vecteur de pair qui associe ï¿½ un ID un sommet ascendant et le poid de dï¿½but jusqu'au sommet s**/
+    std::vector<std::pair<Sommet*,double>> AscendantDistance;
+    for(const auto it:m_vectS)
+    {
+        AscendantDistance.push_back(std::make_pair(nullptr,INT_MAX));///pour obtenir DOUBLE_MAX il faut rajouter une bilbiothï¿½ques donc un int max sera suffisant
+        it->setMarquage(0);
+    }
+    AscendantDistance[depart->getIndice()].second=0;///on met la distance du dï¿½but ï¿½ lui mï¿½me ï¿½ 0
+
+    /** dijkstra pour de vrai **/
+    while(marquage<m_ordre)
+    {
+         ///problï¿½me parcourss ne doit pas ï¿½tre dï¿½jï¿½ marquï¿½ sinon ï¿½a casse tout par consï¿½quent on doit choisir un parcours non marquï¿½
+        cpt=0;
+        parcours=-1;
+        ///choix de l'indice parcours, on prend le premier qui n'est pas marquï¿½
+        do
+        {
+            if( ! m_vectS[cpt]->getMarquage())
+            {
+                parcours=cpt;
+            }
+            cpt++;
+
+
+        }while(parcours==-1);
+
+       ///recherche de l'ï¿½lï¿½ment avec la plus petite distance, parcours contient l'id de l'elt avec le plus petit poids
+        for(int i=0;i<m_ordre;i++)
+        {
+            if(AscendantDistance[i].second<AscendantDistance[parcours].second && !m_vectS[i]->getMarquage())
+            {
+                parcours=i;
+            }
+        }
+
+        ///marquage de l'ï¿½lement
+        m_vectS[parcours]->setMarquage(1);
+        marquage+=1;
+
+        ///recherche des distances des sommets adjacent et remplacement dans le tableau si leur distance avec dï¿½but est plus petite
+        for(const auto elt : m_vectS[parcours]->getVectAdj())
+        {
+
+
+            if(! ( elt->getMarquage() ) && ( AscendantDistance[elt->getIndice()].second > AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids()) )
+            {
+                AscendantDistance[elt->getIndice()].first=m_vectS[parcours];
+                AscendantDistance[elt->getIndice()].second=AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids();
+            }
+        }
+
+
+
+    }
+
+    for(size_t i =0;i<AscendantDistance.size();++i)
+    {
+
+        std::cout<<m_vectS[i]->getNom()<<" =>  "<<AscendantDistance[i].second<<std::endl;
+    }
+
+return AscendantDistance;
 }

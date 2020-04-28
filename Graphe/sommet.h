@@ -18,12 +18,14 @@ class Sommet
         std::vector<Indice*> getVectI() const { return m_vectI; }
         Aspect getAspect() const { return m_aspect; }
         std::vector<Sommet*> getVectAdj() const { return m_vectAdj; }
+        int getMarquage()const {return m_marquage;}
 
         //Set
         void setIndice(int val) { m_indice = val; }
         void setNom(std::string val) { m_nom = val; }
         void setAspect(Aspect a) { m_aspect = a; }
         void pushAdjacent(Sommet* S) {m_vectAdj.push_back(S);}
+        void setMarquage(int a) {m_marquage=a;}
 
         //Dessin
         void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
@@ -36,6 +38,9 @@ class Sommet
         Aspect m_aspect;
         std::vector<Indice*> m_vectI;
         std::vector<Sommet*> m_vectAdj;
+        int m_marquage;
+
+
 };
 
 #endif // SOMMET_H

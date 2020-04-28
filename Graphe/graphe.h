@@ -43,11 +43,13 @@ class Graphe
             m_vectA.clear();
         }
 
+        //dijkstra
+        std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
     private:
 
         int m_taille;
         int m_ordre;
-        bool m_orientation; //false : non orienté - true : orienté
+        bool m_orientation; //false : non orientï¿½ - true : orientï¿½
         std::vector<Sommet*> m_vectS;
         std::vector<Arete*> m_vectA;
 };
