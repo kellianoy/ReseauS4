@@ -19,8 +19,12 @@ void Proximite::calculIndice()
 {
     std::vector<std::pair<Sommet*,double>> tab=m_graphe->dijkstra(m_sommet);
     double i=0;
-    for(const auto it : tab)
+    for( auto it : tab)
     {
+        if(it.second==INT_MAX)
+        {
+            it.second=0;
+        }
         i+=it.second;
     }
     m_critere=1/i;
