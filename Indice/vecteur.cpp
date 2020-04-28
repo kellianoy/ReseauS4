@@ -5,7 +5,7 @@ Vecteur::Vecteur()
     //ctor
 }
 
-Vecteur::Vecteur(double c) : Indice(c)
+Vecteur::Vecteur(Graphe* G, Sommet* S) : Indice(G, S)
 {
     //ctor
 }

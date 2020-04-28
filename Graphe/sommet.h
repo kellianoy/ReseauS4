@@ -9,7 +9,7 @@ class Sommet
 {
     public:
         Sommet();
-        Sommet(int identifiant, std::string nom, int x, int y, Graphe* mongraph);
+        Sommet(int identifiant, std::string nom, int x, int y, Graphe* G);
         ~Sommet();
 
         //Get

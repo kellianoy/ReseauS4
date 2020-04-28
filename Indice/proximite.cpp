@@ -5,7 +5,7 @@ Proximite::Proximite()
     //ctor
 }
 
-Proximite::Proximite(double c) : Indice(c)
+Proximite::Proximite(Graphe* G, Sommet* S) : Indice(G, S)
 {
     //ctor
 }

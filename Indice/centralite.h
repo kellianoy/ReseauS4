@@ -7,7 +7,7 @@ class Centralite : public Indice
 {
     public:
         Centralite();
-        Centralite(double c);
+        Centralite(Graphe* G, Sommet* S);
         ~Centralite();
 
     private:

@@ -5,7 +5,7 @@ Intermediarite::Intermediarite()
     //ctor
 }
 
-Intermediarite::Intermediarite(double c) : Indice(c)
+Intermediarite::Intermediarite(Graphe* G, Sommet* S) : Indice(G, S)
 {
     //ctor
 }
