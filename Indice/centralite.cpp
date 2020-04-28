@@ -24,3 +24,9 @@ double Centralite::normalisation()
 {
     return m_critere/(m_graphe->getVectS().size() - 1 );
 }
+
+
+void Centralite::afficher()
+{
+    std::cout << "    -> Centralite de degre : " << m_critere << " | normalise : " << normalisation() << std::endl ;
+}

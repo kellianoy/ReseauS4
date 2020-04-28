@@ -15,3 +15,8 @@ Intermediarite::~Intermediarite()
 {
     //dtor
 }
+
+void Intermediarite::afficher()
+{
+    std::cout << "    -> Centralite d'intermediarite : " << m_critere << " | normalise : " << normalisation() << std::endl ;
+}

@@ -167,6 +167,7 @@ void Graphe::affichageTextuel()
         std::cout << "Arete : " << a->getIndice() << " | S1 : " << a->getS1()->getNom() << " | S2 : " << a->getS2()->getNom() << std::endl;
 }
 
+///sauvegarde de tous les indices dans un fichier texte
 void Graphe::sauvegardeIndice()
 {
     std::ofstream ofs{"Indice.txt"};
@@ -178,6 +179,12 @@ void Graphe::sauvegardeIndice()
         s->sauvegardeIndice(ofs);
 }
 
+///affichage de tous les indices après calcul
+ void Graphe::afficherIndice()
+ {
+     for(auto s : m_vectS)
+        s->afficherIndice();
+ }
 
 
 

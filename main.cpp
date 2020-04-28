@@ -59,7 +59,7 @@ int main()
                 }
                 G->getVectS()[0]->getVectI()[1]->calculIndice();
                 G->sauvegardeIndice();
-                std::cout<< "Le calcul est effectue et exporte\n\n";
+                G->afficherIndice();
                 break;
             case 5:
                 G->connexite();

@@ -36,6 +36,7 @@ class Graphe
         void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
 
         void sauvegardeIndice();
+        void afficherIndice() ;
 
         void deleteGraphe()
         {
