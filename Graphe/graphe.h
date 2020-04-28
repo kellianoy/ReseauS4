@@ -37,6 +37,12 @@ class Graphe
 
         void sauvegardeIndice();
 
+        void deleteGraphe()
+        {
+            m_vectS.clear();
+            m_vectA.clear();
+        }
+
     private:
 
         int m_taille;

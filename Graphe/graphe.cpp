@@ -10,13 +10,11 @@ Graphe::Graphe()
 
 Graphe::~Graphe()/** le destructeur est cassé**/
 {
-    /*
     for (auto s : m_vectS)
         delete s;
 
     for (auto a : m_vectA)
-        delete a;*/
-
+        delete a;
 }
 
 
