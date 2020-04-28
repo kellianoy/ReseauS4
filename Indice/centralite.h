@@ -12,6 +12,7 @@ class Centralite : public Indice
 
         void calculIndice();
         double normalisation();
+        void afficher();
         void sauvegarder(std::ofstream ofs){ofs << "Crit�re de degr� : "<< m_critere<< " " << normalisation() << std::endl; } ;
 
     private:

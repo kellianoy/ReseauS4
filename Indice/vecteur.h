@@ -12,6 +12,8 @@ class Vecteur : public Indice
         ~Vecteur();
 
         void calculIndice();
+        void afficher();
+        void sauvegarder(std::ofstream &ofs){ofs << " " << m_critere << " -" ; }
 
         double normalisation() {return 0.2 ; }
     private:

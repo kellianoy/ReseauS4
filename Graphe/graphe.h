@@ -36,6 +36,7 @@ class Graphe
         void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
 
         void sauvegardeIndice();
+        void afficherIndice() ;
 
         void deleteGraphe()
         {
@@ -43,8 +44,16 @@ class Graphe
             m_vectA.clear();
         }
 
-        //dijkstra
+        //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
+
+        //BFS
+        void bfs(Sommet* initial, std::vector<Sommet*>& colored);
+
+        //Connexité
+        Sommet* PasFait(const std::vector<Sommet*> faits);
+        void connexite();
+
     private:
 
         int m_taille;

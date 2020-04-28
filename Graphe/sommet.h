@@ -31,6 +31,7 @@ class Sommet
         void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
 
         void sauvegardeIndice(std::ofstream &ofs);
+        void afficherIndice() ;
 
     private:
         int m_indice;

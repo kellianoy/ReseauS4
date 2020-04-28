@@ -21,7 +21,8 @@ class Indice
 
         virtual void calculIndice()=0;
         virtual double normalisation()=0;
-        void sauvegarder(std::ofstream &ofs) {ofs << " " << m_critere << " " << normalisation(); } ;
+        virtual void afficher()=0;
+        virtual void sauvegarder(std::ofstream &ofs) {ofs << " " << m_critere << " " << normalisation() << " -"; } ;
 
     protected:
 

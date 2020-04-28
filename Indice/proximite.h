@@ -12,6 +12,7 @@ class Proximite : public Indice
         ~Proximite();
         void calculIndice();
         double normalisation();
+        void afficher() ;
 
     private:
 };

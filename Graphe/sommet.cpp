@@ -27,9 +27,18 @@ Sommet::~Sommet()
 
 void Sommet::sauvegardeIndice(std::ofstream &ofs)
 {
-    ofs << "Sommet " << m_nom << "  :" ;
+    ofs << m_indice << " " ;
     for(int i = 0 ; i < 4 ; i++)
         m_vectI[i]->sauvegarder(ofs);
     ofs << std::endl;
+}
+
+//affichage les indices en console
+void Sommet::afficherIndice()
+{
+    std::cout << "Sommet n" << m_indice << ", nom : " << m_nom<< std::endl;
+    for(auto i : m_vectI)
+        i->afficher();
+    std::cout << "\n" ;
 }
 

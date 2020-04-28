@@ -47,3 +47,8 @@ void Vecteur::calculIndice()
     }
     while(A>lastA+10 || A<lastA-10);
 }
+
+void Vecteur::afficher()
+{
+    std::cout << "    -> Centralite de vecteur : " << m_critere << std::endl ;
+}
