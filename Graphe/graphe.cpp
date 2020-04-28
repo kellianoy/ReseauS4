@@ -97,9 +97,15 @@ Sommet* Graphe::seekSommet(int id)
 Arete* Graphe::seekArete(int id1, int id2)
 {
     if (m_vectA.size())
+    {
         for (auto it : m_vectA)
-            if ((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))
-                return it;
+        {
+            if (((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))||((id1==it->getS2()->getIndice()) && (id2==it->getS1()->getIndice())))
+            {
+               return it;
+            }
+        }
+    }
     return nullptr;
 }
 
@@ -161,4 +167,85 @@ void Graphe::affichageTextuel()
     std::cout << "Liste des aretes : " << std::endl;
     for (auto a : m_vectA)
         std::cout << "Arete : " << a->getIndice() << " | S1 : " << a->getS1()->getNom() << " | S2 : " << a->getS2()->getNom() << std::endl;
+}
+
+
+
+
+
+                             /**Dijkstra**/
+
+std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
+{
+
+
+    int parcours=-1;///variable buffer qui contient l'élement avec le poid le plus faible
+    int marquage=0;///nb de sommet marquer
+    int cpt=0;
+
+
+
+    /** reset des marquage de tout le monde et création du vecteur de pair qui associe à un ID un sommet ascendant et le poid de début jusqu'au sommet s**/
+    std::vector<std::pair<Sommet*,double>> AscendantDistance;
+    for(const auto it:m_vectS)
+    {
+        AscendantDistance.push_back(std::make_pair(nullptr,INT_MAX));///pour obtenir DOUBLE_MAX il faut rajouter une bilbiothèques donc un int max sera suffisant
+        it->setMarquage(0);
+    }
+    AscendantDistance[depart->getIndice()].second=0;///on met la distance du début à lui même à 0
+
+    /** dijkstra pour de vrai **/
+    while(marquage<m_ordre)
+    {
+         ///problème parcourss ne doit pas être déjà marqué sinon ça casse tout par conséquent on doit choisir un parcours non marqué
+        cpt=0;
+        parcours=-1;
+        ///choix de l'indice parcours, on prend le premier qui n'est pas marqué
+        do
+        {
+            if( ! m_vectS[cpt]->getMarquage())
+            {
+                parcours=cpt;
+            }
+            cpt++;
+
+
+        }while(parcours==-1);
+
+       ///recherche de l'élément avec la plus petite distance, parcours contient l'id de l'elt avec le plus petit poids
+        for(int i=0;i<m_ordre;i++)
+        {
+            if(AscendantDistance[i].second<AscendantDistance[parcours].second && !m_vectS[i]->getMarquage())
+            {
+                parcours=i;
+            }
+        }
+
+        ///marquage de l'élement
+        m_vectS[parcours]->setMarquage(1);
+        marquage+=1;
+
+        ///recherche des distances des sommets adjacent et remplacement dans le tableau si leur distance avec début est plus petite
+        for(const auto elt : m_vectS[parcours]->getVectAdj())
+        {
+
+
+            if(! ( elt->getMarquage() ) && ( AscendantDistance[elt->getIndice()].second > AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids()) )
+            {
+                AscendantDistance[elt->getIndice()].first=m_vectS[parcours];
+                AscendantDistance[elt->getIndice()].second=AscendantDistance[parcours].second+seekArete(parcours,elt->getIndice())->getPoids();
+            }
+        }
+
+
+
+    }
+
+    for(size_t i =0;i<AscendantDistance.size();++i)
+    {
+
+        std::cout<<m_vectS[i]->getNom()<<" =>  "<<AscendantDistance[i].second<<std::endl;
+    }
+
+return AscendantDistance;
 }
