@@ -11,6 +11,8 @@ class Vecteur : public Indice
         Vecteur(Graphe* G, Sommet* S);
         ~Vecteur();
 
+        void calculIndice();
+
     private:
 };
 
