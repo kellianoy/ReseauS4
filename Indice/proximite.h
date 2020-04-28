@@ -10,6 +10,8 @@ class Proximite : public Indice
         Proximite();
         Proximite(double c);
         ~Proximite();
+    void calculIndice() {m_critere = 5;}
+    double normalisation() {return 0.2 ; }
 
     private:
 };

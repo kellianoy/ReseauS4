@@ -11,6 +11,8 @@ int main()
     a->chargerGraphe("graphe_cycle4_topo.txt", "graphe_cycle4_poids.txt" );
     a->affichageTextuel();
     a->dessinGraphe(svgout);
+    a->getVectS()[0]->getVectI()[0]->calculIndice();
+    a->sauvegardeIndice();
 
     delete a;
 

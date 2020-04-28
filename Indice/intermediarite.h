@@ -9,6 +9,8 @@ class Intermediarite : public Indice
         Intermediarite();
         Intermediarite(double c);
         ~Intermediarite();
+        void calculIndice() {m_critere = 1 ;}
+        double normalisation() {return 0.2 ; }
 
     private:
 };

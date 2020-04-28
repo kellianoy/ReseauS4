@@ -153,3 +153,13 @@ void Graphe::affichageTextuel()
     for (auto a : m_vectA)
         std::cout << "Arete : " << a->getIndice() << " | S1 : " << a->getS1()->getNom() << " | S2 : " << a->getS2()->getNom() << std::endl;
 }
+
+void Graphe::sauvegardeIndice()
+{
+    std::ofstream ofs{"Indice.txt"};
+    if (!ofs)
+        throw std::runtime_error( "Impossible d'ouvrir en lecture indice.txt" );
+
+    for(auto s : m_vectS)
+        s->sauvegardeIndice(ofs);
+}

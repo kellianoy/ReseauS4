@@ -10,6 +10,10 @@ class Centralite : public Indice
         Centralite(double c);
         ~Centralite();
 
+        void calculIndice();
+        double normalisation();
+        void sauvegarder(std::ofstream ofs){ofs << "Critère de degré : "<< m_critere<< " " << normalisation() << std::endl; } ;
+
     private:
 };
 
