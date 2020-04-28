@@ -258,3 +258,78 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
 return AscendantDistance;
 }
+
+//Si le sommet est dans le vecteur, on retourne 0 sinon on retourne 1
+bool testVecteur(Sommet* s, std::vector<Sommet*> colored)
+{
+    for(auto c : colored)
+        if (s->getNom()==c->getNom())
+            return 0;
+
+    return 1;
+}
+
+
+void Graphe::bfs(Sommet* initial, std::vector<Sommet*>& colored)
+{
+    std::queue<Sommet*> file;
+
+    file.push(initial);
+    colored.push_back(initial);
+    while (file.size())
+    {
+        for (auto it : file.front()->getVectAdj())
+            if (testVecteur(it, colored))
+            {
+                file.push(it);
+                colored.push_back(it);
+            }
+        file.pop();
+    }
+}
+
+Sommet* Graphe::PasFait(const std::vector<Sommet*> faits)
+{
+    bool existe=0;
+    for (auto t : m_vectS)
+    {
+        for (auto f : faits)
+        {
+            if (t->getIndice()==f->getIndice())
+            {
+                existe=1;
+                break;
+            }
+        }
+        if (!existe)
+            return t;
+        else
+            existe=0;
+    }
+    return 0;
+}
+
+void Graphe::connexite()
+{
+    std::vector<Sommet*> colored;
+    int i=0;
+    Sommet* Si=m_vectS[0];
+    do
+    {
+        std::vector<Sommet*> temp;
+        ++i;
+        bfs(Si, temp);
+        std::cout << "Composante connexe " << i <<std::endl;
+        std::cout << "Sommets composites : ";
+        for (auto c : temp)
+        {
+            colored.push_back(c);
+            std::cout << c->getNom() << " ";
+        }
+        std::cout<<std::endl;
+        Si=PasFait(colored);
+
+    }
+    while(colored.size()!=m_vectS.size());
+
+}

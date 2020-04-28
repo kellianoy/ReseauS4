@@ -43,8 +43,16 @@ class Graphe
             m_vectA.clear();
         }
 
-        //dijkstra
+        //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
+
+        //BFS
+        void bfs(Sommet* initial, std::vector<Sommet*>& colored);
+
+        //Connexité
+        Sommet* PasFait(const std::vector<Sommet*> faits);
+        void connexite();
+
     private:
 
         int m_taille;

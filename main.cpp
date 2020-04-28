@@ -4,6 +4,7 @@
 #include "proximite.h"
 #include "intermediarite.h"
 
+
 int main()
 {
 
@@ -17,12 +18,13 @@ int main()
         std::cout << "2. Dessiner le graphe en SVG\n";
         std::cout << "3. Afficher le graphe dans le texte\n";
         std::cout << "4. Calculer et exporter les indices\n";
+        std::cout << "5. Test de connexite\n";
         std::cout << "\n\n9. Quitter\n";
         do
         {
         std::cin>>choix;
         }
-        while(choix<1||(choix!=9&&choix>4));
+        while(choix<1||(choix!=9&&choix>5));
         switch(choix)
         {
             case 1:
@@ -59,9 +61,14 @@ int main()
                 G->sauvegardeIndice();
                 std::cout<< "Le calcul est effectue et exporte\n\n";
                 break;
+            case 5:
+                G->connexite();
+                break;
+
         }
     }
     delete G;
 
     return 0;
 }
+

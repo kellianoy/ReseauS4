@@ -19,12 +19,6 @@
 <line x1="600" y1="300" x2="800" y2="300" stroke="black" />
 <text x="700" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
 <text x="700" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="300" y1="400" x2="400" y2="300" stroke="black" />
-<text x="350" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="700" y1="400" x2="600" y2="300" stroke="black" />
-<text x="650" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="650" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
 <circle cx="300" cy="200" r="10" fill="pink" />
 <circle cx="300" cy="200" r="10" fill="none" stroke="black" stroke-width="1" />
 <text x="300" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >A</text>
