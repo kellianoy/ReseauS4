@@ -160,6 +160,7 @@ void Graphe::lecture_poids(std::string fichier)
         ifs >> taille;
         if ( ifs.fail() || taille!=m_taille)
         {
+
                 throw std::runtime_error("Probleme avec la taille");
         }
 
