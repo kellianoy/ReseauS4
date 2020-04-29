@@ -7,6 +7,7 @@
 #include "intermediarite.h"
 
 void switchMenu(Graphe* G, Graphe* Copie, int choix);
+void comparaison(Graphe* G1, Graphe* G2);
 void afficherMenu();
 
 

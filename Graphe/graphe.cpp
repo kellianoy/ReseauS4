@@ -3,17 +3,14 @@
 
 Graphe::Graphe()
 {
-    //ctor
 }
 
-
-
-Graphe::~Graphe()/** le destructeur est cass�**/
+Graphe::~Graphe()
 {
 
 }
 
-
+//Permet de lire un fichier topologique afin de charger un graphe
 void Graphe::lecture_topo(std::string fichier)
 {
     int ordre = 0 , orientation = 0, id = 0 ;
@@ -77,6 +74,7 @@ void Graphe::lecture_topo(std::string fichier)
 
 }
 
+//test pour savoir si le graphe est vide ou non
 bool Graphe::grapheVide()
 {
             if(m_vectS.size() == 0 )
@@ -85,13 +83,15 @@ bool Graphe::grapheVide()
                 return true ;
 }
 
-bool Graphe::grapheIdentique(Graphe*Copie)
+//test pour savoir si deux graphes sont identiques
+bool Graphe::grapheIdentique(Graphe* Copie)
  {
             if(Copie->getVectA().size() != m_vectA.size())
                 return true ;
             else return false ;
 }
 
+//renvoie un sommet du graphe correspondant à l'id
 Sommet* Graphe::seekSommet(int id)
 {
     if (m_vectS.size())
@@ -128,6 +128,7 @@ Arete* Graphe::seekAreteId(int id)
     return nullptr;
 }
 
+//Supprime une arête du graphe et donc les sommets adjacents
 void Graphe::deleteArete(int id)
 {
     if (m_vectA.size())
@@ -170,6 +171,7 @@ void Graphe::lecture_poids(std::string fichier)
     }
 }
 
+//affiche tous les sommets d'un graphe
 void Graphe::affichageSommets()
 {
     for (auto s : m_vectS)
@@ -182,6 +184,7 @@ void Graphe::affichageSommets()
     std::cout << std::endl;
 }
 
+//affiche toutes les aretes d'un graphe
 void Graphe::affichageAretes()
 {
     for (auto a : m_vectA)
@@ -189,6 +192,7 @@ void Graphe::affichageAretes()
     std::cout << std::endl;
 }
 
+//affiche arêtes & sommets
 void Graphe::affichageTextuel()
 {
     std::cout << "__________Affichage du Graphe___________\n" << std::endl;
@@ -196,6 +200,7 @@ void Graphe::affichageTextuel()
     std::cout << "Ordre : " << m_ordre << std::endl;
     std::cout << std::endl;
     affichageSommets();
+    affichageAretes();
 }
 
 ///sauvegarde de tous les indices dans un fichier texte
@@ -287,13 +292,6 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
 
     }
-
-    /**for(size_t i =0;i<AscendantDistance.size();++i)
-    {
-
-        std::cout<<m_vectS[i]->getNom()<<" =>  "<<AscendantDistance[i].second<<std::endl;
-    }**/
-
 return AscendantDistance;
 }
 
@@ -301,23 +299,23 @@ return AscendantDistance;
 bool testVecteur(Sommet* s, std::vector<Sommet*> colored)
 {
     for(auto c : colored)
-        if (s->getNom()==c->getNom())
+        if (s->getIndice()==c->getIndice())
             return 0;
 
     return 1;
 }
 
-
+//Parcours bfs
 void Graphe::bfs(Sommet* initial, std::vector<Sommet*>& colored)
 {
     std::queue<Sommet*> file;
-
+    //On remplit la file
     file.push(initial);
     colored.push_back(initial);
     while (file.size())
     {
         for (auto it : file.front()->getVectAdj())
-            if (testVecteur(it, colored))
+            if (testVecteur(it, colored)) //Si le sommet n'a pas déjà été pris
             {
                 file.push(it);
                 colored.push_back(it);
@@ -326,6 +324,7 @@ void Graphe::bfs(Sommet* initial, std::vector<Sommet*>& colored)
     }
 }
 
+//renvoie un sommet non présent dans le vecteur de sommet
 Sommet* Graphe::PasFait(const std::vector<Sommet*> faits)
 {
     bool existe=0;
@@ -347,6 +346,7 @@ Sommet* Graphe::PasFait(const std::vector<Sommet*> faits)
     return 0;
 }
 
+//teste la connexité d'un graphe (composantes connexes)
 void Graphe::connexite()
 {
     std::vector<Sommet*> colored;
@@ -372,6 +372,7 @@ void Graphe::connexite()
 
 }
 
+//Calcul des indices
 void Graphe::calculIndice()
 {
 
