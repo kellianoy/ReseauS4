@@ -8,12 +8,14 @@ void afficherMenu()
         std::cout<<"_________Graphe\n\n";
         std::cout << "3. Afficher les sommets et les aretes du graphe dans la console\n";
         std::cout << "4. Calculer et exporter les indices du graphe\n";
-        std::cout << "5. Tester la connexite du graphe\n\n";
+        std::cout << "5. Tester la connexite du graphe\n";
+        std::cout << "6. Colorer les sommets en fonction d'un critere\n\n";
         std::cout<<"_________Sous-graphe\n\n";
-        std::cout << "6. Supprimer une arete et former un sous-graphe\n";
-        std::cout << "7. Afficher le sous-graphe\n";
-        std::cout << "8. Calculer les indices du sous-graphe et comparer avec le graphe\n";
-        std::cout << "9. Tester la connexite du sous-graphe\n";
+        std::cout << "7. Supprimer une arete et former un sous-graphe\n";
+        std::cout << "8. Afficher le sous-graphe\n";
+        std::cout << "9. Calculer les indices du sous-graphe et comparer avec le graphe\n";
+        std::cout << "10. Tester la connexite du sous-graphe\n";
+        std::cout << "11. Colorer les sommets en fonction d'un critere\n\n";
 
         std::cout << "\n\n0. Quitter\n";
 }
@@ -28,9 +30,9 @@ void comparaison(Graphe* G1, Graphe* G2)
             std::cout << "Sommet " << G1->getVectS()[i]->getNom() <<" :\n";
             for(size_t j = 0 ; j < G1->getVectS()[i]->getVectI().size() ; ++j)
             {
-                std::cout << "Avant : " << G1->getVectS()[i]->getVectI()[j]->getCritere();
-                std::cout << " | Apres : " << G2->getVectS()[i]->getVectI()[j]->getCritere();
-                std::cout << " | Comparaison : " << G2->getVectS()[i]->getVectI()[j]->getCritere()-G1->getVectS()[i]->getVectI()[j]->getCritere()<<std::endl ;
+                std::cout << "Avant : " << G1->getVectS()[i]->getVectI()[j]->normalisation();
+                std::cout << " | Apres : " << G2->getVectS()[i]->getVectI()[j]->normalisation();
+                std::cout << " | Comparaison : " << G2->getVectS()[i]->getVectI()[j]->normalisation() - G1->getVectS()[i]->getVectI()[j]->normalisation()<<std::endl ;
             }
             std::cout<<"\n\n";
         }
@@ -73,7 +75,11 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                     std::cout << "Entrez le nom du fichier de poids"<<std::endl;
                     std::cin >> poids;
                     G->lecture_poids(poids);
-                    Copie->lecture_poids(poids);
+                    if(!G->grapheIdentique(Copie))
+                        Copie->lecture_poids(poids);
+                    Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                    G->dessinGraphe(svgout);
+
                 break;
             }
             case 3:
@@ -95,7 +101,15 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 G->connexite();
                 break;
             }
-            case 6 :
+            case 6:
+            {
+                G->calculIndice();
+                G->colorerCritere();
+                Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                G->dessinGraphe(svgout);
+                break;
+            }
+            case 7 :
             {
                 int numArete=0;
                 std::cout<< "Selectionner le numero de l'arete a supprimer\n\n";
@@ -107,14 +121,14 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
 
                 break;
             }
-            case 7 :
+            case 8 :
             {
                 if(G->grapheIdentique(Copie))
                     Copie->affichageTextuel();
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
                 break ;
             }
-            case 8 :
+            case 9 :
             {
                 if(G->grapheIdentique(Copie))
                 {
@@ -126,13 +140,25 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
 
                 break ;
             }
-            case 9 :
+            case 10 :
             {
                 if(G->grapheIdentique(Copie))
                 {
                     std::cout<< "\n\nConnexite du sous-graphe\n\n";
                     Copie->connexite();
                     std::cout<<std::endl;
+                }
+                else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
+                break;
+            }
+            case 11 :
+            {
+                if(G->grapheIdentique(Copie))
+                {
+                    Copie->calculIndice();
+                    Copie->colorerCritere();
+                    Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
+                    Copie->dessinGraphe(svgcopie);
                 }
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
                 break;

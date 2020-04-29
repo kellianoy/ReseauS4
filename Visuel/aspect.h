@@ -6,7 +6,7 @@ class Aspect
 {
     public:
         Aspect();
-        Aspect(int x, int y, std::string color = "black");
+        Aspect(int x, int y, std::string color = "pink");
         ~Aspect();
 
         //Get

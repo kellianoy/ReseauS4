@@ -2,7 +2,7 @@
 #define SOMMET_H
 #include "aspect.h"
 
-class Indice; //OUI JE SAIS C'EST UN FORWARD MAIS ON VA Y REREFLECHIR #triste
+class Indice;
 class Graphe;
 
 class Sommet
@@ -29,11 +29,14 @@ class Sommet
 
         //Dessin
         void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
+        void colorerCritere(int num);
+
 
         void sauvegardeIndice(std::ofstream &ofs);
         void afficherIndice() ;
 
         void deleteAdj(Sommet* s1);
+
 
     private:
         int m_indice;
