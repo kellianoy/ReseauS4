@@ -45,11 +45,15 @@
 1588150813 a:\riset\documents\code & programmation\reseaus4\indice\vecteur.h
 	"indice.h"
 
+<<<<<<< Updated upstream
 1588151619 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
+=======
+1588159449 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
+>>>>>>> Stashed changes
 	"graphe.h"
 	"indice.h"
 
-1588145383 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
+1588159449 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
 	"arete.h"
 
 1588150274 source:a:\riset\documents\code & programmation\reseaus4\graphe\sommet.cpp
@@ -239,7 +243,7 @@
 
 1588060306 source:d:\école\info ingé 2\projet s4\reseaus4\visuel\svgfile.cpp
 
-1588151994 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+1588167330 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
 	"menu.h"
 
 1588146801 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h

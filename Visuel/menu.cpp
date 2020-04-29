@@ -51,12 +51,9 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             case 1:
             {
                 //On remplace le graphe precedent par ce nouveau graphe
-                if (G)
-                    delete G;
-                Graphe* G=new Graphe();
-                if (Copie)
-                    delete Copie;
-                Graphe* Copie=new Graphe();
+
+               G->deleteGraphe();
+               Copie->deleteGraphe();
 
                 std::string topo;
                 std::cout << "Entrez le nom du fichier topologique"<<std::endl;
@@ -89,7 +86,6 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             }
             case 4:
             {
-                std::cout<< "Indices du graphe\n\n";
                 G->calculIndice();
                 G->sauvegardeIndice();
                 G->afficherIndice();
