@@ -68,10 +68,13 @@ void Graphe::lecture_topo(std::string fichier)
         ifs >> id1;
         ifs >> id2;
         if (!m_orientation)
+        {
             seekSommet(id2)->pushAdjacent(seekSommet(id1));
+            seekSommet(id1)->pushPredecesseur(seekSommet(id2));
+        }
         m_vectA.push_back(new Arete(id, seekSommet(id1), seekSommet(id2)));
         seekSommet(id1)->pushAdjacent(seekSommet(id2));
-
+        seekSommet(id2)->pushPredecesseur(seekSommet(id1));
     }
 
 }
@@ -111,10 +114,13 @@ Arete* Graphe::seekArete(int id1, int id2)
     {
         for (auto it : m_vectA)
         {
-            if (((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))||((id1==it->getS2()->getIndice()) && (id2==it->getS1()->getIndice())))
+            if (!m_orientation)
             {
-               return it;
+                if (((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))||((id1==it->getS2()->getIndice()) && (id2==it->getS1()->getIndice())))
+                   return it;
             }
+            else if ((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))
+                return it;
         }
     }
     return nullptr;
@@ -184,6 +190,9 @@ void Graphe::affichageSommets()
     {
         std::cout << "Sommets : " << s->getIndice() << " | Nom : " << s->getNom() << " | Adjacents : ";
         for (auto a : s->getVectAdj())
+            std::cout << " "  << a->getNom();
+        std::cout << " | Predecesseurs : ";
+        for (auto a : s->getVectPre())
             std::cout << " "  << a->getNom();
         std::cout << std::endl;
     }
@@ -314,15 +323,18 @@ bool testVecteur(Sommet* s, std::vector<Sommet*> colored)
 //Parcours bfs
 void Graphe::bfs(Sommet* initial, std::vector<Sommet*>& colored)
 {
+    ResetMarquage();
     std::queue<Sommet*> file;
     //On remplit la file
     file.push(initial);
     colored.push_back(initial);
+    initial->setMarquage(1);
     while (file.size())
     {
         for (auto it : file.front()->getVectAdj())
-            if (testVecteur(it, colored)) //Si le sommet n'a pas déjà été pris
+            if (!it->getMarquage()) //Si le sommet n'a pas déjà été pris
             {
+                it->setMarquage(1);
                 file.push(it);
                 colored.push_back(it);
             }
@@ -406,4 +418,115 @@ void Graphe::colorerCritere()
     }while(choix<0||choix>3);
     for (auto s : m_vectS)
         s->colorerCritere(choix);
+}
+
+bool Graphe::chaineAmeliorante(Sommet* s, Sommet* t, std::vector<Arete*>& direct, std::vector<Arete*>& indirect)
+{
+    std::queue<Sommet*> file;
+    indirect.clear();
+    direct.clear();
+    ResetMarquage();
+    s->setMarquage(1);
+
+
+    file.push(s);
+
+    do
+    {
+        for (auto y : file.front()->getVectAdj())
+        {
+            if (!y->getMarquage()) //Si le sommet n'a pas déjà été pris
+            {
+                Arete* temp=seekArete(file.front()->getIndice(), y->getIndice());
+                if(temp->getFlux() < temp->getPoids())
+                {
+                    y->setMarquage(1);
+                    file.push(y);
+                    direct.push_back(temp);
+                }
+            }
+        }
+
+        for (auto y : file.front()->getVectPre())
+        {
+            if (!y->getMarquage()) //Si le sommet n'a pas déjà été pris
+                {
+                    std::cout << "y : Sommet "<< y->getIndice() << " | Nom : "<< y->getNom() << "\n";
+                    std::cout << "front : Sommet "<< file.front()->getIndice() << " | Nom : "<< file.front()->getNom() << "\n";
+                    Arete* temp=seekArete(y->getIndice(), file.front()->getIndice());
+
+
+                    if(temp->getFlux() > 0)
+                    {
+                        y->setMarquage(1);
+                        file.push(y);
+                        indirect.push_back(temp);
+                    }
+                }
+        }
+        file.pop();
+    }
+    while (file.size()||!t->getMarquage());
+   if(t->getMarquage())
+        return true;
+
+    return false;
+}
+
+
+void Graphe::FordFulkerson(Sommet* S, Sommet* T)
+{
+    std::vector<Arete*> direct;
+    std::vector<Arete*> indirect;
+    bool existe=0;
+    for (auto a : m_vectA)
+        a->setFlux(0);
+
+    do
+    {
+        existe=chaineAmeliorante(S, T, direct, indirect);
+
+        if (existe)
+        {
+            double delta=0;
+            std::cout << "\nDirect : \n";
+            for (auto a : direct)
+            {
+                std::cout << "Arete " <<a->getIndice() << " | Flux : " << a->getFlux() << "/" << a->getPoids()<<std::endl;
+            }
+
+            std::cout << "Indirect : \n";
+            for (auto a : indirect)
+            {
+                std::cout << "Arete " <<a->getIndice() << " | Flux : " << a->getFlux() << "/" << a->getPoids()<<std::endl;
+            }
+
+            std::vector<double> valeurD;
+            std::vector<double> valeurI;
+
+            //Calcul de la plus petite valeur pour les aretes directes
+            if (direct.size())
+                for (auto a : direct)
+                    valeurD.push_back(a->getPoids() - a->getFlux());
+
+            //Calcul de la plus petite valeur pour les aretes indirectes
+            if (indirect.size())
+            {
+                for (auto a : indirect)
+                    valeurI.push_back(a->getFlux());
+                delta=std::min(*std::min_element(std::begin(valeurD), std::end(valeurD)), *std::min_element(valeurI.begin(), valeurI.end()));
+            }
+            else
+                delta=*std::min_element(std::begin(valeurD), std::end(valeurD));
+
+
+
+            for(auto a : direct)
+                a->setFlux(a->getFlux()+delta);
+            for(auto b : indirect)
+                b->setFlux(b->getFlux()-delta);
+        }
+    }
+    while (existe);
+
 }

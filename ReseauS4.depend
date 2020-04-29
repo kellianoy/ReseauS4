@@ -17,13 +17,13 @@
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\centralite.h
 	"indice.h"
 
-1588159449 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
+1588175486 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
 	"arete.h"
 
-1588159449 a:\riset\documents\code & programmation\reseaus4\graphe\arete.h
+1588175474 a:\riset\documents\code & programmation\reseaus4\graphe\arete.h
 	"sommet.h"
 
-1588159254 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
+1588175376 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
 	"aspect.h"
 
 1588159254 source:a:\riset\documents\code & programmation\reseaus4\indice\intermediarite.cpp
@@ -45,12 +45,11 @@
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\vecteur.h
 	"indice.h"
 
-1588159449 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
-1588151619 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
+1588181887 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
 	"graphe.h"
 	"indice.h"
 
-1588159449 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
+1588167704 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
 	"arete.h"
 
 1588159254 source:a:\riset\documents\code & programmation\reseaus4\graphe\sommet.cpp
@@ -62,7 +61,7 @@
 	"intermediarite.h"
 	"graphe.h"
 
-1588159254 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
+1588177305 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
 	"menu.h"
 
 1588083952 source:d:\ing2\th�orie des graphs\projet\reseaus4\indice\centralite.cpp
@@ -193,7 +192,7 @@
 
 1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
 
-1588159254 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
+1588175600 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>
@@ -205,6 +204,7 @@
 	<iostream>
 	<queue>
 	<utility>
+	<algorithm>
 
 1588157109 d:\�cole\info ing� 2\projet s4\reseaus4\visuel\svgfile.h
 	<string>
@@ -240,7 +240,7 @@
 
 1588060306 source:d:\�cole\info ing� 2\projet s4\reseaus4\visuel\svgfile.cpp
 
-1588167330 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+1588177339 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
 	"menu.h"
 
 1588159254 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h

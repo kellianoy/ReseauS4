@@ -60,6 +60,10 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
+        void ResetMarquage(){for (auto s : m_vectS){s->setMarquage(false);}}
+
+        bool chaineAmeliorante(Sommet* s, Sommet* t, std::vector<Arete*>& direct, std::vector<Arete*>& indirect);
+        void FordFulkerson(Sommet* S, Sommet* T);
 
 
     private:

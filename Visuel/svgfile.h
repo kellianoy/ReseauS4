@@ -11,6 +11,7 @@
 #include <iostream>
 #include <queue>
 #include <utility>
+#include <algorithm>
 
 constexpr char defcol[] = "black";
 
