@@ -1,6 +1,7 @@
 #include "graphe.h"
 #include "indice.h"
 
+
 Graphe::Graphe()
 {
 }
@@ -293,6 +294,49 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
     }
 return AscendantDistance;
+}
+
+Valeur* trouverValeur(std::vector<Valeur*> &valeurS, Sommet* atrouver)
+{
+    for(size_t i = 0 ; i < valeurS.size() ; i++)
+    {
+        if(valeurS[i]->s_ref == atrouver)
+            return valeurS[i] ;
+    }
+    return nullptr ;
+}
+
+                      /**Dijksra pour Brandes**/
+void Graphe::dijkstraBrandes(std::stack<Valeur*> & S, std::vector<Valeur*> &valeurS, Sommet* departv)
+{
+    std::queue<Valeur*> Q;
+    Valeur* valeur_v = nullptr ;
+    Valeur* valeur_w = nullptr ;
+    Arete* lien_vw = nullptr ;
+    Valeur* depart = trouverValeur(valeurS, departv);
+
+    Q.push(depart);
+    while(!Q.empty())
+    {
+        S.push(Q.front());
+        valeur_v = Q.front();
+        Q.pop();
+        for(auto it : valeur_v->s_ref->getVectAdj())
+        {
+            valeur_w = trouverValeur(valeurS, it);
+            lien_vw = seekArete(valeur_v->s_ref->getIndice(), valeur_w->s_ref->getIndice());
+            if(valeur_w->s_distance == INT_MAX)
+            {
+                valeur_w->s_distance = valeur_v->s_dependance + lien_vw->getPoids();
+                Q.push(valeur_w);
+            }
+            if(valeur_w->s_distance == valeur_v->s_dependance + lien_vw->getPoids())
+            {
+                valeur_w->s_nbpluscourt += valeur_v->s_nbpluscourt ;
+                valeur_w->s_predecesseur.push_back(valeur_v);
+            }
+        }
+    }
 }
 
 //Si le sommet est dans le vecteur, on retourne 0 sinon on retourne 1

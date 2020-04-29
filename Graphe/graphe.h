@@ -1,6 +1,8 @@
 #ifndef GRAPHE_H
 #define GRAPHE_H
 #include "arete.h"
+#include "Valeur.h"
+
 
 class Graphe
 {
@@ -48,6 +50,9 @@ class Graphe
 
         //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
+
+        //Dijkstra version Brandes
+        void dijkstraBrandes(std::stack<Valeur*> & S, std::vector<Valeur*> &valeurS, Sommet* departv);
 
         //BFS
         void bfs(Sommet* initial, std::vector<Sommet*>& colored);

@@ -73,8 +73,9 @@
 1588083952 d:\ing2\théorie des graphs\projet\reseaus4\indice\indice.h
 	"graphe.h"
 
-1588106168 d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.h
+1588157004 d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.h
 	"arete.h"
+	"Valeur.h"
 
 1588058922 d:\ing2\théorie des graphs\projet\reseaus4\graphe\arete.h
 	"sommet.h"
@@ -88,11 +89,12 @@
 1588079396 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\indice.cpp
 	"indice.h"
 
-1588083952 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\intermediarite.cpp
+1588163163 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\intermediarite.cpp
 	"intermediarite.h"
 
-1588089667 d:\ing2\théorie des graphs\projet\reseaus4\indice\intermediarite.h
+1588163630 d:\ing2\théorie des graphs\projet\reseaus4\indice\intermediarite.h
 	"indice.h"
+	"Valeur.h"
 
 1588089234 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\proximite.cpp
 	"proximite.h"
@@ -100,7 +102,7 @@
 1588083952 d:\ing2\théorie des graphs\projet\reseaus4\indice\proximite.h
 	"indice.h"
 
-1588103880 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\vecteur.cpp
+1588150154 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\vecteur.cpp
 	"vecteur.h"
 	<math.h>
 
@@ -110,7 +112,7 @@
 1588089667 source:d:\ing2\théorie des graphs\projet\reseaus4\graphe\arete.cpp
 	"arete.h"
 
-1588106075 source:d:\ing2\théorie des graphs\projet\reseaus4\main.cpp
+1588150154 source:d:\ing2\théorie des graphs\projet\reseaus4\main.cpp
 	"menu.h"
 
 1588058922 source:d:\ing2\théorie des graphs\projet\reseaus4\visuel\aspect.cpp
@@ -221,7 +223,7 @@
 	<queue>
 	<utility>
 
-1588096418 d:\ing2\théorie des graphs\projet\reseaus4\visuel\svgfile.h
+1588151267 d:\ing2\théorie des graphs\projet\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>
@@ -233,8 +235,9 @@
 	<iostream>
 	<queue>
 	<utility>
+	<stack>
 
-1588106168 source:d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.cpp
+1588157589 source:d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.cpp
 	"graphe.h"
 	"indice.h"
 
@@ -252,13 +255,15 @@
 	"proximite.h"
 	"intermediarite.h"
 
-1588096418 d:\ing2\théorie des graphs\projet\reseaus4\visuel\menu.h
+1588150154 d:\ing2\théorie des graphs\projet\reseaus4\visuel\menu.h
 	"graphe.h"
 	"centralite.h"
 	"vecteur.h"
 	"proximite.h"
 	"intermediarite.h"
 
-1588106075 source:d:\ing2\théorie des graphs\projet\reseaus4\visuel\menu.cpp
+1588150154 source:d:\ing2\théorie des graphs\projet\reseaus4\visuel\menu.cpp
 	"menu.h"
+
+1588163433 d:\ing2\théorie des graphs\projet\reseaus4\indice\valeur.h
 
