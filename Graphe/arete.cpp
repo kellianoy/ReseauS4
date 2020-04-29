@@ -14,7 +14,7 @@ Arete::~Arete()
 {
 }
 
-void Arete::dessin(Svgfile& svgout) const
+void Arete::dessin(Svgfile& svgout, bool orientation) const
 {
     int x1=0, x2=0, y1=0, y2=0;
     x1=m_s1->getAspect().getX()*100+100;
@@ -25,4 +25,5 @@ void Arete::dessin(Svgfile& svgout) const
 
     svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "FireBrick", "FireBrick", 2.5);
     svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "white", "FireBrick", 0);
+
 }

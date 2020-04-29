@@ -67,9 +67,11 @@ void Graphe::lecture_topo(std::string fichier)
         ifs >> id ;
         ifs >> id1;
         ifs >> id2;
+        if (!m_orientation)
+            seekSommet(id2)->pushAdjacent(seekSommet(id1));
         m_vectA.push_back(new Arete(id, seekSommet(id1), seekSommet(id2)));
         seekSommet(id1)->pushAdjacent(seekSommet(id2));
-        seekSommet(id2)->pushAdjacent(seekSommet(id1));
+
     }
 
 }
@@ -281,7 +283,7 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
         m_vectS[parcours]->setMarquage(1);
         marquage+=1;
 
-        ///recherche des distances des sommets adjacent et remplacement dans le tableau si leur distance avec d�but est plus petite
+        ///recherche des distances des sommets adjacents et remplacement dans le tableau si leur distance avec d�but est plus petite
         for(const auto elt : m_vectS[parcours]->getVectAdj())
         {
 

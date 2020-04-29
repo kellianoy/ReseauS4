@@ -21,7 +21,7 @@ class Arete
         void setPoids(double val) { m_poids = val; }
 
         //Dessin
-        void dessin(Svgfile& svgout) const;
+        void dessin(Svgfile& svgout, bool orientation) const;
 
     private:
 
