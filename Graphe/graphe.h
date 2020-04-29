@@ -39,7 +39,7 @@ class Graphe
         void affichageAretes();
         void affichageSommets();
         void affichageTextuel();
-        void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
+        void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout, m_orientation); for (auto s : m_vectS) s->dessin(svgout);}
         void colorerCritere();
 
         //Indices
