@@ -10,7 +10,7 @@ int main()
         afficherMenu();
         do{
             std::cin>>choix;}
-        while(choix<0||(choix>9));
+        while(choix<0||(choix>11));
 
         switchMenu(G, Copie, choix);
 

@@ -40,11 +40,15 @@ class Graphe
         void affichageSommets();
         void affichageTextuel();
         void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout); for (auto s : m_vectS) s->dessin(svgout);}
+        void colorerCritere();
 
+        //Indices
         void sauvegardeIndice();
         void afficherIndice() ;
+        void calculIndice();
 
-        void deleteGraphe(){   m_vectS.clear(); m_vectA.clear();     }
+        //Supprimer le graphe
+        void deleteGraphe(){ m_taille=0; m_ordre=0; m_orientation=0;  m_vectS.clear(); m_vectA.clear();     }
 
         //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
@@ -56,7 +60,8 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
-        void calculIndice();
+
+
     private:
 
         int m_taille;

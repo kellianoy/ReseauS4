@@ -15,7 +15,7 @@ void Graphe::lecture_topo(std::string fichier)
 {
     int ordre = 0 , orientation = 0, id = 0 ;
 
-    //v�rifier que le fichier est bien un fichiier topo
+    //v�rifier que le fichier est bien un fichier topo
     if(fichier.compare(fichier.size()- 8, 8, "topo.txt") != 0 )
         throw std::runtime_error("Il ne s'agit pas d'un fichier topologie.");
 
@@ -166,7 +166,11 @@ void Graphe::lecture_poids(std::string fichier)
             int id, value;
             ifs >> id;
             ifs >> value;
-        seekAreteId(id)->setPoids(value);
+            seekAreteId(id)->setPoids(value);
+        }
+        for (auto a : m_vectA)
+        {
+            std::cout<<"Poids :" << a->getPoids()<<std::endl;
         }
     }
 }
@@ -386,3 +390,18 @@ void Graphe::calculIndice()
 
 }
 
+void Graphe::colorerCritere()
+{
+    int choix;
+    std::cout << "Quel critere voulez-vous colorer ?\n\n";
+    std::cout << "0. Centralite de degre ?\n";
+    std::cout << "1. Centralite du vecteur propre ?\n";
+    std::cout << "2. Proximite ?\n";
+    std::cout << "3. Intermediarite ?\n";
+    do
+    {
+        std::cin>>choix;
+    }while(choix<0||choix>3);
+    for (auto s : m_vectS)
+        s->colorerCritere(choix);
+}

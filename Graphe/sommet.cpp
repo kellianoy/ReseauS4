@@ -52,3 +52,8 @@ void Sommet::deleteAdj(Sommet* s1)
             }
 }
 
+void Sommet::colorerCritere(int num)
+{
+    if (num>=0&&num<4)
+        m_aspect.setColor(Svgfile::makeRGB(255*(m_vectI[num]->normalisation()),0,255*(1-m_vectI[num]->normalisation())));
+}
