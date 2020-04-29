@@ -62,7 +62,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 G->chargerGraphe(topo);
                 Copie->chargerGraphe(topo);
 
-                Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                Svgfile svgout("Graphe actuel.svg", 2500, 2500);
                 G->dessinGraphe(svgout);
                 break;
             }
@@ -74,7 +74,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                     G->lecture_poids(poids);
                     if(!G->grapheIdentique(Copie))
                         Copie->lecture_poids(poids);
-                    Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                    Svgfile svgout("Graphe actuel.svg", 2500, 2500);
                     G->dessinGraphe(svgout);
 
                 break;
@@ -101,7 +101,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             {
                 G->calculIndice();
                 G->colorerCritere();
-                Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                Svgfile svgout("Graphe actuel.svg", 2500, 2500);
                 G->dessinGraphe(svgout);
                 break;
             }
@@ -123,7 +123,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                     }
                 }
 
-                Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
+                Svgfile svgcopie("Sous-graphe.svg", 2500, 2500);
                 Copie->dessinGraphe(svgcopie);
 
                 break;
@@ -164,7 +164,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 {
                     Copie->calculIndice();
                     Copie->colorerCritere();
-                    Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
+                    Svgfile svgcopie("Sous-graphe.svg", 2500, 2500);
                     Copie->dessinGraphe(svgcopie);
                 }
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;

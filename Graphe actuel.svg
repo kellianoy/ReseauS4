@@ -1,57 +1,237 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="1200">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2500" height="2500">
 
-<line x1="300" y1="200" x2="400" y2="300" stroke="black" />
-<text x="350" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >10</text>
-<text x="350" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >10</text>
-<line x1="700" y1="200" x2="600" y2="300" stroke="black" />
-<text x="650" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >5</text>
-<text x="650" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >5</text>
-<line x1="200" y1="300" x2="400" y2="300" stroke="black" />
-<text x="300" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >7</text>
-<text x="300" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >7</text>
-<line x1="400" y1="300" x2="500" y2="300" stroke="black" />
-<text x="450" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >3</text>
-<text x="450" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >3</text>
-<line x1="500" y1="300" x2="600" y2="300" stroke="black" />
-<text x="550" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="550" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="600" y1="300" x2="800" y2="300" stroke="black" />
-<text x="700" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >15</text>
-<text x="700" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >15</text>
-<line x1="300" y1="400" x2="400" y2="300" stroke="black" />
-<text x="350" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >9</text>
-<text x="350" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >9</text>
-<line x1="700" y1="400" x2="600" y2="300" stroke="black" />
-<text x="650" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >8</text>
-<text x="650" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >8</text>
-<circle cx="300" cy="200" r="10" fill="rgb(90,0,164)" />
-<circle cx="300" cy="200" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="300" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >A</text>
-<circle cx="700" cy="200" r="10" fill="rgb(90,0,164)" />
-<circle cx="700" cy="200" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="700" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >B</text>
-<circle cx="200" cy="300" r="10" fill="rgb(90,0,164)" />
-<circle cx="200" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="200" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >C</text>
-<circle cx="400" cy="300" r="10" fill="rgb(90,0,164)" />
-<circle cx="400" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="400" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >D</text>
-<circle cx="500" cy="300" r="10" fill="rgb(90,0,164)" />
-<circle cx="500" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="500" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >E</text>
-<circle cx="600" cy="300" r="10" fill="rgb(90,0,164)" />
-<circle cx="600" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="600" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >F</text>
-<circle cx="800" cy="300" r="10" fill="rgb(0,0,255)" />
+<line x1="800" y1="300" x2="900" y2="300" stroke="black" />
+<text x="850" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >141</text>
+<text x="850" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >141</text>
+<line x1="800" y1="300" x2="800" y2="600" stroke="black" />
+<text x="800" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >157</text>
+<text x="800" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >157</text>
+<line x1="800" y1="300" x2="600" y2="300" stroke="black" />
+<text x="700" y="325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >120</text>
+<text x="700" y="325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >120</text>
+<line x1="800" y1="300" x2="1100" y2="500" stroke="black" />
+<text x="950" y="425" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >362</text>
+<text x="950" y="425" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >362</text>
+<line x1="800" y1="200" x2="900" y2="300" stroke="black" />
+<text x="850" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >110</text>
+<text x="850" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >110</text>
+<line x1="800" y1="200" x2="800" y2="300" stroke="black" />
+<text x="800" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >157</text>
+<text x="800" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >157</text>
+<line x1="500" y1="400" x2="600" y2="300" stroke="black" />
+<text x="550" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >131</text>
+<text x="550" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >131</text>
+<line x1="500" y1="400" x2="800" y2="600" stroke="black" />
+<text x="650" y="525" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >238</text>
+<text x="650" y="525" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >238</text>
+<line x1="500" y1="400" x2="500" y2="700" stroke="black" />
+<text x="500" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >185</text>
+<text x="500" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >185</text>
+<line x1="500" y1="400" x2="500" y2="1000" stroke="black" />
+<text x="500" y="725" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >359</text>
+<text x="500" y="725" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >359</text>
+<line x1="800" y1="600" x2="1100" y2="500" stroke="black" />
+<text x="950" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >331</text>
+<text x="950" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >331</text>
+<line x1="800" y1="600" x2="1100" y2="600" stroke="black" />
+<text x="950" y="625" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >385</text>
+<text x="950" y="625" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >385</text>
+<line x1="800" y1="600" x2="500" y2="700" stroke="black" />
+<text x="650" y="675" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >354</text>
+<text x="650" y="675" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >354</text>
+<line x1="800" y1="600" x2="500" y2="1000" stroke="black" />
+<text x="650" y="825" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >340</text>
+<text x="650" y="825" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >340</text>
+<line x1="800" y1="600" x2="200" y2="900" stroke="black" />
+<text x="500" y="775" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >385</text>
+<text x="500" y="775" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >385</text>
+<line x1="800" y1="600" x2="900" y2="1300" stroke="black" />
+<text x="850" y="975" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >423</text>
+<text x="850" y="975" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >423</text>
+<line x1="800" y1="600" x2="700" y2="900" stroke="black" />
+<text x="750" y="775" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >414</text>
+<text x="750" y="775" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >414</text>
+<line x1="800" y1="600" x2="900" y2="1000" stroke="black" />
+<text x="850" y="825" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >242</text>
+<text x="850" y="825" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >242</text>
+<line x1="800" y1="600" x2="1100" y2="800" stroke="black" />
+<text x="950" y="725" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >315</text>
+<text x="950" y="725" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >315</text>
+<line x1="1100" y1="500" x2="1100" y2="600" stroke="black" />
+<text x="1100" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >59</text>
+<text x="1100" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >59</text>
+<line x1="1100" y1="500" x2="1300" y2="600" stroke="black" />
+<text x="1200" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >166</text>
+<text x="1200" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >166</text>
+<line x1="1300" y1="600" x2="700" y2="900" stroke="black" />
+<text x="1000" y="775" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >243</text>
+<text x="1000" y="775" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >243</text>
+<line x1="1100" y1="800" x2="700" y2="900" stroke="black" />
+<text x="900" y="875" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >97</text>
+<text x="900" y="875" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >97</text>
+<line x1="1100" y1="800" x2="1400" y2="1100" stroke="black" />
+<text x="1250" y="975" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >262</text>
+<text x="1250" y="975" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >262</text>
+<line x1="1100" y1="800" x2="1200" y2="1200" stroke="black" />
+<text x="1150" y="1025" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >196</text>
+<text x="1150" y="1025" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >196</text>
+<line x1="200" y1="900" x2="500" y2="1000" stroke="black" />
+<text x="350" y="975" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >219</text>
+<text x="350" y="975" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >219</text>
+<line x1="200" y1="900" x2="200" y2="1100" stroke="black" />
+<text x="200" y="1025" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >136</text>
+<text x="200" y="1025" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >136</text>
+<line x1="200" y1="900" x2="900" y2="1300" stroke="black" />
+<text x="550" y="1125" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >534</text>
+<text x="550" y="1125" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >534</text>
+<line x1="200" y1="1100" x2="500" y2="1000" stroke="black" />
+<text x="350" y="1075" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >139</text>
+<text x="350" y="1075" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >139</text>
+<line x1="200" y1="1100" x2="200" y2="1500" stroke="black" />
+<text x="200" y="1325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >184</text>
+<text x="200" y="1325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >184</text>
+<line x1="1400" y1="1100" x2="1200" y2="1200" stroke="black" />
+<text x="1300" y="1175" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >149</text>
+<text x="1300" y="1175" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >149</text>
+<line x1="1400" y1="1100" x2="1300" y2="1500" stroke="black" />
+<text x="1350" y="1325" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >144</text>
+<text x="1350" y="1325" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >144</text>
+<line x1="700" y1="1200" x2="800" y2="600" stroke="black" />
+<text x="750" y="925" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >395</text>
+<text x="750" y="925" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >395</text>
+<line x1="700" y1="1200" x2="700" y2="1500" stroke="black" />
+<text x="700" y="1375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >93</text>
+<text x="700" y="1375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >93</text>
+<line x1="900" y1="1300" x2="700" y2="1500" stroke="black" />
+<text x="800" y="1425" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >180</text>
+<text x="800" y="1425" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >180</text>
+<line x1="1200" y1="1200" x2="1300" y2="1500" stroke="black" />
+<text x="1250" y="1375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >111</text>
+<text x="1250" y="1375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >111</text>
+<line x1="200" y1="1500" x2="500" y2="1000" stroke="black" />
+<text x="350" y="1275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >258</text>
+<text x="350" y="1275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >258</text>
+<line x1="200" y1="1500" x2="700" y2="1500" stroke="black" />
+<text x="450" y="1525" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >205</text>
+<text x="450" y="1525" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >205</text>
+<line x1="200" y1="1500" x2="400" y2="2100" stroke="black" />
+<text x="300" y="1825" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >217</text>
+<text x="300" y="1825" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >217</text>
+<line x1="200" y1="1500" x2="700" y2="2100" stroke="black" />
+<text x="450" y="1825" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >245</text>
+<text x="450" y="1825" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >245</text>
+<line x1="700" y1="1500" x2="700" y2="2100" stroke="black" />
+<text x="700" y="1825" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >205</text>
+<text x="700" y="1825" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >205</text>
+<line x1="700" y1="2100" x2="1000" y2="2200" stroke="black" />
+<text x="850" y="2175" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >205</text>
+<text x="850" y="2175" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >205</text>
+<line x1="1000" y1="1900" x2="1000" y2="2200" stroke="black" />
+<text x="1000" y="2075" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >157</text>
+<text x="1000" y="2075" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >157</text>
+<line x1="1000" y1="1900" x2="1200" y2="2200" stroke="black" />
+<text x="1100" y="2075" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >169</text>
+<text x="1100" y="2075" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >169</text>
+<line x1="1200" y1="2200" x2="1400" y2="2000" stroke="black" />
+<text x="1300" y="2125" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >199</text>
+<text x="1300" y="2125" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >199</text>
+<line x1="900" y1="1300" x2="1200" y2="1200" stroke="black" />
+<text x="1050" y="1275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >167</text>
+<text x="1050" y="1275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >167</text>
+<line x1="1200" y1="1200" x2="1000" y2="1900" stroke="black" />
+<text x="1100" y="1575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >305</text>
+<text x="1100" y="1575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >305</text>
+<line x1="1000" y1="1900" x2="900" y2="1300" stroke="black" />
+<text x="950" y="1625" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >333</text>
+<text x="950" y="1625" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >333</text>
+<circle cx="800" cy="300" r="10" fill="pink" />
 <circle cx="800" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="800" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >G</text>
-<circle cx="300" cy="400" r="10" fill="rgb(90,0,164)" />
-<circle cx="300" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="300" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >H</text>
-<circle cx="700" cy="400" r="10" fill="rgb(90,0,164)" />
-<circle cx="700" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="700" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >I</text>
+<text x="800" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Amiens</text>
+<circle cx="800" cy="200" r="10" fill="pink" />
+<circle cx="800" cy="200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="800" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Calais</text>
+<circle cx="900" cy="300" r="10" fill="pink" />
+<circle cx="900" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="900" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Lille</text>
+<circle cx="500" cy="400" r="10" fill="pink" />
+<circle cx="500" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="500" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Caen</text>
+<circle cx="600" cy="300" r="10" fill="pink" />
+<circle cx="600" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="600" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Rouen</text>
+<circle cx="800" cy="600" r="10" fill="pink" />
+<circle cx="800" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="800" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Paris</text>
+<circle cx="1100" cy="500" r="10" fill="pink" />
+<circle cx="1100" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1100" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Metz</text>
+<circle cx="1100" cy="600" r="10" fill="pink" />
+<circle cx="1100" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1100" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nancy</text>
+<circle cx="1300" cy="600" r="10" fill="pink" />
+<circle cx="1300" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1300" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Strasbourg</text>
+<circle cx="500" cy="700" r="10" fill="pink" />
+<circle cx="500" cy="700" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="500" y="730" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Rennes</text>
+<circle cx="1100" cy="800" r="10" fill="pink" />
+<circle cx="1100" cy="800" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1100" y="830" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Dijon</text>
+<circle cx="200" cy="900" r="10" fill="pink" />
+<circle cx="200" cy="900" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="200" y="930" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nantes</text>
+<circle cx="700" cy="900" r="10" fill="pink" />
+<circle cx="700" cy="900" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="930" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Besançon</text>
+<circle cx="200" cy="1100" r="10" fill="pink" />
+<circle cx="200" cy="1100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="200" y="1130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >LaRochelle</text>
+<circle cx="500" cy="1000" r="10" fill="pink" />
+<circle cx="500" cy="1000" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="500" y="1030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Poitiers</text>
+<circle cx="900" cy="1000" r="10" fill="pink" />
+<circle cx="900" cy="1000" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="900" y="1030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nevers</text>
+<circle cx="1400" cy="1100" r="10" fill="pink" />
+<circle cx="1400" cy="1100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1400" y="1130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Geneve</text>
+<circle cx="700" cy="1200" r="10" fill="pink" />
+<circle cx="700" cy="1200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="1230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Limoges</text>
+<circle cx="900" cy="1300" r="10" fill="pink" />
+<circle cx="900" cy="1300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="900" y="1330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >ClermondFerrant</text>
+<circle cx="1200" cy="1200" r="10" fill="pink" />
+<circle cx="1200" cy="1200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1200" y="1230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Lyon</text>
+<circle cx="200" cy="1500" r="10" fill="pink" />
+<circle cx="200" cy="1500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="200" y="1530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Bordeaux</text>
+<circle cx="700" cy="1500" r="10" fill="pink" />
+<circle cx="700" cy="1500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="1530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Brive</text>
+<circle cx="1300" cy="1500" r="10" fill="pink" />
+<circle cx="1300" cy="1500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1300" y="1530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Grenoble</text>
+<circle cx="400" cy="2100" r="10" fill="pink" />
+<circle cx="400" cy="2100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="400" y="2130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Pau</text>
+<circle cx="700" cy="2100" r="10" fill="pink" />
+<circle cx="700" cy="2100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="2130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Toulouse</text>
+<circle cx="1000" cy="1900" r="10" fill="pink" />
+<circle cx="1000" cy="1900" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1000" y="1930" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Montpellier</text>
+<circle cx="1000" cy="2200" r="10" fill="pink" />
+<circle cx="1000" cy="2200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1000" y="2230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Perpignan</text>
+<circle cx="1200" cy="2200" r="10" fill="pink" />
+<circle cx="1200" cy="2200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1200" y="2230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Marseille</text>
+<circle cx="1400" cy="2000" r="10" fill="pink" />
+<circle cx="1400" cy="2000" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1400" y="2030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nice</text>
 
 
 </svg>
