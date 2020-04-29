@@ -4,13 +4,13 @@ int main()
 {
     Graphe* Copie=new Graphe();
     Graphe* G=new Graphe();
-    int choix=0;
-    while (choix!=9)
+    int choix=-1;
+    while (choix!=0)
     {
         afficherMenu();
         do{
             std::cin>>choix;}
-        while(choix<1||(choix>7&&choix!=9));
+        while(choix<0||(choix>9));
 
         switchMenu(G, Copie, choix);
 

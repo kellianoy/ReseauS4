@@ -2,20 +2,44 @@
 
 void afficherMenu()
 {
-        std::cout<<"_________MENU_________\n\n";
+        std::cout<<"\t\tMENU\n\n";
         std::cout << "1. Charger une topologie\n";
-        std::cout << "2. Charger une ponderation\n";
-        std::cout << "3. Afficher le graphe dans le texte\n";
+        std::cout << "2. Charger une ponderation\n\n";
+        std::cout<<"_________Graphe\n\n";
+        std::cout << "3. Afficher les sommets et les aretes du graphe dans la console\n";
         std::cout << "4. Calculer et exporter les indices du graphe\n";
-        std::cout << "5. Test de connexite\n";
+        std::cout << "5. Tester la connexite du graphe\n\n";
+        std::cout<<"_________Sous-graphe\n\n";
         std::cout << "6. Supprimer une arete et former un sous-graphe\n";
-        std::cout << "7. Calculer les indices du sous-graphe\n";
-        std::cout << "\n\n9. Quitter\n";
+        std::cout << "7. Afficher le sous-graphe\n";
+        std::cout << "8. Calculer les indices du sous-graphe et comparer avec le graphe\n";
+        std::cout << "9. Tester la connexite du sous-graphe\n";
+
+        std::cout << "\n\n0. Quitter\n";
+}
+
+
+void comparaison(Graphe* G1, Graphe* G2)
+{
+    if(G1->getOrdre()==G2->getOrdre())
+    {
+        for (int i = 0 ; i < G1->getOrdre() ; ++i)
+        {
+            std::cout << "Sommet " << G1->getVectS()[i]->getNom() <<" :\n";
+            for(size_t j = 0 ; j < G1->getVectS()[i]->getVectI().size() ; ++j)
+            {
+                std::cout << "Avant : " << G1->getVectS()[i]->getVectI()[j]->getCritere();
+                std::cout << " | Apres : " << G2->getVectS()[i]->getVectI()[j]->getCritere();
+                std::cout << " | Comparaison : " << G2->getVectS()[i]->getVectI()[j]->getCritere()-G1->getVectS()[i]->getVectI()[j]->getCritere()<<std::endl ;
+            }
+            std::cout<<"\n\n";
+        }
+    }
 }
 
 void switchMenu(Graphe* G, Graphe* Copie, int choix)
 {
-    if(!G->grapheVide() && (choix!=1 && choix!=9))
+    if(!G->grapheVide() && (choix!=1 && choix!=0))
     {
         std::cout << "Vous devez d'abord charger une topologie."<< std::endl ;
         return ;
@@ -69,11 +93,6 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             {
                 std::cout<< "Connexite du graphe\n\n";
                 G->connexite();
-
-                std::cout<< "\n\nConnexite du sous-graphe\n\n";
-                Copie->connexite();
-                std::cout<<std::endl;
-
                 break;
             }
             case 6 :
@@ -83,10 +102,6 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 Copie->affichageAretes();
                 std::cin >> numArete;
                 Copie->deleteArete(numArete);
-
-                std::cout<< "Le nouveau sous-graphe genere est le suivant\n\n";
-                Copie->affichageTextuel();
-
                 Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
                 Copie->dessinGraphe(svgcopie);
 
@@ -95,16 +110,34 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             case 7 :
             {
                 if(G->grapheIdentique(Copie))
+                    Copie->affichageTextuel();
+                else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
+                break ;
+            }
+            case 8 :
+            {
+                if(G->grapheIdentique(Copie))
                 {
-                    std::cout<< "Indices du sous-graphe\n\n";
+                    G->calculIndice();
                     Copie->calculIndice();
-                    Copie->afficherIndice();
+                    comparaison(G, Copie);
                 }
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
 
                 break ;
             }
             case 9 :
+            {
+                if(G->grapheIdentique(Copie))
+                {
+                    std::cout<< "\n\nConnexite du sous-graphe\n\n";
+                    Copie->connexite();
+                    std::cout<<std::endl;
+                }
+                else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
+                break;
+            }
+            case 0 :
                 break;
             default :
             {

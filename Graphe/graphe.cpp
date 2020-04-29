@@ -196,6 +196,7 @@ void Graphe::affichageTextuel()
     std::cout << "Ordre : " << m_ordre << std::endl;
     std::cout << std::endl;
     affichageSommets();
+    affichageAretes();
 }
 
 ///sauvegarde de tous les indices dans un fichier texte
