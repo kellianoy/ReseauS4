@@ -13,6 +13,9 @@ class Graphe
         void lecture_topo(std::string fichier);
         void lecture_poids(std::string fichier);
         void chargerGraphe(std::string s1, std::string s2="") {lecture_topo(s1); lecture_poids(s2);}
+        bool grapheVide();
+        bool grapheIdentique(Graphe * Copie);
+
 
         //Get
         int getTaille() { return m_taille; }

@@ -15,6 +15,11 @@ void afficherMenu()
 
 void switchMenu(Graphe* G, Graphe* Copie, int choix)
 {
+    if(!G->grapheVide() && (choix!=1 && choix!=9))
+    {
+        std::cout << "Vous devez d'abord charger une topologie."<< std::endl ;
+        return ;
+    }
     switch(choix)
     {
             case 1:
@@ -40,12 +45,11 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             }
             case 2 :
             {
-                std::string poids;
-                std::cout << "Entrez le nom du fichier de poids"<<std::endl;
-                std::cin >> poids;
-
-                G->lecture_poids(poids);
-                Copie->lecture_poids(poids);
+                    std::string poids;
+                    std::cout << "Entrez le nom du fichier de poids"<<std::endl;
+                    std::cin >> poids;
+                    G->lecture_poids(poids);
+                    Copie->lecture_poids(poids);
                 break;
             }
             case 3:
@@ -89,10 +93,24 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 break;
             }
             case 7 :
-                std::cout<< "Indices du sous-graphe\n\n";
-                Copie->calculIndice();
-                Copie->afficherIndice();
+            {
+                if(G->grapheIdentique(Copie))
+                {
+                    std::cout<< "Indices du sous-graphe\n\n";
+                    Copie->calculIndice();
+                    Copie->afficherIndice();
+                }
+                else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
 
-        }
+                break ;
+            }
+            case 9 :
+                break;
+            default :
+            {
+                std::cout << "Commande invalide." << std::endl ;
+                break;
+            }
+    }
 }
 
