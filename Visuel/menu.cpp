@@ -11,7 +11,7 @@ void afficherMenu()
         std::cout << "5. Tester la connexite du graphe\n";
         std::cout << "6. Colorer les sommets en fonction d'un critere\n\n";
         std::cout<<"_________Sous-graphe\n\n";
-        std::cout << "7. Supprimer une arete et former un sous-graphe\n";
+        std::cout << "7. Supprimer une ou plusieurs aretes et former un sous-graphe\n";
         std::cout << "8. Afficher le sous-graphe\n";
         std::cout << "9. Calculer les indices du sous-graphe et comparer avec le graphe\n";
         std::cout << "10. Tester la connexite du sous-graphe\n";
@@ -111,11 +111,22 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             }
             case 7 :
             {
-                int numArete=0;
-                std::cout<< "Selectionner le numero de l'arete a supprimer\n\n";
+                std::string numArete;
+                std::cout<< "Selectionner le numero de l'arete a supprimer vous pouvez separer deux point a supprimer par un espace\n\n";
                 Copie->affichageAretes();
-                std::cin >> numArete;
-                Copie->deleteArete(numArete);
+                std::cin.ignore();/// la lecture bug à cause du std::cout du dessus, le '\n' empêche la lecture. le cin.ignore supprime le '\n' du buffer
+                std::getline(std::cin,numArete);
+                std::istringstream iss(numArete);
+                int value=-1;
+                while(iss)
+                {
+                    iss>>value;
+                    if(Copie->seekAreteId(value)!=nullptr)
+                    {
+                        Copie->deleteArete(value);
+                    }
+                }
+
                 Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
                 Copie->dessinGraphe(svgcopie);
 
