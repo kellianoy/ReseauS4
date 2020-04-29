@@ -18,7 +18,7 @@ void afficherMenu()
         std::cout << "\n\n0. Quitter\n";
 }
 
-
+//permet de comparer les indices de deux graphes
 void comparaison(Graphe* G1, Graphe* G2)
 {
     if(G1->getOrdre()==G2->getOrdre())
