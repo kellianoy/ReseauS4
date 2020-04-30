@@ -108,10 +108,19 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             }
             case 7 :
             {
-                std::cout<<"Selectionner les deux sommets\n";
+                G->affichageSommets();
+                std::cout<<"Selectionner le sommet source et le sommet puits\n";
                 int a=0, b=0;
-                std::cin>>a >> b;
-                G->FordFulkerson(G->seekSommet(a),G->seekSommet(b));
+                do
+                {
+                    fflush(stdin);
+                    std::cin>>a >> b;
+                }
+                while (!G->seekSommet(a)&&!G->seekSommet(b));
+                double flux=G->FordFulkerson(a, b);
+                std::cout << "Le flot maximum entre le sommet "<< G->seekSommet(a)->getNom() << " et " <<G->seekSommet(b)->getNom() << " est de " << flux<<std::endl;
+                Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                G->dessinFulkerson(svgout, G->seekSommet(a), G->seekSommet(b), flux);
                 break;
             }
             case 8 :

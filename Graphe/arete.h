@@ -17,13 +17,13 @@ class Arete
         Sommet* getS2() { return m_s2; }
         double getFlux() { return m_flux; }
 
-
         //Set
         void setIndice(int val) { m_indice = val; }
         void setPoids(double val) { m_poids = val; }
         void setFlux(double flux) {m_flux=flux;}
+
         //Dessin
-        void dessin(Svgfile& svgout, bool orientation) const;
+        void dessin(Svgfile& svgout, bool orientation, bool fordfulkerson=0) const;
 
     private:
 

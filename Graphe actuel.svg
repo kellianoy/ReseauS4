@@ -2,42 +2,43 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="1200">
 
 <line x1="400" y1="200" x2="300" y2="300" stroke="black" />
-<text x="350" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="350" y="275" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >4 / 4</text>
+<text x="350" y="275" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >4 / 4</text>
 <line x1="400" y1="200" x2="500" y2="300" stroke="black" />
-<text x="450" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="450" y="275" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >15 / 15</text>
+<text x="450" y="275" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >15 / 15</text>
 <line x1="300" y1="300" x2="400" y2="400" stroke="black" />
-<text x="350" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="350" y="375" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >4 / 20</text>
+<text x="350" y="375" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >4 / 20</text>
 <line x1="500" y1="300" x2="400" y2="400" stroke="black" />
-<text x="450" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="450" y="375" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >15 / 35</text>
+<text x="450" y="375" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >15 / 35</text>
 <line x1="400" y1="400" x2="300" y2="500" stroke="black" />
-<text x="350" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="350" y="475" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >19 / 45</text>
+<text x="350" y="475" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >19 / 45</text>
 <line x1="400" y1="400" x2="500" y2="500" stroke="black" />
-<text x="450" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="450" y="475" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >0 / 5</text>
+<text x="450" y="475" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 5</text>
 <line x1="300" y1="300" x2="200" y2="600" stroke="black" />
-<text x="250" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="250" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="250" y="475" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >0 / 22</text>
+<text x="250" y="475" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 22</text>
 <line x1="500" y1="300" x2="600" y2="600" stroke="black" />
-<text x="550" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="550" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="550" y="475" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >0 / 7</text>
+<text x="550" y="475" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 7</text>
 <line x1="300" y1="500" x2="400" y2="500" stroke="black" />
-<text x="350" y="525" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="525" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="350" y="525" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >19 / 34</text>
+<text x="350" y="525" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >19 / 34</text>
 <line x1="400" y1="500" x2="500" y2="500" stroke="black" />
-<text x="450" y="525" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="525" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="450" y="525" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >0 / 9</text>
+<text x="450" y="525" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 9</text>
 <line x1="500" y1="500" x2="600" y2="600" stroke="black" />
-<text x="550" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="550" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
+<text x="550" y="575" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >0 / 37</text>
+<text x="550" y="575" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 37</text>
 <line x1="300" y1="500" x2="200" y2="600" stroke="black" />
-<text x="250" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="250" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<circle cx="400" cy="200" r="10" fill="pink" />
+<text x="250" y="575" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >0 / 51</text>
+<text x="250" y="575" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 51</text>
+<text x="400" y="170" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Flux max : 19</text>
+<circle cx="400" cy="200" r="10" fill="Green" />
 <circle cx="400" cy="200" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="400" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >A</text>
 <circle cx="300" cy="300" r="10" fill="pink" />
@@ -52,7 +53,7 @@
 <circle cx="300" cy="500" r="10" fill="pink" />
 <circle cx="300" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="300" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >E</text>
-<circle cx="400" cy="500" r="10" fill="pink" />
+<circle cx="400" cy="500" r="10" fill="DarkRed" />
 <circle cx="400" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="400" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >F</text>
 <circle cx="500" cy="500" r="10" fill="pink" />

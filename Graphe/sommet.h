@@ -18,7 +18,6 @@ class Sommet
         std::vector<Indice*> getVectI() const { return m_vectI; }
         Aspect getAspect() const { return m_aspect; }
         std::vector<Sommet*> getVectAdj() const { return m_vectAdj; }
-        std::vector<Sommet*> getVectPre() const { return m_vectPre; }
         int getMarquage()const {return m_marquage;}
 
         //Set
@@ -26,11 +25,11 @@ class Sommet
         void setNom(std::string val) { m_nom = val; }
         void setAspect(Aspect a) { m_aspect = a; }
         void pushAdjacent(Sommet* S) {m_vectAdj.push_back(S);}
-        void pushPredecesseur(Sommet* S) {m_vectPre.push_back(S);}
         void setMarquage(int a) {m_marquage=a;}
 
         //Dessin
         void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
+        void dessinFulkerson(Svgfile& svgout, Sommet* a, Sommet* b, double flux) const;
         void colorerCritere(int num);
 
 
@@ -46,7 +45,6 @@ class Sommet
         Aspect m_aspect;
         std::vector<Indice*> m_vectI;
         std::vector<Sommet*> m_vectAdj;
-        std::vector<Sommet*> m_vectPre;
         bool m_marquage;
 
 
