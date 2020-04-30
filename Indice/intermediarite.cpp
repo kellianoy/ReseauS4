@@ -36,11 +36,8 @@ void Intermediarite::calculIndice()
     initialisation(valeurS);
 
     //lancement du plus court chemin
-    //parcours = m_graphe->BFSmodif(valeurS, m_sommet);
-    parcours = m_graphe->dijkstraModif(valeurS, m_sommet);
-
-    /*for(auto s : valeurS)
-        std::cout << s->s_ref->getNom() << " : " << s->s_predecesseur.size() << std::endl ;*/
+    if(m_sommet->getVectAdj().size() != 0)
+        parcours = m_graphe->dijkstraModif(valeurS, m_sommet);
 
     //recursif pour retrouver toutes les inerm�diarit�s
     while( !parcours.empty())
@@ -50,6 +47,7 @@ void Intermediarite::calculIndice()
         recurChemin(refer, refer, 0);
         parcours.pop();
     }
+
     //On met � jour les crit�res
     for(auto s : valeurS)
         s->s_ref->getVectI()[3]->setCritere(s->s_ref->getVectI()[3]->getCritere() + s->s_dependance);

@@ -316,58 +316,6 @@ Valeur* trouverValeur(std::vector<Valeur*> &valeurS, Sommet* atrouver)
 
                       /**Dijksra pour Brandes**/
 
-std::stack<Valeur*> Graphe::BFSmodif(std::vector<Valeur*> & valeurS, Sommet * base)
-{
-    std::stack<Valeur*> parcours ;
-    std::queue<Valeur *> file ;
-    Valeur * refer = trouverValeur(valeurS, base);
-    Valeur * suivant = nullptr ;
-    Arete * lien_refer_suivant = nullptr ;
-
-    file.push(refer);
-
-    while(! file.empty())
-    {
-        //on récupère la première valeur dans la file
-        refer = file.front();
-        file.pop();
-        //si on l'a déjà checker on a déjà trouvé le plus court chemin
-        if(refer->s_ref->getMarquage() != 1)
-        {
-            std::cout << refer->s_ref->getNom();
-            parcours.push(refer);
-        }
-        //on regarde tous les adjacents
-        for(auto s : refer->s_ref->getVectAdj())
-        {
-            suivant = trouverValeur(valeurS, s);
-            //on récupère la valeur de l'arrete entre les deux
-            lien_refer_suivant = seekArete(refer->s_ref->getIndice(), suivant->s_ref->getIndice());
-            //on regarde si le sommet n'a jamais été ajouter, on initialise sa distance à la base
-            if(suivant->s_distance == INT_MAX)
-            {
-                suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids() ;
-                file.push(suivant);
-            }
-            //si la distance est la plus petite alors c'est bon c'est un prédecesseur
-            if(suivant->s_distance == refer->s_distance + lien_refer_suivant->getPoids() )
-            {
-                suivant->s_nbpluscourt = refer->s_nbpluscourt + suivant->s_nbpluscourt;
-                suivant->s_predecesseur.push_back(refer);
-            }
-            if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
-            {
-                suivant->s_nbpluscourt = refer->s_nbpluscourt ;
-                suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids();
-                suivant->s_predecesseur.clear();
-                suivant->s_predecesseur.push_back(refer);
-            }
-        }
-    }
-    //on retourne le parcours pour analyse
-    return parcours ;
-}
-
 std::stack<Valeur*> Graphe::dijkstraModif(std::vector<Valeur*> & valeurS, Sommet * depart)
 {
     std::pair<Valeur*, double > n ;
@@ -392,7 +340,12 @@ std::stack<Valeur*> Graphe::dijkstraModif(std::vector<Valeur*> & valeurS, Sommet
     {
         referV = liste.top().first ;
         //poids = liste.top().second ;
-        if(referV->s_ref->getMarquage() != 1)
+        if(m_orientation == false)
+        {
+            if(referV->s_ref->getMarquage() != 1)
+                parcours.push(referV);
+        }
+        else
             parcours.push(referV);
         //std::cout << referV->s_ref->getNom() << std::endl ;
         //pour chaque successeur on vérifie si il a déjà été exploré sinon on l'insère
