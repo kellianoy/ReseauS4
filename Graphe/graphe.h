@@ -50,7 +50,13 @@ class Graphe
         void calculIndice();
 
         //Supprimer le graphe
-        void deleteGraphe(){ m_taille=0; m_ordre=0; m_orientation=0;  m_vectS.clear(); m_vectA.clear();     }
+        void deleteGraphe(){ m_taille=0; m_ordre=0; m_orientation=0;
+        for (size_t i=0 ; i<m_vectS.size() ; ++i)
+            delete (m_vectS[i]);
+        for (size_t i=0 ; i<m_vectA.size() ; ++i)
+            delete (m_vectA[i]);
+        m_vectS.clear();
+        m_vectA.clear();     }
 
         //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
@@ -61,10 +67,13 @@ class Graphe
         //Connexité
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
+        //K-arête-connexité
+        int kedgeconnexity();
 
         //Ford Fulkerson
         bool chaineAmeliorante(int S, int T, double* tabParent, double** capaciteResiduelle);
         double FordFulkerson(int S, int T);
+
 
 
     private:

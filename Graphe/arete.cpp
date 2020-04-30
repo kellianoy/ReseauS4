@@ -13,6 +13,7 @@ Arete::Arete(int id, Sommet* s1, Sommet* s2) : m_indice{id}, m_s1{s1}, m_s2{s2}
 
 Arete::~Arete()
 {
+
 }
 
 void Arete::dessin (Svgfile& svgout, bool orientation, bool fordfulkerson) const
