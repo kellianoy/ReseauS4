@@ -391,12 +391,10 @@ void Graphe::calculIndice()
 {
 
     for (auto s : m_vectS)
-    {
-        s->getVectI()[0]->calculIndice();
-        s->getVectI()[2]->calculIndice();
-        s->getVectI()[3]->calculIndice();
-    }
-      m_vectS[0]->getVectI()[1]->calculIndice();
+        for (size_t i=0; i < s->getVectI().size() ; ++i)
+            if (i!=1)
+                s->getVectI()[i]->calculIndice();
+    m_vectS[0]->getVectI()[1]->calculIndice();
 
 }
 
@@ -510,5 +508,33 @@ double Graphe::FordFulkerson(int S, int T)
        x->setFlux(abs(x->getPoids()-capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]));
 
 
+    for (int i=0 ; i<m_ordre ;++i)
+        delete (capaciteResiduelle[i]);
+    delete (capaciteResiduelle);
     return flotMax;
+}
+
+int Graphe::kedgeconnexity()
+{
+    //on sauvegarde la pondération et on la remet à 1 pour tous les chemins
+    std::vector<double> poids;
+    std::vector<int> flux;
+    for (auto a : m_vectA)
+    {
+        poids.push_back(a->getPoids());
+        a->setPoids(1);
+    }
+
+    //on teste 1 sommet avec tous les autres avec ford fulkerson
+    for (auto s : m_vectS)
+        if(s->getIndice()!=m_vectS[0]->getIndice())
+            flux.push_back(FordFulkerson(0, s->getIndice()));
+
+    //on remet la pondération comme avant
+    for (size_t i = 0; i<m_vectA.size() ; ++i)
+        m_vectA[i]->setPoids(poids[i]);
+
+    //on retourne le min des chemins
+    return *std::min_element(flux.begin(), flux.end());
+
 }

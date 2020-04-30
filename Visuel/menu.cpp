@@ -2,7 +2,8 @@
 
 void afficherMenu()
 {
-        std::cout<<"\t\tMENU\n\n";
+        std::cout<<"\n_____________________________________________\n";
+        std::cout<<"\n\t\tMENU\n\n";
         std::cout << "1. Charger une topologie\n";
         std::cout << "2. Charger une ponderation\n\n";
         std::cout<<"_________Graphe\n\n";
@@ -96,6 +97,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             {
                 std::cout<< "Connexite du graphe\n\n";
                 G->connexite();
+                std::cout<< "Le graphe est " << G->kedgeconnexity() << "-aretes-connexe\n";
                 break;
             }
             case 6 :
@@ -172,6 +174,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                     std::cout<< "\n\nConnexite du sous-graphe\n\n";
                     Copie->connexite();
                     std::cout<<std::endl;
+                    std::cout<< "Le sous-graphe est " << G->kedgeconnexity() << "-aretes-connexe\n";
                 }
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
                 break;
