@@ -345,13 +345,13 @@ std::stack<Valeur*> Graphe::BFSmodif(std::vector<Valeur*> & valeurS, Sommet * ba
                 suivant->s_nbpluscourt = refer->s_nbpluscourt + suivant->s_nbpluscourt;
                 suivant->s_predecesseur.push_back(refer);
             }
-            if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
+            /*if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
             {
                 suivant->s_nbpluscourt = refer->s_nbpluscourt ;
                 suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids();
                 suivant->s_predecesseur.clear();
                 suivant->s_predecesseur.push_back(refer);
-            }
+            }*/
         }
     }
     //on retourne le parcours pour analyse

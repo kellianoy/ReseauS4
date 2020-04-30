@@ -61,6 +61,8 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
+        void calculIndice();
+
         void ResetMarquage()
         {for (auto s : m_vectS)
         {s->setMarquage(0);}}
