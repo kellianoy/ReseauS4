@@ -11,11 +11,12 @@
 1588245908 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
 	"aspect.h"
 
-<<<<<<< HEAD
+1588245908 D
+
 1588245908 a:\riset\documents\code & programmation\reseaus4\visuel\aspect.h
 	"svgfile.h"
 
-1588245908 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
+1588145383 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>
@@ -28,12 +29,23 @@
 	<queue>
 	<utility>
 	<algorithm>
+	<string>
+	<fstream>
+	<set>
+	<iostream>
+	<sstream>
+	<vector>
+	<fstream>
+	<string>
+	<iostream>
+	<queue>
+	<utility>
 
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\indice.h
 	"graphe.h"
 
 1588254288 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
-=======
+
 1588083952 source:d:\ing2\thï¿½orie des graphs\projet\reseaus4\indice\centralite.cpp
 	"centralite.h"
 
@@ -45,10 +57,17 @@
 
 1588150154 ated upstream
 
-1588258393 d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.h
->>>>>>> Intermediarite
+1588259050 d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.h
 	"arete.h"
 	"Valeur.h"
+
+1588159022 ermediarite
+	"arete.h"
+	"Valeur.h"
+	"indice.h"
+	"Valeur.h"
+	"indice.h"
+	"indice.h"
 
 1588157004 d:\ing2\thï¿½orie des graphs\projet\reseaus4\graphe\graphe.h
 
@@ -101,12 +120,11 @@
 	"proximite.h"
 	"intermediarite.h"
 
-<<<<<<< HEAD
 1588245908 a:\riset\documents\code & programmation\reseaus4\graphe\arete.h
 	"sommet.h"
 
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\centralite.h
-=======
+
 1588058922 d:\ing2\thï¿½orie des graphs\projet\reseaus4\graphe\arete.h
 	"sommet.h"
 
@@ -123,11 +141,7 @@
 	"intermediarite.h"
 
 1588258271 d:\ing2\théorie des graphs\projet\reseaus4\indice\intermediarite.h
->>>>>>> Intermediarite
-	"indice.h"
-	"Valeur.h"
 
-<<<<<<< HEAD
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\vecteur.h
 	"indice.h"
 
@@ -135,7 +149,7 @@
 	"indice.h"
 
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\intermediarite.h
-=======
+
 1588163163 source:d:\ing2\thï¿½orie des graphs\projet\reseaus4\indice\intermediarite.cpp
 	"intermediarite.h"
 
@@ -169,15 +183,12 @@
 
 1588089667 source:d:\ing2\thï¿½orie des graphs\projet\reseaus4\graphe\sommet.cpp
 	"sommet.h"
->>>>>>> Intermediarite
-	"indice.h"
 
 1588159254 source:a:\riset\documents\code & programmation\reseaus4\indice\centralite.cpp
 	"centralite.h"
 
-<<<<<<< HEAD
 1588073382 source:a:\riset\documents\code & programmation\reseaus4\indice\indice.cpp
-=======
+
 1588083822 d:\école\info ingé 2\projet s4\reseaus4\indice\centralite.h
 	"indice.h"
 
@@ -211,8 +222,6 @@
 1588157109 d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\visuel\aspect.h
 
 1588061914 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\indice\indice.cpp
->>>>>>> Intermediarite
-	"indice.h"
 
 1588159254 source:a:\riset\documents\code & programmation\reseaus4\indice\intermediarite.cpp
 	"intermediarite.h"
@@ -224,10 +233,9 @@
 	"vecteur.h"
 	<math.h>
 
-<<<<<<< HEAD
 1588245908 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
 	"menu.h"
-=======
+
 1588083822 d:\école\info ingé 2\projet s4\reseaus4\indice\vecteur.h
 	"indice.h"
 
@@ -259,9 +267,13 @@
 	"arete.h"
 
 1588157109 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\graphe\sommet.cpp
->>>>>>> Intermediarite
 
-1588159254 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h
+1588146801 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h
+	"graphe.h"
+	"centralite.h"
+	"vecteur.h"
+	"proximite.h"
+	"intermediarite.h"
 	"graphe.h"
 	"centralite.h"
 	"vecteur.h"
@@ -271,20 +283,22 @@
 1588245908 source:a:\riset\documents\code & programmation\reseaus4\visuel\aspect.cpp
 	"aspect.h"
 
-<<<<<<< HEAD
 1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
 
 1588254737 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
 	"arete.h"
 	<sstream>
 
-1588252996 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+1588147538 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+	"menu.h"
 	"menu.h"
 
 1588254633 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
 	"graphe.h"
 	"indice.h"
-=======
+
+1588254633 
+
 1588083822 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.cpp
 
 1588157109 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\main.cpp
@@ -295,26 +309,11 @@
 
 1588157109 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\graphe\graphe.cpp
 
-1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
-
-1588145383 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
-	<string>
-	<fstream>
-	<set>
-	<iostream>
-	<sstream>
-	<vector>
-	<fstream>
-	<string>
-	<iostream>
-	<queue>
-	<utility>
-
 1588075975 d:\école\info ingé 2\projet s4\reseaus4\visuel\svgfile.h
 
 1588157109 d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\visuel\svgfile.h
 
-1588258308 d:\ing2\théorie des graphs\projet\reseaus4\visuel\svgfile.h
+1588258934 d:\ing2\théorie des graphs\projet\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>
@@ -326,6 +325,7 @@
 	<iostream>
 	<queue>
 	<utility>
+	<algorithm>
 	<stack>
 	<unordered_map>
 
@@ -341,16 +341,6 @@
 
 1588060306 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\visuel\svgfile.cpp
 
-1588147538 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
-	"menu.h"
-
-1588146801 a:\riset\documents\code & programmation\reseaus4\visuel\menu.h
-	"graphe.h"
-	"centralite.h"
-	"vecteur.h"
-	"proximite.h"
-	"intermediarite.h"
-
 1588150154 d:\ing2\théorie des graphs\projet\reseaus4\visuel\menu.h
 	"graphe.h"
 	"centralite.h"
@@ -363,7 +353,7 @@
 1588258144 source:d:\ing2\théorie des graphs\projet\reseaus4\visuel\menu.cpp
 	"menu.h"
 
-1588258279 d:\ing2\théorie des graphs\projet\reseaus4\indice\valeur.h
+1588258580 d:\ing2\théorie des graphs\projet\reseaus4\indice\valeur.h
 
 1588150154 source:d:\ing2\thï¿½orie des graphs\projet\reseaus4\visuel\menu.cpp
 	"menu.h"
@@ -379,7 +369,6 @@
 
 1588159022 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\visuel\menu.cpp
 	"menu.h"
->>>>>>> Intermediarite
 
 1588083952 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\centralite.cpp
 	"centralite.h"
@@ -390,13 +379,13 @@
 1588083952 d:\ing2\théorie des graphs\projet\reseaus4\indice\indice.h
 	"graphe.h"
 
-1588258144 d:\ing2\théorie des graphs\projet\reseaus4\graphe\arete.h
+1588258561 d:\ing2\théorie des graphs\projet\reseaus4\graphe\arete.h
 	"sommet.h"
 
-1588258144 d:\ing2\théorie des graphs\projet\reseaus4\graphe\sommet.h
+1588258561 d:\ing2\théorie des graphs\projet\reseaus4\graphe\sommet.h
 	"aspect.h"
 
-1588258144 d:\ing2\théorie des graphs\projet\reseaus4\visuel\aspect.h
+1588258561 d:\ing2\théorie des graphs\projet\reseaus4\visuel\aspect.h
 	"svgfile.h"
 
 1588079396 source:d:\ing2\théorie des graphs\projet\reseaus4\indice\indice.cpp
@@ -413,8 +402,9 @@
 
 1588058922 source:d:\ing2\théorie des graphs\projet\reseaus4\visuel\svgfile.cpp
 
-1588258144 source:d:\ing2\théorie des graphs\projet\reseaus4\graphe\arete.cpp
+1588258561 source:d:\ing2\théorie des graphs\projet\reseaus4\graphe\arete.cpp
 	"arete.h"
+	<sstream>
 
 1588258144 source:d:\ing2\théorie des graphs\projet\reseaus4\graphe\sommet.cpp
 	"sommet.h"

@@ -79,14 +79,6 @@ class Graphe
         bool chaineAmeliorante(int S, int T, double* tabParent, double** capaciteResiduelle);
         double FordFulkerson(int S, int T);
 
-
-
-        void calculIndice();
-
-        void ResetMarquage()
-        {for (auto s : m_vectS)
-        {s->setMarquage(0);}}
-
     private:
 
         int m_taille;
