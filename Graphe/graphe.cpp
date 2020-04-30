@@ -68,10 +68,11 @@ void Graphe::lecture_topo(std::string fichier)
         ifs >> id1;
         ifs >> id2;
         if (!m_orientation)
+        {
             seekSommet(id2)->pushAdjacent(seekSommet(id1));
+        }
         m_vectA.push_back(new Arete(id, seekSommet(id1), seekSommet(id2)));
         seekSommet(id1)->pushAdjacent(seekSommet(id2));
-
     }
 
 }
@@ -111,10 +112,13 @@ Arete* Graphe::seekArete(int id1, int id2)
     {
         for (auto it : m_vectA)
         {
-            if (((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))||((id1==it->getS2()->getIndice()) && (id2==it->getS1()->getIndice())))
+            if (!m_orientation)
             {
-               return it;
+                if (((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))||((id1==it->getS2()->getIndice()) && (id2==it->getS1()->getIndice())))
+                   return it;
             }
+            else if ((id1==it->getS1()->getIndice()) && (id2==it->getS2()->getIndice()))
+                return it;
         }
     }
     return nullptr;
@@ -315,15 +319,18 @@ bool testVecteur(Sommet* s, std::vector<Sommet*> colored)
 //Parcours bfs
 void Graphe::bfs(Sommet* initial, std::vector<Sommet*>& colored)
 {
+    ResetMarquage();
     std::queue<Sommet*> file;
     //On remplit la file
     file.push(initial);
     colored.push_back(initial);
+    initial->setMarquage(1);
     while (file.size())
     {
         for (auto it : file.front()->getVectAdj())
-            if (testVecteur(it, colored)) //Si le sommet n'a pas déjà été pris
+            if (!it->getMarquage()) //Si le sommet n'a pas déjà été pris
             {
+                it->setMarquage(1);
                 file.push(it);
                 colored.push_back(it);
             }
@@ -407,4 +414,93 @@ void Graphe::colorerCritere()
     }while(choix<0||choix>3);
     for (auto s : m_vectS)
         s->colorerCritere(choix);
+}
+
+
+bool Graphe::chaineAmeliorante(int S, int T, double* tabParent, double** capaciteResiduelle)
+{
+    //on effectue un bfs qui rempli le tableau de parent si il existe une chaine améliorante
+    std::queue<int> file;
+    bool visite[m_ordre];
+    //On réinitialise le tableau de visite
+    for (int i = 0; i< m_ordre ;++i)
+        visite[i]=0;
+    //la source n'a pas de prédécesseur
+    tabParent[S] = -1;
+    file.push(S);
+    while (!file.empty()) //tant que la file n'est pas vide
+    {
+        int u=file.front();
+        file.pop();
+        for (int i=0 ; i<m_ordre ; ++i)
+        {
+            if (visite[i]==false && capaciteResiduelle[u][i] > 0.0) //Si le sommet n'a pas déjà été pris et que la capacité residuelle (poids d'une arête - flux sur une arête) est supérieure à 0
+            {
+                file.push(i);
+                tabParent[i]=u; //On marque le parent
+                visite[i]=true; //On marque la visite
+
+            }
+        }
+    }
+    if (visite[T]==true) //Si le sommet de fin a été marqué, c'est qu'il existe une chaine améliorante
+        return true;
+    return false; //Sinon on retourne faux
+}
+
+
+double Graphe::FordFulkerson(int S, int T)
+{
+    int i=0, u=0;
+
+    //On met tous les flux à 0 pour commencer
+    for (auto a : m_vectA)
+        a->setFlux(0);
+
+    //Tableau à deux dimensions alloué dynamiquement
+    double** capaciteResiduelle=new double* [m_ordre];
+    for (int i=0 ; i<m_ordre ;++i)
+    {
+        capaciteResiduelle[i]=new double [m_ordre];
+        for (int j=0 ; j<m_ordre ;++j)
+            capaciteResiduelle[i][j]=0.0;
+    }
+
+    //On répertorie dans une matrice d'adjacence l'ensemble des poids sur les arêtes
+    for(auto x : m_vectA)
+        capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]=x->getPoids();
+
+
+    //On crée un tableau afin de stocker le chemin du puit à la source
+    double tabParent[m_ordre];
+
+    //On déclare le flot max
+    double flotMax=0;
+
+    //on arrête la boucle lorsqu'il n'y a plus de chaîne améliorante
+    while(chaineAmeliorante(S, T, tabParent, capaciteResiduelle))
+    {
+        //On déclare le chemin à max pour pouvoir prendre le minimum entre le chemin et le précédent chemin
+        double chemin=INT_MAX;
+
+        for(i=T ; i!=S ; i=tabParent[i])
+        {
+            u=tabParent[i];
+            chemin=std::min(chemin, capaciteResiduelle[u][i]); //on prend le minimum entre le nouveau chemin et le précédent chemin stocké
+        }
+
+        //On augmente chaque arete direct de chemin et diminue chaque arete indirecte de chemin
+        for(i=T ; i!=S ; i=tabParent[i])
+        {
+            u=tabParent[i];
+            capaciteResiduelle[u][i]-=chemin;
+            capaciteResiduelle[i][u]+=chemin;
+        }
+        flotMax+=chemin;
+
+    }
+    for(auto x : m_vectA)
+       x->setFlux(x->getPoids()-capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]);
+
+    return flotMax;
 }

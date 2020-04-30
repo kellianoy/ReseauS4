@@ -21,6 +21,7 @@ class Aspect
 
         //Dessin
         void dessin(Svgfile& svgout, std::string nom) const;
+        void dessinFulkerson(Svgfile& svgout, std::string nom, bool debut, bool fin, double flux=0) const;
 
     private:
         int m_x;

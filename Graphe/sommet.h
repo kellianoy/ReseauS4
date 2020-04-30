@@ -29,6 +29,7 @@ class Sommet
 
         //Dessin
         void dessin(Svgfile& svgout) const { m_aspect.dessin(svgout, m_nom); }
+        void dessinFulkerson(Svgfile& svgout, Sommet* a, Sommet* b, double flux) const;
         void colorerCritere(int num);
 
 
@@ -44,7 +45,7 @@ class Sommet
         Aspect m_aspect;
         std::vector<Indice*> m_vectI;
         std::vector<Sommet*> m_vectAdj;
-        int m_marquage;
+        bool m_marquage;
 
 
 };

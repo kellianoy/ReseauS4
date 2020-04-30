@@ -28,6 +28,7 @@ class Graphe
         void setTaille(int val) { m_taille = val; }
         void setOrdre(int val) { m_ordre = val; }
         void setOrientation(bool val) { m_orientation = val; }
+        void ResetMarquage(){for (auto s : m_vectS){s->setMarquage(false);}}
 
         //Recherche
         Sommet* seekSommet(int id);
@@ -39,7 +40,8 @@ class Graphe
         void affichageAretes();
         void affichageSommets();
         void affichageTextuel();
-        void dessinGraphe(Svgfile& svgout) const {for (auto a : m_vectA) a->dessin(svgout, m_orientation); for (auto s : m_vectS) s->dessin(svgout);}
+        void dessinGraphe(Svgfile& svgout, bool fordfulkerson=0) const {for (auto a : m_vectA) a->dessin(svgout, m_orientation, fordfulkerson); for (auto s : m_vectS) s->dessin(svgout);}
+        void dessinFulkerson(Svgfile& svgout, Sommet* a, Sommet* b, double flux, bool fordfulkerson=1) const {for (auto a : m_vectA) a->dessin(svgout, m_orientation, fordfulkerson); for (auto s : m_vectS) s->dessinFulkerson(svgout, a, b, flux);}
         void colorerCritere();
 
         //Indices
@@ -60,6 +62,9 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
+        //Ford Fulkerson
+        bool chaineAmeliorante(int S, int T, double* tabParent, double** capaciteResiduelle);
+        double FordFulkerson(int S, int T);
 
 
     private:

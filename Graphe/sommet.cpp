@@ -57,3 +57,13 @@ void Sommet::colorerCritere(int num)
     if (num>=0&&num<4)
         m_aspect.setColor(Svgfile::makeRGB(255*(m_vectI[num]->normalisation()),0,255*(1-m_vectI[num]->normalisation())));
 }
+
+void Sommet::dessinFulkerson(Svgfile& svgout, Sommet* a, Sommet* b, double flux) const
+{
+            if (a->getIndice()==m_indice)
+                m_aspect.dessinFulkerson(svgout, m_nom, 1, 0, flux);
+            else if (b->getIndice()==m_indice)
+                m_aspect.dessinFulkerson(svgout, m_nom, 0, 1);
+            else
+                m_aspect.dessinFulkerson(svgout, m_nom, 0, 0);
+}
