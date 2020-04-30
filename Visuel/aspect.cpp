@@ -26,7 +26,7 @@ void Aspect::dessin(Svgfile& svgout, std::string nom) const
 void Aspect::dessinFulkerson(Svgfile& svgout, std::string nom, bool debut, bool fin, double flux) const
 {
     if (!debut && !fin)
-        svgout.addDisk(m_x*N+100 , m_y*75+100, 10, m_color);
+        svgout.addDisk(m_x*N+100 , m_y*N+100, 10, m_color);
     else if (debut)
     {
         std::ostringstream oss;
