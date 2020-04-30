@@ -14,7 +14,7 @@ class Intermediarite : public Indice
         void afficher() ;
         void initialisation(std::vector<Valeur*> &valeurS);
         std::stack<Valeur*> BFSmodif(std::vector<Valeur*> & valeurS);
-        void recurChemin(Valeur* refer, Valeur* top);
+        void recurChemin(Valeur* refer, Valeur* top, int a);
 
     private:
 };

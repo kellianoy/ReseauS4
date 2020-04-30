@@ -176,10 +176,6 @@ void Graphe::lecture_poids(std::string fichier)
             ifs >> value;
             seekAreteId(id)->setPoids(value);
         }
-        for (auto a : m_vectA)
-        {
-            std::cout<<"Poids :" << a->getPoids()<<std::endl;
-        }
     }
 }
 
@@ -337,7 +333,10 @@ std::stack<Valeur*> Graphe::BFSmodif(std::vector<Valeur*> & valeurS, Sommet * ba
         file.pop();
         //si on l'a déjà checker on a déjà trouvé le plus court chemin
         if(refer->s_ref->getMarquage() != 1)
+        {
+            std::cout << refer->s_ref->getNom();
             parcours.push(refer);
+        }
         //on regarde tous les adjacents
         for(auto s : refer->s_ref->getVectAdj())
         {
@@ -356,16 +355,68 @@ std::stack<Valeur*> Graphe::BFSmodif(std::vector<Valeur*> & valeurS, Sommet * ba
                 suivant->s_nbpluscourt = refer->s_nbpluscourt + suivant->s_nbpluscourt;
                 suivant->s_predecesseur.push_back(refer);
             }
-            /*if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
+            if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
             {
                 suivant->s_nbpluscourt = refer->s_nbpluscourt ;
                 suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids();
                 suivant->s_predecesseur.clear();
                 suivant->s_predecesseur.push_back(refer);
-            }*/
+            }
         }
     }
     //on retourne le parcours pour analyse
+    return parcours ;
+}
+
+std::stack<Valeur*> Graphe::dijkstraModif(std::vector<Valeur*> & valeurS, Sommet * depart)
+{
+    std::pair<Valeur*, double > n ;
+    std::stack<Valeur*> parcours ;
+    std::vector<std::pair<Valeur*, int>> SuccesseurDirect ;
+    Valeur * referV = trouverValeur(valeurS, depart);
+    Valeur* suivant = nullptr ;
+    Arete* lien_refer_suivant = nullptr ;
+
+    //creation de la priority queue
+    auto comp = [](const std::pair<Valeur*, double> &u , const std::pair<Valeur*, double> &v){return u.second > v.second;};
+    std::priority_queue< std::pair<Valeur*, double> ,  std::vector<std::pair<Valeur*, double>> ,  decltype(comp)> liste(comp) ;
+
+    //on met tous nos sommet comme non "vu" et sans predecesseur défini
+    for(auto s : valeurS)
+        s->s_marquage = false ;
+
+    //on ajoute le premier sommet dans la pririty queue on le marque comme vu
+    liste.push({referV, 0});
+    referV->s_marquage = true ;
+    do
+    {
+        referV = liste.top().first ;
+        //poids = liste.top().second ;
+        if(referV->s_ref->getMarquage() != 1)
+            parcours.push(referV);
+        //pour chaque successeur on vérifie si il a déjà été exploré sinon on l'insère
+        for(auto s : referV->s_ref->getVectAdj())
+        {
+               std::cout << "in" ;
+            suivant = trouverValeur(valeurS, s);
+            lien_refer_suivant = seekArete(referV->s_ref->getIndice(), suivant->s_ref->getIndice());
+
+            if(suivant->s_distance == INT_MAX)
+            {
+                suivant->s_distance = referV->s_distance + lien_refer_suivant->getPoids() ;
+                liste.push(std::make_pair(suivant, suivant->s_distance));
+            }
+            //si la distance est la plus petite alors c'est bon c'est un prédecesseur
+            if(suivant->s_distance == referV->s_distance + lien_refer_suivant->getPoids() )
+            {
+                suivant->s_nbpluscourt = referV->s_nbpluscourt + suivant->s_nbpluscourt;
+                suivant->s_predecesseur.push_back(referV);
+            }
+        }
+        referV->s_marquage = true ;
+        liste.pop();
+    //on répète tant que la liste n'est pas vide ou que le point n'a pas été trouvé
+    }while(liste.empty() == true) ;
     return parcours ;
 }
 
