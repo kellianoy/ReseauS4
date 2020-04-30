@@ -60,6 +60,11 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
+        double maxX()
+        {std::vector<double> X; for (auto s : m_vectS) X.push_back(s->getAspect().getX()); return *std::max_element(X.begin(), X.end())*100+100;}
+
+        double maxY()
+        {std::vector<double> Y; for (auto s : m_vectS) Y.push_back(s->getAspect().getY()); return *std::max_element(Y.begin(), Y.end())*100+100;}
 
 
     private:

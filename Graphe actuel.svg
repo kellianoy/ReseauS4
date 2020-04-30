@@ -1,69 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="1200">
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="600">
 
-<line x1="400" y1="200" x2="300" y2="300" stroke="black" />
-<text x="350" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="400" y1="200" x2="500" y2="300" stroke="black" />
-<text x="450" y="275" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="275" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="300" y1="300" x2="400" y2="400" stroke="black" />
-<text x="350" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="500" y1="300" x2="400" y2="400" stroke="black" />
-<text x="450" y="375" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="375" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="400" y1="400" x2="300" y2="500" stroke="black" />
-<text x="350" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="400" y1="400" x2="500" y2="500" stroke="black" />
-<text x="450" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="300" y1="300" x2="200" y2="600" stroke="black" />
-<text x="250" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="250" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="500" y1="300" x2="600" y2="600" stroke="black" />
-<text x="550" y="475" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="550" y="475" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="300" y1="500" x2="400" y2="500" stroke="black" />
-<text x="350" y="525" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="350" y="525" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="400" y1="500" x2="500" y2="500" stroke="black" />
-<text x="450" y="525" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="450" y="525" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="500" y1="500" x2="600" y2="600" stroke="black" />
-<text x="550" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="550" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<line x1="300" y1="500" x2="200" y2="600" stroke="black" />
-<text x="250" y="575" stroke="FireBrick" stroke-width="2.5" fill="FireBrick" style="text-anchor: middle" >1</text>
-<text x="250" y="575" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >1</text>
-<circle cx="400" cy="200" r="10" fill="rgb(0,0,255)" />
-<circle cx="400" cy="200" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="400" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >A</text>
-<circle cx="300" cy="300" r="10" fill="rgb(0,0,255)" />
-<circle cx="300" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="300" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >B</text>
-<circle cx="500" cy="300" r="10" fill="rgb(0,0,255)" />
-<circle cx="500" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="500" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >C</text>
-<circle cx="400" cy="400" r="10" fill="rgb(0,0,255)" />
+<line x1="325" y1="175" x2="250" y2="250" stroke="black" />
+<text x="287" y="212" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >4</text>
+<text x="287" y="212" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >4</text>
+<line x1="325" y1="175" x2="400" y2="250" stroke="black" />
+<text x="362" y="212" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >15</text>
+<text x="362" y="212" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >15</text>
+<line x1="250" y1="250" x2="325" y2="325" stroke="black" />
+<text x="287" y="287" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >20</text>
+<text x="287" y="287" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >20</text>
+<line x1="400" y1="250" x2="325" y2="325" stroke="black" />
+<text x="362" y="287" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >35</text>
+<text x="362" y="287" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >35</text>
+<line x1="325" y1="325" x2="250" y2="400" stroke="black" />
+<text x="287" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >45</text>
+<text x="287" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >45</text>
+<line x1="325" y1="325" x2="400" y2="400" stroke="black" />
+<text x="362" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >5</text>
+<text x="362" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >5</text>
+<line x1="250" y1="250" x2="175" y2="475" stroke="black" />
+<text x="212" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >22</text>
+<text x="212" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >22</text>
+<line x1="400" y1="250" x2="475" y2="475" stroke="black" />
+<text x="437" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >7</text>
+<text x="437" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >7</text>
+<line x1="250" y1="400" x2="325" y2="400" stroke="black" />
+<text x="287" y="400" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >34</text>
+<text x="287" y="400" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >34</text>
+<line x1="325" y1="400" x2="400" y2="400" stroke="black" />
+<text x="362" y="400" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >9</text>
+<text x="362" y="400" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >9</text>
+<line x1="400" y1="400" x2="475" y2="475" stroke="black" />
+<text x="437" y="437" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >37</text>
+<text x="437" y="437" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >37</text>
+<line x1="250" y1="400" x2="175" y2="475" stroke="black" />
+<text x="212" y="437" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >51</text>
+<text x="212" y="437" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >51</text>
+<circle cx="325" cy="175" r="10" fill="pink" />
+<circle cx="325" cy="175" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="325" y="205" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >A</text>
+<circle cx="250" cy="250" r="10" fill="pink" />
+<circle cx="250" cy="250" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="250" y="280" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >B</text>
+<circle cx="400" cy="250" r="10" fill="pink" />
+<circle cx="400" cy="250" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="400" y="280" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >C</text>
+<circle cx="325" cy="325" r="10" fill="pink" />
+<circle cx="325" cy="325" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="325" y="355" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >D</text>
+<circle cx="250" cy="400" r="10" fill="pink" />
+<circle cx="250" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="250" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >E</text>
+<circle cx="325" cy="400" r="10" fill="pink" />
+<circle cx="325" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="325" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >F</text>
+<circle cx="400" cy="400" r="10" fill="pink" />
 <circle cx="400" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="400" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >D</text>
-<circle cx="300" cy="500" r="10" fill="rgb(0,0,255)" />
-<circle cx="300" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="300" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >E</text>
-<circle cx="400" cy="500" r="10" fill="rgb(0,0,255)" />
-<circle cx="400" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="400" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >F</text>
-<circle cx="500" cy="500" r="10" fill="rgb(0,0,255)" />
-<circle cx="500" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="500" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >G</text>
-<circle cx="200" cy="600" r="10" fill="rgb(0,0,255)" />
-<circle cx="200" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="200" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >H</text>
-<circle cx="600" cy="600" r="10" fill="rgb(0,0,255)" />
-<circle cx="600" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="600" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >I</text>
+<text x="400" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >G</text>
+<circle cx="175" cy="475" r="10" fill="pink" />
+<circle cx="175" cy="475" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="175" y="505" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >H</text>
+<circle cx="475" cy="475" r="10" fill="pink" />
+<circle cx="475" cy="475" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="475" y="505" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >I</text>
 
 
 </svg>

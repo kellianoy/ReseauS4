@@ -168,10 +168,6 @@ void Graphe::lecture_poids(std::string fichier)
             ifs >> value;
             seekAreteId(id)->setPoids(value);
         }
-        for (auto a : m_vectA)
-        {
-            std::cout<<"Poids :" << a->getPoids()<<std::endl;
-        }
     }
 }
 
@@ -299,16 +295,6 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 return AscendantDistance;
 }
 
-//Si le sommet est dans le vecteur, on retourne 0 sinon on retourne 1
-bool testVecteur(Sommet* s, std::vector<Sommet*> colored)
-{
-    for(auto c : colored)
-        if (s->getIndice()==c->getIndice())
-            return 0;
-
-    return 1;
-}
-
 //Parcours bfs
 void Graphe::bfs(Sommet* initial, std::vector<Sommet*>& colored)
 {
@@ -379,7 +365,6 @@ void Graphe::connexite()
 //Calcul des indices
 void Graphe::calculIndice()
 {
-
     for (auto s : m_vectS)
     {
         s->getVectI()[0]->calculIndice();
@@ -404,4 +389,139 @@ void Graphe::colorerCritere()
     }while(choix<0||choix>3);
     for (auto s : m_vectS)
         s->colorerCritere(choix);
+}
+
+
+bool Graphe::chaineAmeliorante(int S, int T, double* tabParent, double** capaciteResiduelle)
+{
+    //on effectue un bfs qui rempli le tableau de parent si il existe une chaine améliorante
+    std::queue<int> file;
+    bool visite[m_ordre];
+    //On réinitialise le tableau de visite
+    for (int i = 0; i< m_ordre ;++i)
+        visite[i]=0;
+    //la source n'a pas de prédécesseur
+    tabParent[S] = -1;
+    file.push(S);
+    while (!file.empty()) //tant que la file n'est pas vide
+    {
+        int u=file.front();
+        file.pop();
+        for (int i=0 ; i<m_ordre ; ++i)
+        {
+            if (visite[i]==false && capaciteResiduelle[u][i] > 0.0) //Si le sommet n'a pas déjà été pris et que la capacité residuelle (poids d'une arête - flux sur une arête) est supérieure à 0
+            {
+                file.push(i);
+                tabParent[i]=u; //On marque le parent
+                visite[i]=true; //On marque la visite
+
+            }
+        }
+    }
+    if (visite[T]==true) //Si le sommet de fin a été marqué, c'est qu'il existe une chaine améliorante
+        return true;
+    return false; //Sinon on retourne faux
+}
+
+
+//SOURCES DE L'ALGORITHME DE FORD FULKERSON
+
+//https://www.srcmake.com/home/cpp-ford-fulkerson-max-flow
+
+//https://www.sanfoundry.com/cpp-program-implement-ford-fulkerson-algorithm/
+
+//https://github.com/chichunchen/Algorithm/blob/master/assignment6/Ford-Fulkerson.cpp
+
+//https://www.researchgate.net/publication/338969453_IMPLEMENTATION_OF_FORD_FULKERSON_CALCULATION_IN_C_PROGRAMMING_LANGUAGE
+
+double Graphe::FordFulkerson(int S, int T)
+{
+    int i=0, u=0;
+
+    //On met tous les flux à 0 pour commencer
+    for (auto a : m_vectA)
+        a->setFlux(0);
+
+    //Tableau à deux dimensions alloué dynamiquement
+    double** capaciteResiduelle=new double* [m_ordre];
+    for (int i=0 ; i<m_ordre ;++i)
+    {
+        capaciteResiduelle[i]=new double [m_ordre];
+        for (int j=0 ; j<m_ordre ;++j)
+            capaciteResiduelle[i][j]=0.0;
+    }
+
+    //On répertorie dans une matrice d'adjacence l'ensemble des poids sur les arêtes
+
+    for(auto x : m_vectA)
+    {
+        if(!m_orientation)
+            capaciteResiduelle[x->getS2()->getIndice()][x->getS1()->getIndice()]=x->getPoids();
+        capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]=x->getPoids();
+    }
+
+
+
+    //On crée un tableau afin de stocker le chemin du puit à la source
+    double tabParent[m_ordre];
+
+    //On déclare le flot max
+    double flotMax=0;
+
+    //on arrête la boucle lorsqu'il n'y a plus de chaîne améliorante
+    while(chaineAmeliorante(S, T, tabParent, capaciteResiduelle))
+    {
+        //On déclare le chemin à max pour pouvoir prendre le minimum entre le chemin et le précédent chemin
+        double chemin=INT_MAX;
+
+        for(i=T ; i!=S ; i=tabParent[i])
+        {
+            u=tabParent[i];
+            chemin=std::min(chemin, capaciteResiduelle[u][i]); //on prend le minimum entre le nouveau chemin et le précédent chemin stocké
+        }
+
+        //On augmente chaque arete direct de chemin et diminue chaque arete indirecte de chemin
+        for(i=T ; i!=S ; i=tabParent[i])
+        {
+            u=tabParent[i];
+            capaciteResiduelle[u][i]-=chemin;
+            capaciteResiduelle[i][u]+=chemin;
+        }
+        flotMax+=chemin;
+
+    }
+
+    for(auto x : m_vectA)
+       x->setFlux(abs(x->getPoids()-capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]));
+
+
+    for (int i=0 ; i<m_ordre ;++i)
+        delete (capaciteResiduelle[i]);
+    delete (capaciteResiduelle);
+    return flotMax;
+}
+
+int Graphe::kedgeconnexity()
+{
+    //on sauvegarde la pondération et on la remet à 1 pour tous les chemins
+    std::vector<double> poids;
+    std::vector<int> flux;
+    for (auto a : m_vectA)
+    {
+        poids.push_back(a->getPoids());
+        a->setPoids(1);
+    }
+
+    //on teste 1 sommet avec tous les autres avec ford fulkerson
+    for (auto s : m_vectS)
+        if(s->getIndice()!=m_vectS[0]->getIndice())
+            flux.push_back(FordFulkerson(0, s->getIndice()));
+
+    //on remet la pondération comme avant
+    for (size_t i = 0; i<m_vectA.size() ; ++i)
+        m_vectA[i]->setPoids(poids[i]);
+
+    //on retourne le min des chemins
+    return *std::min_element(flux.begin(), flux.end());
+
 }

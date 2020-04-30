@@ -64,8 +64,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
 
                 G->chargerGraphe(topo);
                 Copie->chargerGraphe(topo);
-
-                Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                Svgfile svgout("Graphe actuel.svg", G->maxX(), G->maxY());
                 G->dessinGraphe(svgout);
                 break;
             }
@@ -77,7 +76,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                     G->lecture_poids(poids);
                     if(!G->grapheIdentique(Copie))
                         Copie->lecture_poids(poids);
-                    Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                    Svgfile svgout("Graphe actuel.svg", G->maxX(), G->maxY());
                     G->dessinGraphe(svgout);
 
                 break;
@@ -105,18 +104,46 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             {
                 G->calculIndice();
                 G->colorerCritere();
-                Svgfile svgout("Graphe actuel.svg", 1200, 1200);
+                Svgfile svgout("Graphe actuel.svg", G->maxX(), G->maxY());
                 G->dessinGraphe(svgout);
                 break;
             }
             case 7 :
             {
-                int numArete=0;
-                std::cout<< "Selectionner le numero de l'arete a supprimer\n\n";
+                G->affichageSommets();
+                std::cout<<"Selectionner le sommet source et le sommet puits\n";
+                int a=0, b=0;
+                do
+                {
+                    fflush(stdin);
+                    std::cin>>a >> b;
+                }
+                while (!G->seekSommet(a)&&!G->seekSommet(b));
+                double flux=G->FordFulkerson(a, b);
+                std::cout << "Le flot maximum entre le sommet "<< G->seekSommet(a)->getNom() << " et " <<G->seekSommet(b)->getNom() << " est de " << flux<<std::endl;
+                Svgfile svgout("Graphe actuel.svg", G->maxX(), G->maxY());
+                G->dessinFulkerson(svgout, G->seekSommet(a), G->seekSommet(b), flux);
+                break;
+            }
+            case 8 :
+            {
+                std::string numArete;
+                std::cout<< "Selectionner le numero de l'arete a supprimer vous pouvez separer deux point a supprimer par un espace\n\n";
                 Copie->affichageAretes();
-                std::cin >> numArete;
-                Copie->deleteArete(numArete);
-                Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
+                std::cin.ignore();/// la lecture bug � cause du std::cout du dessus, le '\n' emp�che la lecture. le cin.ignore supprime le '\n' du buffer
+                std::getline(std::cin,numArete);
+                std::istringstream iss(numArete);
+                int value=-1;
+                while(iss)
+                {
+                    iss>>value;
+                    if(Copie->seekAreteId(value)!=nullptr)
+                    {
+                        Copie->deleteArete(value);
+                    }
+                }
+
+                Svgfile svgcopie("Sous-graphe.svg", G->maxX(), G->maxY());
                 Copie->dessinGraphe(svgcopie);
 
                 break;
@@ -157,7 +184,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 {
                     Copie->calculIndice();
                     Copie->colorerCritere();
-                    Svgfile svgcopie("Sous-graphe.svg", 1200, 1200);
+                    Svgfile svgcopie("Sous-graphe.svg", G->maxX(), G->maxY());
                     Copie->dessinGraphe(svgcopie);
                 }
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
