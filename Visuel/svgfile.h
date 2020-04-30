@@ -12,6 +12,7 @@
 #include <queue>
 #include <utility>
 #include <stack>
+#include <unordered_map>
 
 constexpr char defcol[] = "black";
 

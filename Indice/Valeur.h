@@ -11,4 +11,5 @@ struct Valeur
     double s_dependance = 0 ;
 };
 
+
 #endif // VALEUR_H_INCLUDED

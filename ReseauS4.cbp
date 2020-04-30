@@ -44,6 +44,7 @@
 		<Unit filename="Graphe/graphe.h" />
 		<Unit filename="Graphe/sommet.cpp" />
 		<Unit filename="Graphe/sommet.h" />
+		<Unit filename="Indice/Valeur.h" />
 		<Unit filename="Indice/centralite.cpp" />
 		<Unit filename="Indice/centralite.h" />
 		<Unit filename="Indice/indice.cpp" />

@@ -13,7 +13,8 @@ class Intermediarite : public Indice
         double normalisation();
         void afficher() ;
         void initialisation(std::vector<Valeur*> &valeurS);
-        void retro_propa(std::vector<Valeur*> & valeurS, std::stack<Valeur*> S);
+        std::stack<Valeur*> BFSmodif(std::vector<Valeur*> & valeurS);
+        void recurChemin(Valeur* refer, Valeur* top);
 
     private:
 };

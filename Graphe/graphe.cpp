@@ -276,7 +276,7 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
         ///marquage de l'�lement
         m_vectS[parcours]->setMarquage(1);
-        marquage+=1;
+        marquage += 1;
 
         ///recherche des distances des sommets adjacent et remplacement dans le tableau si leur distance avec d�but est plus petite
         for(const auto elt : m_vectS[parcours]->getVectAdj())
@@ -296,6 +296,7 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 return AscendantDistance;
 }
 
+///Permet de retrouver la valeur pour le critère
 Valeur* trouverValeur(std::vector<Valeur*> &valeurS, Sommet* atrouver)
 {
     for(size_t i = 0 ; i < valeurS.size() ; i++)
@@ -307,36 +308,54 @@ Valeur* trouverValeur(std::vector<Valeur*> &valeurS, Sommet* atrouver)
 }
 
                       /**Dijksra pour Brandes**/
-void Graphe::dijkstraBrandes(std::stack<Valeur*> & S, std::vector<Valeur*> &valeurS, Sommet* departv)
-{
-    std::queue<Valeur*> Q;
-    Valeur* valeur_v = nullptr ;
-    Valeur* valeur_w = nullptr ;
-    Arete* lien_vw = nullptr ;
-    Valeur* depart = trouverValeur(valeurS, departv);
 
-    Q.push(depart);
-    while(!Q.empty())
+std::stack<Valeur*> Graphe::BFSmodif(std::vector<Valeur*> & valeurS, Sommet * base)
+{
+    std::stack<Valeur*> parcours ;
+    std::queue<Valeur *> file ;
+    Valeur * refer = trouverValeur(valeurS, base);
+    Valeur * suivant = nullptr ;
+    Arete * lien_refer_suivant = nullptr ;
+
+    file.push(refer);
+
+    while(! file.empty())
     {
-        S.push(Q.front());
-        valeur_v = Q.front();
-        Q.pop();
-        for(auto it : valeur_v->s_ref->getVectAdj())
+        //on récupère la première valeur dans la file
+        refer = file.front();
+        file.pop();
+        //si on l'a déjà checker on a déjà trouvé le plus court chemin
+        if(refer->s_ref->getMarquage() != 1)
+            parcours.push(refer);
+        //on regarde tous les adjacents
+        for(auto s : refer->s_ref->getVectAdj())
         {
-            valeur_w = trouverValeur(valeurS, it);
-            lien_vw = seekArete(valeur_v->s_ref->getIndice(), valeur_w->s_ref->getIndice());
-            if(valeur_w->s_distance == INT_MAX)
+            suivant = trouverValeur(valeurS, s);
+            //on récupère la valeur de l'arrete entre les deux
+            lien_refer_suivant = seekArete(refer->s_ref->getIndice(), suivant->s_ref->getIndice());
+            //on regarde si le sommet n'a jamais été ajouter, on initialise sa distance à la base
+            if(suivant->s_distance == INT_MAX)
             {
-                valeur_w->s_distance = valeur_v->s_dependance + lien_vw->getPoids();
-                Q.push(valeur_w);
+                suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids() ;
+                file.push(suivant);
             }
-            if(valeur_w->s_distance == valeur_v->s_dependance + lien_vw->getPoids())
+            //si la distance est la plus petite alors c'est bon c'est un prédecesseur
+            if(suivant->s_distance == refer->s_distance + lien_refer_suivant->getPoids() )
             {
-                valeur_w->s_nbpluscourt += valeur_v->s_nbpluscourt ;
-                valeur_w->s_predecesseur.push_back(valeur_v);
+                suivant->s_nbpluscourt = refer->s_nbpluscourt + suivant->s_nbpluscourt;
+                suivant->s_predecesseur.push_back(refer);
+            }
+            if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
+            {
+                suivant->s_nbpluscourt = refer->s_nbpluscourt ;
+                suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids();
+                suivant->s_predecesseur.clear();
+                suivant->s_predecesseur.push_back(refer);
             }
         }
     }
+    //on retourne le parcours pour analyse
+    return parcours ;
 }
 
 //Si le sommet est dans le vecteur, on retourne 0 sinon on retourne 1
@@ -419,14 +438,19 @@ void Graphe::connexite()
 //Calcul des indices
 void Graphe::calculIndice()
 {
-
     for (auto s : m_vectS)
     {
         s->getVectI()[0]->calculIndice();
         s->getVectI()[2]->calculIndice();
-        s->getVectI()[3]->calculIndice();
     }
-      m_vectS[0]->getVectI()[1]->calculIndice();
 
+    ResetMarquage();
+    for(auto s : m_vectS)
+        s->getVectI()[3]->setCritere(0);
+
+    for (auto s : m_vectS)
+        s->getVectI()[3]->calculIndice();
+
+    m_vectS[0]->getVectI()[1]->calculIndice();
 }
 

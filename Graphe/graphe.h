@@ -51,8 +51,8 @@ class Graphe
         //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
 
-        //Dijkstra version Brandes
-        void dijkstraBrandes(std::stack<Valeur*> & S, std::vector<Valeur*> &valeurS, Sommet* departv);
+        //BFS/Dijkstra modifié pour l'intermediarité
+        std::stack<Valeur*> BFSmodif(std::vector<Valeur*> & valeurS, Sommet * base);
 
         //BFS
         void bfs(Sommet* initial, std::vector<Sommet*>& colored);
@@ -61,7 +61,10 @@ class Graphe
         Sommet* PasFait(const std::vector<Sommet*> faits);
         void connexite();
 
-        void calculIndice();
+        void ResetMarquage()
+        {for (auto s : m_vectS)
+        {s->setMarquage(0);}}
+
     private:
 
         int m_taille;
