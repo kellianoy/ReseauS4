@@ -1,7 +1,7 @@
 #ifndef INTERMEDIARITE_H
 #define INTERMEDIARITE_H
 #include "indice.h"
-
+#include "Valeur.h"
 
 class Intermediarite : public Indice
 {
@@ -9,11 +9,16 @@ class Intermediarite : public Indice
         Intermediarite();
         Intermediarite(Graphe* G, Sommet* S);
         ~Intermediarite();
-        void calculIndice() {m_critere = 1 ;}
-        double normalisation() {return 0; }
+        void calculIndice();
+        double normalisation();
         void afficher() ;
+        void initialisation(std::vector<Valeur*> &valeurS);
+        std::stack<Valeur*> BFSmodif(std::vector<Valeur*> & valeurS);
+        void recurChemin(Valeur* refer, Valeur* top);
 
     private:
 };
+
+
 
 #endif // INTERMEDIARITE_H

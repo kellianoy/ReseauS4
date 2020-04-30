@@ -1,6 +1,8 @@
 #ifndef GRAPHE_H
 #define GRAPHE_H
 #include "arete.h"
+#include "Valeur.h"
+
 
 class Graphe
 {
@@ -61,6 +63,9 @@ class Graphe
         //Dijkstra
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
 
+        //BFS/Dijkstra modifié pour l'intermediarité
+        std::stack<Valeur*> BFSmodif(std::vector<Valeur*> & valeurS, Sommet * base);
+
         //BFS
         void bfs(Sommet* initial, std::vector<Sommet*>& colored);
 
@@ -75,6 +80,12 @@ class Graphe
         double FordFulkerson(int S, int T);
 
 
+
+        void calculIndice();
+
+        void ResetMarquage()
+        {for (auto s : m_vectS)
+        {s->setMarquage(0);}}
 
     private:
 

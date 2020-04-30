@@ -1,6 +1,7 @@
 #include "graphe.h"
 #include "indice.h"
 
+
 Graphe::Graphe()
 {
 }
@@ -286,7 +287,7 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
         ///marquage de l'�lement
         m_vectS[parcours]->setMarquage(1);
-        marquage+=1;
+        marquage += 1;
 
         ///recherche des distances des sommets adjacents et remplacement dans le tableau si leur distance avec d�but est plus petite
         for(const auto elt : m_vectS[parcours]->getVectAdj())
@@ -304,6 +305,68 @@ std::vector<std::pair<Sommet*,double>> Graphe:: dijkstra(Sommet* depart)
 
     }
 return AscendantDistance;
+}
+
+///Permet de retrouver la valeur pour le critère
+Valeur* trouverValeur(std::vector<Valeur*> &valeurS, Sommet* atrouver)
+{
+    for(size_t i = 0 ; i < valeurS.size() ; i++)
+    {
+        if(valeurS[i]->s_ref == atrouver)
+            return valeurS[i] ;
+    }
+    return nullptr ;
+}
+
+                      /**Dijksra pour Brandes**/
+
+std::stack<Valeur*> Graphe::BFSmodif(std::vector<Valeur*> & valeurS, Sommet * base)
+{
+    std::stack<Valeur*> parcours ;
+    std::queue<Valeur *> file ;
+    Valeur * refer = trouverValeur(valeurS, base);
+    Valeur * suivant = nullptr ;
+    Arete * lien_refer_suivant = nullptr ;
+
+    file.push(refer);
+
+    while(! file.empty())
+    {
+        //on récupère la première valeur dans la file
+        refer = file.front();
+        file.pop();
+        //si on l'a déjà checker on a déjà trouvé le plus court chemin
+        if(refer->s_ref->getMarquage() != 1)
+            parcours.push(refer);
+        //on regarde tous les adjacents
+        for(auto s : refer->s_ref->getVectAdj())
+        {
+            suivant = trouverValeur(valeurS, s);
+            //on récupère la valeur de l'arrete entre les deux
+            lien_refer_suivant = seekArete(refer->s_ref->getIndice(), suivant->s_ref->getIndice());
+            //on regarde si le sommet n'a jamais été ajouter, on initialise sa distance à la base
+            if(suivant->s_distance == INT_MAX)
+            {
+                suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids() ;
+                file.push(suivant);
+            }
+            //si la distance est la plus petite alors c'est bon c'est un prédecesseur
+            if(suivant->s_distance == refer->s_distance + lien_refer_suivant->getPoids() )
+            {
+                suivant->s_nbpluscourt = refer->s_nbpluscourt + suivant->s_nbpluscourt;
+                suivant->s_predecesseur.push_back(refer);
+            }
+            /*if(suivant->s_distance < refer->s_distance + lien_refer_suivant->getPoids())
+            {
+                suivant->s_nbpluscourt = refer->s_nbpluscourt ;
+                suivant->s_distance = refer->s_distance + lien_refer_suivant->getPoids();
+                suivant->s_predecesseur.clear();
+                suivant->s_predecesseur.push_back(refer);
+            }*/
+        }
+    }
+    //on retourne le parcours pour analyse
+    return parcours ;
 }
 
 //Si le sommet est dans le vecteur, on retourne 0 sinon on retourne 1
@@ -389,13 +452,21 @@ void Graphe::connexite()
 //Calcul des indices
 void Graphe::calculIndice()
 {
+    for (auto s : m_vectS)
+    {
+        s->getVectI()[0]->calculIndice();
+        s->getVectI()[2]->calculIndice();
+    }
+
+
+    ResetMarquage();
+    for(auto s : m_vectS)
+        s->getVectI()[3]->setCritere(0);
 
     for (auto s : m_vectS)
-        for (size_t i=0; i < s->getVectI().size() ; ++i)
-            if (i!=1)
-                s->getVectI()[i]->calculIndice();
-    m_vectS[0]->getVectI()[1]->calculIndice();
+        s->getVectI()[3]->calculIndice();
 
+    m_vectS[0]->getVectI()[1]->calculIndice();
 }
 
 void Graphe::colorerCritere()
