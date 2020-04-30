@@ -394,13 +394,13 @@ std::stack<Valeur*> Graphe::dijkstraModif(std::vector<Valeur*> & valeurS, Sommet
         //poids = liste.top().second ;
         if(referV->s_ref->getMarquage() != 1)
             parcours.push(referV);
+        //std::cout << referV->s_ref->getNom() << std::endl ;
         //pour chaque successeur on vérifie si il a déjà été exploré sinon on l'insère
+        //if(referV->s_marquage == false)
         for(auto s : referV->s_ref->getVectAdj())
         {
-               std::cout << "in" ;
             suivant = trouverValeur(valeurS, s);
             lien_refer_suivant = seekArete(referV->s_ref->getIndice(), suivant->s_ref->getIndice());
-
             if(suivant->s_distance == INT_MAX)
             {
                 suivant->s_distance = referV->s_distance + lien_refer_suivant->getPoids() ;
@@ -416,7 +416,7 @@ std::stack<Valeur*> Graphe::dijkstraModif(std::vector<Valeur*> & valeurS, Sommet
         referV->s_marquage = true ;
         liste.pop();
     //on répète tant que la liste n'est pas vide ou que le point n'a pas été trouvé
-    }while(liste.empty() == true) ;
+    }while(liste.empty() == false || liste.top().first->s_ref == depart) ;
     return parcours ;
 }
 

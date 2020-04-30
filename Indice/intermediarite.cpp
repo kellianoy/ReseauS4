@@ -39,11 +39,14 @@ void Intermediarite::calculIndice()
     //parcours = m_graphe->BFSmodif(valeurS, m_sommet);
     parcours = m_graphe->dijkstraModif(valeurS, m_sommet);
 
+    /*for(auto s : valeurS)
+        std::cout << s->s_ref->getNom() << " : " << s->s_predecesseur.size() << std::endl ;*/
+
     //recursif pour retrouver toutes les inerm�diarit�s
     while( !parcours.empty())
     {
         refer = parcours.top();
-        std::cout << refer->s_predecesseur.size();
+        //std::cout << refer->s_ref->getNom() << std::endl ;
         recurChemin(refer, refer, 0);
         parcours.pop();
     }
