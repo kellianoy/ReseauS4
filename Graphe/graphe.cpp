@@ -466,8 +466,14 @@ double Graphe::FordFulkerson(int S, int T)
     }
 
     //On répertorie dans une matrice d'adjacence l'ensemble des poids sur les arêtes
+
     for(auto x : m_vectA)
+    {
+        if(!m_orientation)
+            capaciteResiduelle[x->getS2()->getIndice()][x->getS1()->getIndice()]=x->getPoids();
         capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]=x->getPoids();
+    }
+
 
 
     //On crée un tableau afin de stocker le chemin du puit à la source
@@ -498,8 +504,10 @@ double Graphe::FordFulkerson(int S, int T)
         flotMax+=chemin;
 
     }
+
     for(auto x : m_vectA)
-       x->setFlux(x->getPoids()-capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]);
+       x->setFlux(abs(x->getPoids()-capaciteResiduelle[x->getS1()->getIndice()][x->getS2()->getIndice()]));
+
 
     return flotMax;
 }

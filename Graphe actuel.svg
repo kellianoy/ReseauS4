@@ -2,6 +2,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="1200" height="1200">
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <line x1="400" y1="200" x2="300" y2="300" stroke="black" />
 <text x="350" y="275" stroke="Salmon" stroke-width="2" fill="Salmon" style="text-anchor: middle" >4 / 4</text>
 <text x="350" y="275" stroke="Salmon" stroke-width="0" fill="white" style="text-anchor: middle" >4 / 4</text>
@@ -211,6 +212,152 @@
 <line x1="1000" y1="1900" x2="900" y2="1300" stroke="black" />
 <text x="950" y="1625" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 333</text>
 <text x="950" y="1625" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 333</text>
+=======
+<line x1="800" y1="300" x2="900" y2="300" stroke="black" />
+<text x="850" y="300" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 141</text>
+<text x="850" y="300" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 141</text>
+<line x1="800" y1="300" x2="800" y2="600" stroke="black" />
+<text x="800" y="450" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 157</text>
+<text x="800" y="450" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 157</text>
+<line x1="800" y1="300" x2="600" y2="300" stroke="black" />
+<text x="700" y="300" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 120</text>
+<text x="700" y="300" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 120</text>
+<line x1="800" y1="300" x2="1100" y2="500" stroke="black" />
+<text x="950" y="400" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 362</text>
+<text x="950" y="400" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 362</text>
+<line x1="800" y1="200" x2="900" y2="300" stroke="black" />
+<text x="850" y="250" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 110</text>
+<text x="850" y="250" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 110</text>
+<line x1="800" y1="200" x2="800" y2="300" stroke="black" />
+<text x="800" y="250" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 157</text>
+<text x="800" y="250" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 157</text>
+<line x1="500" y1="400" x2="600" y2="300" stroke="black" />
+<text x="550" y="350" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 131</text>
+<text x="550" y="350" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 131</text>
+<line x1="500" y1="400" x2="800" y2="600" stroke="black" />
+<text x="650" y="500" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 238</text>
+<text x="650" y="500" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 238</text>
+<line x1="500" y1="400" x2="500" y2="700" stroke="black" />
+<text x="500" y="550" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 185</text>
+<text x="500" y="550" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 185</text>
+<line x1="500" y1="400" x2="500" y2="1000" stroke="black" />
+<text x="500" y="700" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 359</text>
+<text x="500" y="700" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 359</text>
+<line x1="800" y1="600" x2="1100" y2="500" stroke="black" />
+<text x="950" y="550" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 331</text>
+<text x="950" y="550" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 331</text>
+<line x1="800" y1="600" x2="1100" y2="600" stroke="black" />
+<text x="950" y="600" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 385</text>
+<text x="950" y="600" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 385</text>
+<line x1="800" y1="600" x2="500" y2="700" stroke="black" />
+<text x="650" y="650" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 354</text>
+<text x="650" y="650" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 354</text>
+<line x1="800" y1="600" x2="500" y2="1000" stroke="black" />
+<text x="650" y="800" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >306 / 340</text>
+<text x="650" y="800" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >306 / 340</text>
+<line x1="800" y1="600" x2="200" y2="900" stroke="black" />
+<text x="500" y="750" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >136 / 385</text>
+<text x="500" y="750" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >136 / 385</text>
+<line x1="800" y1="600" x2="900" y2="1300" stroke="black" />
+<text x="850" y="950" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >337 / 423</text>
+<text x="850" y="950" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >337 / 423</text>
+<line x1="800" y1="600" x2="700" y2="900" stroke="black" />
+<text x="750" y="750" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 414</text>
+<text x="750" y="750" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 414</text>
+<line x1="800" y1="600" x2="900" y2="1000" stroke="black" />
+<text x="850" y="800" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 242</text>
+<text x="850" y="800" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 242</text>
+<line x1="800" y1="600" x2="1100" y2="800" stroke="black" />
+<text x="950" y="700" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 315</text>
+<text x="950" y="700" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 315</text>
+<line x1="1100" y1="500" x2="1100" y2="600" stroke="black" />
+<text x="1100" y="550" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 59</text>
+<text x="1100" y="550" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 59</text>
+<line x1="1100" y1="500" x2="1300" y2="600" stroke="black" />
+<text x="1200" y="550" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 166</text>
+<text x="1200" y="550" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 166</text>
+<line x1="1300" y1="600" x2="700" y2="900" stroke="black" />
+<text x="1000" y="750" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 243</text>
+<text x="1000" y="750" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 243</text>
+<line x1="1100" y1="800" x2="700" y2="900" stroke="black" />
+<text x="900" y="850" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 97</text>
+<text x="900" y="850" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 97</text>
+<line x1="1100" y1="800" x2="1400" y2="1100" stroke="black" />
+<text x="1250" y="950" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 262</text>
+<text x="1250" y="950" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 262</text>
+<line x1="1100" y1="800" x2="1200" y2="1200" stroke="black" />
+<text x="1150" y="1000" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 196</text>
+<text x="1150" y="1000" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 196</text>
+<line x1="200" y1="900" x2="500" y2="1000" stroke="black" />
+<text x="350" y="950" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 219</text>
+<text x="350" y="950" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 219</text>
+<line x1="200" y1="900" x2="200" y2="1100" stroke="black" />
+<text x="200" y="1000" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >136 / 136</text>
+<text x="200" y="1000" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >136 / 136</text>
+<line x1="200" y1="900" x2="900" y2="1300" stroke="black" />
+<text x="550" y="1100" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 534</text>
+<text x="550" y="1100" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 534</text>
+<line x1="200" y1="1100" x2="500" y2="1000" stroke="black" />
+<text x="350" y="1050" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >48 / 139</text>
+<text x="350" y="1050" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >48 / 139</text>
+<line x1="200" y1="1100" x2="200" y2="1500" stroke="black" />
+<text x="200" y="1300" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >184 / 184</text>
+<text x="200" y="1300" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >184 / 184</text>
+<line x1="1400" y1="1100" x2="1200" y2="1200" stroke="black" />
+<text x="1300" y="1150" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 149</text>
+<text x="1300" y="1150" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 149</text>
+<line x1="1400" y1="1100" x2="1300" y2="1500" stroke="black" />
+<text x="1350" y="1300" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 144</text>
+<text x="1350" y="1300" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 144</text>
+<line x1="700" y1="1200" x2="800" y2="600" stroke="black" />
+<text x="750" y="900" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >93 / 395</text>
+<text x="750" y="900" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >93 / 395</text>
+<line x1="700" y1="1200" x2="700" y2="1500" stroke="black" />
+<text x="700" y="1350" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >93 / 93</text>
+<text x="700" y="1350" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >93 / 93</text>
+<line x1="900" y1="1300" x2="700" y2="1500" stroke="black" />
+<text x="800" y="1400" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >180 / 180</text>
+<text x="800" y="1400" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >180 / 180</text>
+<line x1="1200" y1="1200" x2="1300" y2="1500" stroke="black" />
+<text x="1250" y="1350" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 111</text>
+<text x="1250" y="1350" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 111</text>
+<line x1="200" y1="1500" x2="500" y2="1000" stroke="black" />
+<text x="350" y="1250" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >258 / 258</text>
+<text x="350" y="1250" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >258 / 258</text>
+<line x1="200" y1="1500" x2="700" y2="1500" stroke="black" />
+<text x="450" y="1500" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >205 / 205</text>
+<text x="450" y="1500" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >205 / 205</text>
+<line x1="200" y1="1500" x2="400" y2="2100" stroke="black" />
+<text x="300" y="1800" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 217</text>
+<text x="300" y="1800" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 217</text>
+<line x1="200" y1="1500" x2="700" y2="2100" stroke="black" />
+<text x="450" y="1800" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >225 / 245</text>
+<text x="450" y="1800" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >225 / 245</text>
+<line x1="700" y1="1500" x2="700" y2="2100" stroke="black" />
+<text x="700" y="1800" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >68 / 205</text>
+<text x="700" y="1800" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >68 / 205</text>
+<line x1="700" y1="2100" x2="1000" y2="2200" stroke="black" />
+<text x="850" y="2150" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >157 / 205</text>
+<text x="850" y="2150" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >157 / 205</text>
+<line x1="1000" y1="1900" x2="1000" y2="2200" stroke="black" />
+<text x="1000" y="2050" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >157 / 157</text>
+<text x="1000" y="2050" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >157 / 157</text>
+<line x1="1000" y1="1900" x2="1200" y2="2200" stroke="black" />
+<text x="1100" y="2050" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 169</text>
+<text x="1100" y="2050" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 169</text>
+<line x1="1200" y1="2200" x2="1400" y2="2000" stroke="black" />
+<text x="1300" y="2100" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 199</text>
+<text x="1300" y="2100" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 199</text>
+<line x1="900" y1="1300" x2="1200" y2="1200" stroke="black" />
+<text x="1050" y="1250" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 167</text>
+<text x="1050" y="1250" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 167</text>
+<line x1="1200" y1="1200" x2="1000" y2="1900" stroke="black" />
+<text x="1100" y="1550" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >0 / 305</text>
+<text x="1100" y="1550" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >0 / 305</text>
+<line x1="1000" y1="1900" x2="900" y2="1300" stroke="black" />
+<text x="950" y="1600" stroke="FireBrick" stroke-width="2" fill="FireBrick" style="text-anchor: middle" >157 / 333</text>
+<text x="950" y="1600" stroke="FireBrick" stroke-width="0" fill="white" style="text-anchor: middle" >157 / 333</text>
+>>>>>>> Stashed changes
 <circle cx="800" cy="300" r="10" fill="pink" />
 <circle cx="800" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="800" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Amiens</text>
@@ -226,7 +373,11 @@
 <circle cx="600" cy="300" r="10" fill="pink" />
 <circle cx="600" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="600" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Rouen</text>
+<<<<<<< Updated upstream
 <text x="800" y="570" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Flux max : 136</text>
+=======
+<text x="800" y="570" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Flux max : 872</text>
+>>>>>>> Stashed changes
 <circle cx="800" cy="600" r="10" fill="Green" />
 <circle cx="800" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="800" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Paris</text>
@@ -299,6 +450,9 @@
 <circle cx="1400" cy="2000" r="10" fill="pink" />
 <circle cx="1400" cy="2000" r="10" fill="none" stroke="Black" stroke-width="1" />
 <text x="1400" y="2030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nice</text>
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
