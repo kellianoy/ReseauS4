@@ -80,3 +80,14 @@
 
 1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
 
+1588247730 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
+	"arete.h"
+	<sstream>
+
+1588247730 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+	"menu.h"
+
+1588250713 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
+	"graphe.h"
+	"indice.h"
+
