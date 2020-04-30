@@ -176,10 +176,6 @@ void Graphe::lecture_poids(std::string fichier)
             ifs >> value;
             seekAreteId(id)->setPoids(value);
         }
-        for (auto a : m_vectA)
-        {
-            std::cout<<"Poids :" << a->getPoids()<<std::endl;
-        }
     }
 }
 
@@ -517,6 +513,16 @@ bool Graphe::chaineAmeliorante(int S, int T, double* tabParent, double** capacit
     return false; //Sinon on retourne faux
 }
 
+
+//SOURCES DE L'ALGORITHME DE FORD FULKERSON
+
+//https://www.srcmake.com/home/cpp-ford-fulkerson-max-flow
+
+//https://www.sanfoundry.com/cpp-program-implement-ford-fulkerson-algorithm/
+
+//https://github.com/chichunchen/Algorithm/blob/master/assignment6/Ford-Fulkerson.cpp
+
+//https://www.researchgate.net/publication/338969453_IMPLEMENTATION_OF_FORD_FULKERSON_CALCULATION_IN_C_PROGRAMMING_LANGUAGE
 
 double Graphe::FordFulkerson(int S, int T)
 {

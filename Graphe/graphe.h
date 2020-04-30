@@ -79,6 +79,13 @@ class Graphe
         bool chaineAmeliorante(int S, int T, double* tabParent, double** capaciteResiduelle);
         double FordFulkerson(int S, int T);
 
+        //Recherche de maximum
+        double maxX()
+        {std::vector<double> X; for (auto s : m_vectS) X.push_back(s->getAspect().getX()); return *std::max_element(X.begin(), X.end())*100+200;}
+        double maxY()
+        {std::vector<double> Y; for (auto s : m_vectS) Y.push_back(s->getAspect().getY()); return *std::max_element(Y.begin(), Y.end())*100+200;}
+
+
     private:
 
         int m_taille;
