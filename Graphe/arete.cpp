@@ -27,12 +27,12 @@ void Arete::dessin (Svgfile& svgout, bool orientation, bool fordfulkerson) const
     {
         std::ostringstream oss;
         oss << m_flux << " / " << m_poids;
-        svgout.addText((x1+x2)/2, (y1+y2)/2+25, oss.str(), "SaddleBrown", "SaddleBrown", 2);
-        svgout.addText((x1+x2)/2, (y1+y2)/2+25, oss.str(), "white", "SaddleBrown", 0);
+        svgout.addText((x1+x2)/2, (y1+y2)/2, oss.str(), "FireBrick", "FireBrick", 2);
+        svgout.addText((x1+x2)/2, (y1+y2)/2, oss.str(), "white", "FireBrick", 0);
     }
     else
     {
-        svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "FireBrick", "FireBrick", 2);
-        svgout.addText((x1+x2)/2, (y1+y2)/2+25, m_poids, "white", "FireBrick", 0);
+        svgout.addText((x1+x2)/2, (y1+y2)/2, m_poids, "FireBrick", "FireBrick", 2);
+        svgout.addText((x1+x2)/2, (y1+y2)/2, m_poids, "white", "FireBrick", 0);
     }
 }

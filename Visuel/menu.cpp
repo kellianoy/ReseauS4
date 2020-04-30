@@ -128,7 +128,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 std::string numArete;
                 std::cout<< "Selectionner le numero de l'arete a supprimer vous pouvez separer deux point a supprimer par un espace\n\n";
                 Copie->affichageAretes();
-                std::cin.ignore();/// la lecture bug à cause du std::cout du dessus, le '\n' empêche la lecture. le cin.ignore supprime le '\n' du buffer
+                std::cin.ignore();/// la lecture bug ï¿½ cause du std::cout du dessus, le '\n' empï¿½che la lecture. le cin.ignore supprime le '\n' du buffer
                 std::getline(std::cin,numArete);
                 std::istringstream iss(numArete);
                 int value=-1;
