@@ -31,9 +31,6 @@
 <line x1="500" y1="400" x2="500" y2="1000" stroke="black" />
 <text x="500" y="700" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >359</text>
 <text x="500" y="700" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >359</text>
-<line x1="800" y1="600" x2="1100" y2="500" stroke="black" />
-<text x="950" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >331</text>
-<text x="950" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >331</text>
 <line x1="800" y1="600" x2="1100" y2="600" stroke="black" />
 <text x="950" y="600" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >385</text>
 <text x="950" y="600" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >385</text>
@@ -61,15 +58,21 @@
 <line x1="1100" y1="500" x2="1100" y2="600" stroke="black" />
 <text x="1100" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >59</text>
 <text x="1100" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >59</text>
-<line x1="1100" y1="500" x2="1300" y2="600" stroke="black" />
-<text x="1200" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >166</text>
-<text x="1200" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >166</text>
+<line x1="1300" y1="600" x2="700" y2="900" stroke="black" />
+<text x="1000" y="750" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >243</text>
+<text x="1000" y="750" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >243</text>
 <line x1="1100" y1="800" x2="700" y2="900" stroke="black" />
 <text x="900" y="850" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >97</text>
 <text x="900" y="850" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >97</text>
+<line x1="1100" y1="800" x2="1400" y2="1100" stroke="black" />
+<text x="1250" y="950" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >262</text>
+<text x="1250" y="950" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >262</text>
 <line x1="1100" y1="800" x2="1200" y2="1200" stroke="black" />
 <text x="1150" y="1000" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >196</text>
 <text x="1150" y="1000" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >196</text>
+<line x1="200" y1="900" x2="500" y2="1000" stroke="black" />
+<text x="350" y="950" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >219</text>
+<text x="350" y="950" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >219</text>
 <line x1="200" y1="900" x2="200" y2="1100" stroke="black" />
 <text x="200" y="1000" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >136</text>
 <text x="200" y="1000" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >136</text>
@@ -82,6 +85,9 @@
 <line x1="200" y1="1100" x2="200" y2="1500" stroke="black" />
 <text x="200" y="1300" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >184</text>
 <text x="200" y="1300" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >184</text>
+<line x1="1400" y1="1100" x2="1200" y2="1200" stroke="black" />
+<text x="1300" y="1150" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >149</text>
+<text x="1300" y="1150" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >149</text>
 <line x1="700" y1="1200" x2="800" y2="600" stroke="black" />
 <text x="750" y="900" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >395</text>
 <text x="750" y="900" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >395</text>
@@ -97,9 +103,6 @@
 <line x1="200" y1="1500" x2="500" y2="1000" stroke="black" />
 <text x="350" y="1250" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >258</text>
 <text x="350" y="1250" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >258</text>
-<line x1="200" y1="1500" x2="700" y2="1500" stroke="black" />
-<text x="450" y="1500" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >205</text>
-<text x="450" y="1500" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >205</text>
 <line x1="200" y1="1500" x2="400" y2="2100" stroke="black" />
 <text x="300" y="1800" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >217</text>
 <text x="300" y="1800" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >217</text>
@@ -121,9 +124,6 @@
 <line x1="1200" y1="2200" x2="1400" y2="2000" stroke="black" />
 <text x="1300" y="2100" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >199</text>
 <text x="1300" y="2100" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >199</text>
-<line x1="900" y1="1300" x2="1200" y2="1200" stroke="black" />
-<text x="1050" y="1250" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >167</text>
-<text x="1050" y="1250" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >167</text>
 <line x1="1200" y1="1200" x2="1000" y2="1900" stroke="black" />
 <text x="1100" y="1550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >305</text>
 <text x="1100" y="1550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >305</text>

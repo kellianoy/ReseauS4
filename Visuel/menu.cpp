@@ -200,7 +200,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 while (!Copie->seekSommet(a)&&!Copie->seekSommet(b));
                 double flux=Copie->FordFulkerson(a, b);
                 std::cout << "Le flot maximum entre le sommet "<< Copie->seekSommet(a)->getNom() << " et " <<Copie->seekSommet(b)->getNom() << " est de " << flux<<std::endl;
-                Svgfile svgcopie("Graphe actuel.svg", Copie->maxX(), Copie->maxY());
+                Svgfile svgcopie("Sous-graphe.svg", Copie->maxX(), Copie->maxY());
                 Copie->dessinFulkerson(svgcopie, Copie->seekSommet(a), Copie->seekSommet(b), flux);
                 break;
             }
