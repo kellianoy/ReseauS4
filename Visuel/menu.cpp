@@ -97,7 +97,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             {
                 bool ori=0;
                 ori=G->getOrientation();
-                G->setOrientation(1);
+                G->setOrientation(0);
                 std::cout<< "Connexite du graphe\n\n";
                 G->connexite();
                 std::cout<< "Le graphe est " << G->kedgeconnexity() << "-aretes-connexe\n";
@@ -177,7 +177,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 {
                     bool ori=0;
                     ori=Copie->getOrientation();
-                    Copie->setOrientation(1);
+                    Copie->setOrientation(0);
                     std::cout<< "\n\nConnexite du sous-graphe\n\n";
                     Copie->connexite();
                     std::cout<<std::endl;
@@ -202,6 +202,7 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
                 std::cout << "Le flot maximum entre le sommet "<< Copie->seekSommet(a)->getNom() << " et " <<Copie->seekSommet(b)->getNom() << " est de " << flux<<std::endl;
                 Svgfile svgcopie("Graphe actuel.svg", Copie->maxX(), Copie->maxY());
                 Copie->dessinFulkerson(svgcopie, Copie->seekSommet(a), Copie->seekSommet(b), flux);
+                break;
             }
             case 13 :
             {

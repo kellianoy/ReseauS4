@@ -8,10 +8,10 @@
 	"intermediarite.h"
 	"graphe.h"
 
-1588260628 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
+1588319031 a:\riset\documents\code & programmation\reseaus4\graphe\sommet.h
 	"aspect.h"
 
-1588096418 D
+1588261033 D
 	"graphe.h"
 	<string>
 	<fstream>
@@ -39,10 +39,10 @@
 	"graphe.h"
 	"indice.h"
 
-1588260966 a:\riset\documents\code & programmation\reseaus4\visuel\aspect.h
+1588319031 a:\riset\documents\code & programmation\reseaus4\visuel\aspect.h
 	"svgfile.h"
 
-1588260628 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
+1588319031 a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.h
 	<string>
 	<fstream>
 	<set>
@@ -61,7 +61,7 @@
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\indice.h
 	"graphe.h"
 
-1588261188 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
+1588319031 a:\riset\documents\code & programmation\reseaus4\graphe\graphe.h
 	"arete.h"
 	"Valeur.h"
 
@@ -76,7 +76,7 @@
 1588083952 d:\ing2\thï¿½orie des graphs\projet\reseaus4\indice\indice.h
 	"graphe.h"
 
-1588150154 ated upstream
+1588261527 ated upstream
 
 1588259050 d:\ing2\théorie des graphs\projet\reseaus4\graphe\graphe.h
 	"arete.h"
@@ -92,7 +92,7 @@
 
 1588157004 d:\ing2\thï¿½orie des graphs\projet\reseaus4\graphe\graphe.h
 
-1588166003 shed changes
+1588318882 shed changes
 	"arete.h"
 	"Valeur.h"
 	"indice.h"
@@ -110,22 +110,12 @@
 	"intermediarite.h"
 	"graphe.h"
 
-<<<<<<< HEAD
-1588254633 
-
-1588260628 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
-=======
-<<<<<<< Updated upstream
-1588150078 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
-=======
 1588254633 
 
 1588318893 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
->>>>>>> Stashed changes
->>>>>>> Visuel
-	"menu.h"
 
-1588106075 uel
+1588318882 uel
+	"menu.h"
 	"graphe.h"
 	"centralite.h"
 	"vecteur.h"
@@ -147,8 +137,10 @@
 	"proximite.h"
 	"intermediarite.h"
 	"menu.h"
+	"graphe.h"
+	"indice.h"
 
-1588260628 a:\riset\documents\code & programmation\reseaus4\graphe\arete.h
+1588319031 a:\riset\documents\code & programmation\reseaus4\graphe\arete.h
 	"sommet.h"
 
 1588159254 a:\riset\documents\code & programmation\reseaus4\indice\centralite.h
@@ -315,39 +307,24 @@
 	"proximite.h"
 	"intermediarite.h"
 
-1588157109 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\main.cpp
+1588083822 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\main.cpp
 	"graphe.h"
 	"menu.h"
 
 1588261527 source:a:\riset\documents\code & programmation\reseaus4\visuel\aspect.cpp
 	"aspect.h"
 
-<<<<<<< HEAD
-=======
-<<<<<<< Updated upstream
-1588083822 source:d:\ï¿½cole\info ingï¿½ 2\projet s4\reseaus4\main.cpp
-=======
->>>>>>> Visuel
 1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
 
 1588261033 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
 	"arete.h"
 	<sstream>
 
-<<<<<<< HEAD
-1588260776 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
-	"menu.h"
-
-1588260723 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
-=======
 1588318893 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+	"menu.h"
 	"menu.h"
 
 1588318882 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
->>>>>>> Stashed changes
->>>>>>> Visuel
-	"graphe.h"
-	"indice.h"
 
 1588083822 source:d:\école\info ingé 2\projet s4\reseaus4\graphe\graphe.cpp
 
@@ -460,5 +437,5 @@
 1588258144 source:d:\ing2\théorie des graphs\projet\reseaus4\visuel\aspect.cpp
 	"aspect.h"
 
-1588260628 a:\riset\documents\code & programmation\reseaus4\indice\valeur.h
+1588319031 a:\riset\documents\code & programmation\reseaus4\indice\valeur.h
 
