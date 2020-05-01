@@ -64,7 +64,7 @@ class Graphe
         std::vector<std::pair<Sommet*,double>> dijkstra(Sommet* depart);
 
         //BFS/Dijkstra modifié pour l'intermediarité
-        std::stack<Valeur*> BFSmodif(std::vector<Valeur*> & valeurS, Sommet * base);
+        std::stack<Valeur*> dijkstraModif(std::vector<Valeur*> & valeurS, Sommet * depart);
 
         //BFS
         void bfs(Sommet* initial, std::vector<Sommet*>& colored);

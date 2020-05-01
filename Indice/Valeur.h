@@ -9,6 +9,7 @@ struct Valeur
     std::vector<Valeur*> s_predecesseur ;
     double s_nbpluscourt = 0 ;
     double s_dependance = 0 ;
+    double s_marquage;
 };
 
 

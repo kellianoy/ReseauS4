@@ -36,13 +36,15 @@ void Intermediarite::calculIndice()
     initialisation(valeurS);
 
     //lancement du plus court chemin
-    parcours = m_graphe->BFSmodif(valeurS, m_sommet);
+    if(m_sommet->getVectAdj().size() != 0)
+        parcours = m_graphe->dijkstraModif(valeurS, m_sommet);
 
     //recursif pour retrouver toutes les inerm�diarit�s
     while( !parcours.empty())
     {
         refer = parcours.top();
-        recurChemin(refer, refer);
+        //std::cout << refer->s_ref->getNom() << std::endl ;
+        recurChemin(refer, refer, 0);
         parcours.pop();
     }
 
@@ -54,14 +56,16 @@ void Intermediarite::calculIndice()
 }
 
 //permet de retrouver les valeurs � ajouter aux crit�res � partir d'un chemin
-void Intermediarite::recurChemin(Valeur * refer, Valeur * top)
+void Intermediarite::recurChemin(Valeur * refer, Valeur * top, int a)
 {
+    if(refer == top && a != 0)
+        return ;
     for(auto v : refer->s_predecesseur)
     {
         //si l'interm�diarit� correspond on ajoute la valeur
         if(refer->s_ref != m_sommet && refer->s_ref != top->s_ref)
             refer->s_dependance += 1/top->s_nbpluscourt;
-        recurChemin(v, top);
+        recurChemin(v, top, 1);
     }
 }
 
