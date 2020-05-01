@@ -21,6 +21,11 @@ void Intermediarite::afficher()
     std::cout << "    -> Centralite d'intermediarite : " << m_critere << " | normalise : " << normalisation() << std::endl ;
 }
 
+
+///Document source pour l'algo de Brandes
+//https://www.cl.cam.ac.uk/teaching/1617/MLRD/handbook/brandes.pdf
+//Surtout celui-ci
+///http://thibautdemare.github.io/files/memoire_M2_Thibaut_Demare_Reseaux_viaires_et_evacuation.pdf
 void Intermediarite::calculIndice()
 {
     std::vector<Valeur*> valeurS;
