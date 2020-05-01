@@ -112,6 +112,33 @@ void Svgfile::addTriangle(double x1, double y1, double x2, double y2,
             << "\" />\n";
 }
 
+void Svgfile::addArrow(double x1, double y1, double x2, double y2, std::string color)
+{
+    double module=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+    double epaisseur=6;
+    double longueur=8;
+
+    x2=x2-10*((x2-x1)/module);
+    y2=y2-10*((y2-y1)/module);
+    module=sqrt((x2-x1)*(x2-x1)+(y2-y1)*(y2-y1));
+
+    std::pair<double, double> c;
+    c.first=x2-longueur*((x2-x1)/module);
+    c.second=y2-longueur*((y2-y1)/module);
+
+    std::pair<double, double> d;
+    d.first=c.first+epaisseur*(-(y2-y1)/module);
+    d.second=c.second+epaisseur*((x2-x1)/module);
+
+    std::pair<double, double> e;
+    e.first=c.first-epaisseur*(-(y2-y1)/module);
+    e.second=c.second-epaisseur*((x2-x1)/module);
+
+
+    addLine(x2, y2, d.first , d.second  , "Black");
+    addLine(x2, y2, e.first , e.second  , "Black");
+}
+
 void Svgfile::addLine(double x1, double y1, double x2, double y2, std::string color)
 {
     m_ostrm << "<line "

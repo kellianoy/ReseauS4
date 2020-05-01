@@ -54,7 +54,6 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             case 1:
             {
                 //On remplace le graphe precedent par ce nouveau graphe
-
                G->deleteGraphe();
                Copie->deleteGraphe();
 

@@ -25,6 +25,8 @@ void Arete::dessin (Svgfile& svgout, bool orientation, bool fordfulkerson) const
     x2=m_s2->getAspect().getX()*N+100;
     y2=m_s2->getAspect().getY()*N+100;
     svgout.addLine(x1, y1, x2, y2, "black");
+    if (orientation)
+        svgout.addArrow(x1, y1, x2, y2, "black");
     if (fordfulkerson)
     {
         std::ostringstream oss;
