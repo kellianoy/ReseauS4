@@ -601,7 +601,6 @@ int Graphe::kedgeconnexity()
         poids.push_back(a->getPoids());
         a->setPoids(1);
     }
-
     //on teste 1 sommet avec tous les autres avec ford fulkerson
     for (auto s : m_vectS)
         if(s->getIndice()!=m_vectS[0]->getIndice())
