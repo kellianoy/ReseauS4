@@ -61,7 +61,13 @@
 	"intermediarite.h"
 	"graphe.h"
 
+<<<<<<< Updated upstream
 1588150078 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
+=======
+1588254633 
+
+1588318893 source:a:\riset\documents\code & programmation\reseaus4\main.cpp
+>>>>>>> Stashed changes
 	"menu.h"
 
 1588083952 source:d:\ing2\th�orie des graphs\projet\reseaus4\indice\centralite.cpp
@@ -180,7 +186,20 @@
 	"intermediarite.h"
 	"graphe.h"
 
+<<<<<<< Updated upstream
 1588083822 source:d:\�cole\info ing� 2\projet s4\reseaus4\main.cpp
+=======
+1588073377 source:a:\riset\documents\code & programmation\reseaus4\visuel\svgfile.cpp
+
+1588261033 source:a:\riset\documents\code & programmation\reseaus4\graphe\arete.cpp
+	"arete.h"
+	<sstream>
+
+1588318893 source:a:\riset\documents\code & programmation\reseaus4\visuel\menu.cpp
+	"menu.h"
+
+1588318882 source:a:\riset\documents\code & programmation\reseaus4\graphe\graphe.cpp
+>>>>>>> Stashed changes
 	"graphe.h"
 	"centralite.h"
 	"vecteur.h"

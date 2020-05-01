@@ -11,11 +11,12 @@ void afficherMenu()
         std::cout << "5. Tester la connexite du graphe\n";
         std::cout << "6. Colorer les sommets en fonction d'un critere\n\n";
         std::cout<<"_________Sous-graphe\n\n";
-        std::cout << "7. Supprimer une arete et former un sous-graphe\n";
-        std::cout << "8. Afficher le sous-graphe\n";
-        std::cout << "9. Calculer les indices du sous-graphe et comparer avec le graphe\n";
-        std::cout << "10. Tester la connexite du sous-graphe\n";
-        std::cout << "11. Colorer les sommets en fonction d'un critere\n\n";
+        std::cout << "8. Supprimer une ou plusieurs aretes et former un sous-graphe\n";
+        std::cout << "9. Afficher le sous-graphe\n";
+        std::cout << "10. Calculer les indices du sous-graphe et comparer avec le graphe\n";
+        std::cout << "11. Tester la connexite du sous-graphe\n";
+        std::cout << "12. Appliquer Ford-Fulkerson sur le sous-graphe\n";
+        std::cout << "13. Colorer les sommets en fonction d'un critere\n\n";
 
         std::cout << "\n\n0. Quitter\n";
 }
@@ -96,8 +97,13 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             }
             case 5:
             {
+                bool ori=0;
+                ori=G->getOrientation();
+                G->setOrientation(1);
                 std::cout<< "Connexite du graphe\n\n";
                 G->connexite();
+                std::cout<< "Le graphe est " << G->kedgeconnexity() << "-aretes-connexe\n";
+                G->setOrientation(ori);
                 break;
             }
             case 6:
@@ -171,14 +177,35 @@ void switchMenu(Graphe* G, Graphe* Copie, int choix)
             {
                 if(G->grapheIdentique(Copie))
                 {
+                    bool ori=0;
+                    ori=Copie->getOrientation();
+                    Copie->setOrientation(1);
                     std::cout<< "\n\nConnexite du sous-graphe\n\n";
                     Copie->connexite();
                     std::cout<<std::endl;
+                    std::cout<< "Le sous-graphe est " << Copie->kedgeconnexity() << "-aretes-connexe\n";
+                    Copie->setOrientation(ori);
                 }
                 else std::cout << "Vous devez d'abord effacer une arete." << std::endl;
                 break;
             }
             case 11 :
+            {
+                Copie->affichageSommets();
+                std::cout<<"Selectionner le sommet source et le sommet puits\n";
+                int a=0, b=0;
+                do
+                {
+                    fflush(stdin);
+                    std::cin>>a >> b;
+                }
+                while (!Copie->seekSommet(a)&&!Copie->seekSommet(b));
+                double flux=Copie->FordFulkerson(a, b);
+                std::cout << "Le flot maximum entre le sommet "<< Copie->seekSommet(a)->getNom() << " et " <<Copie->seekSommet(b)->getNom() << " est de " << flux<<std::endl;
+                Svgfile svgcopie("Graphe actuel.svg", Copie->maxX(), Copie->maxY());
+                Copie->dessinFulkerson(svgcopie, Copie->seekSommet(a), Copie->seekSommet(b), flux);
+            }
+            case 13 :
             {
                 if(G->grapheIdentique(Copie))
                 {

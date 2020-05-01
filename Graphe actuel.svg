@@ -1,69 +1,239 @@
 <?xml version="1.0" encoding="utf-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="600" height="600">
 
-<line x1="325" y1="175" x2="250" y2="250" stroke="black" />
-<text x="287" y="212" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >4</text>
-<text x="287" y="212" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >4</text>
-<line x1="325" y1="175" x2="400" y2="250" stroke="black" />
-<text x="362" y="212" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >15</text>
-<text x="362" y="212" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >15</text>
-<line x1="250" y1="250" x2="325" y2="325" stroke="black" />
-<text x="287" y="287" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >20</text>
-<text x="287" y="287" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >20</text>
-<line x1="400" y1="250" x2="325" y2="325" stroke="black" />
-<text x="362" y="287" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >35</text>
-<text x="362" y="287" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >35</text>
-<line x1="325" y1="325" x2="250" y2="400" stroke="black" />
-<text x="287" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >45</text>
-<text x="287" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >45</text>
-<line x1="325" y1="325" x2="400" y2="400" stroke="black" />
-<text x="362" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >5</text>
-<text x="362" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >5</text>
-<line x1="250" y1="250" x2="175" y2="475" stroke="black" />
-<text x="212" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >22</text>
-<text x="212" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >22</text>
-<line x1="400" y1="250" x2="475" y2="475" stroke="black" />
-<text x="437" y="362" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >7</text>
-<text x="437" y="362" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >7</text>
-<line x1="250" y1="400" x2="325" y2="400" stroke="black" />
-<text x="287" y="400" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >34</text>
-<text x="287" y="400" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >34</text>
-<line x1="325" y1="400" x2="400" y2="400" stroke="black" />
-<text x="362" y="400" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >9</text>
-<text x="362" y="400" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >9</text>
-<line x1="400" y1="400" x2="475" y2="475" stroke="black" />
-<text x="437" y="437" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >37</text>
-<text x="437" y="437" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >37</text>
-<line x1="250" y1="400" x2="175" y2="475" stroke="black" />
-<text x="212" y="437" stroke="DarkRed" stroke-width="1.5" fill="DarkRed" style="text-anchor: middle" >51</text>
-<text x="212" y="437" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >51</text>
-<circle cx="325" cy="175" r="10" fill="pink" />
-<circle cx="325" cy="175" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="325" y="205" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >A</text>
-<circle cx="250" cy="250" r="10" fill="pink" />
-<circle cx="250" cy="250" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="250" y="280" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >B</text>
-<circle cx="400" cy="250" r="10" fill="pink" />
-<circle cx="400" cy="250" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="400" y="280" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >C</text>
-<circle cx="325" cy="325" r="10" fill="pink" />
-<circle cx="325" cy="325" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="325" y="355" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >D</text>
-<circle cx="250" cy="400" r="10" fill="pink" />
-<circle cx="250" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="250" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >E</text>
-<circle cx="325" cy="400" r="10" fill="pink" />
-<circle cx="325" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="325" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >F</text>
-<circle cx="400" cy="400" r="10" fill="pink" />
-<circle cx="400" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="400" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >G</text>
-<circle cx="175" cy="475" r="10" fill="pink" />
-<circle cx="175" cy="475" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="175" y="505" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >H</text>
-<circle cx="475" cy="475" r="10" fill="pink" />
-<circle cx="475" cy="475" r="10" fill="none" stroke="Black" stroke-width="1" />
-<text x="475" y="505" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >I</text>
+<line x1="800" y1="300" x2="900" y2="300" stroke="black" />
+<text x="850" y="300" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 141</text>
+<text x="850" y="300" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 141</text>
+<line x1="800" y1="300" x2="800" y2="600" stroke="black" />
+<text x="800" y="450" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 157</text>
+<text x="800" y="450" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 157</text>
+<line x1="800" y1="300" x2="600" y2="300" stroke="black" />
+<text x="700" y="300" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 120</text>
+<text x="700" y="300" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 120</text>
+<line x1="800" y1="300" x2="1100" y2="500" stroke="black" />
+<text x="950" y="400" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 362</text>
+<text x="950" y="400" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 362</text>
+<line x1="800" y1="200" x2="900" y2="300" stroke="black" />
+<text x="850" y="250" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 110</text>
+<text x="850" y="250" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 110</text>
+<line x1="800" y1="200" x2="800" y2="300" stroke="black" />
+<text x="800" y="250" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 157</text>
+<text x="800" y="250" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 157</text>
+<line x1="500" y1="400" x2="600" y2="300" stroke="black" />
+<text x="550" y="350" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 131</text>
+<text x="550" y="350" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 131</text>
+<line x1="500" y1="400" x2="800" y2="600" stroke="black" />
+<text x="650" y="500" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 238</text>
+<text x="650" y="500" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 238</text>
+<line x1="500" y1="400" x2="400" y2="700" stroke="black" />
+<text x="450" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 185</text>
+<text x="450" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 185</text>
+<line x1="500" y1="400" x2="500" y2="1000" stroke="black" />
+<text x="500" y="700" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 359</text>
+<text x="500" y="700" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 359</text>
+<line x1="800" y1="600" x2="1100" y2="500" stroke="black" />
+<text x="950" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 331</text>
+<text x="950" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 331</text>
+<line x1="800" y1="600" x2="1100" y2="600" stroke="black" />
+<text x="950" y="600" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 385</text>
+<text x="950" y="600" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 385</text>
+<line x1="800" y1="600" x2="400" y2="700" stroke="black" />
+<text x="600" y="650" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 354</text>
+<text x="600" y="650" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 354</text>
+<line x1="800" y1="600" x2="500" y2="1000" stroke="black" />
+<text x="650" y="800" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 340</text>
+<text x="650" y="800" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 340</text>
+<line x1="800" y1="600" x2="200" y2="900" stroke="black" />
+<text x="500" y="750" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 385</text>
+<text x="500" y="750" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 385</text>
+<line x1="800" y1="600" x2="900" y2="1300" stroke="black" />
+<text x="850" y="950" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >169 / 423</text>
+<text x="850" y="950" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >169 / 423</text>
+<line x1="800" y1="600" x2="700" y2="900" stroke="black" />
+<text x="750" y="750" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 414</text>
+<text x="750" y="750" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 414</text>
+<line x1="800" y1="600" x2="900" y2="1000" stroke="black" />
+<text x="850" y="800" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 242</text>
+<text x="850" y="800" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 242</text>
+<line x1="800" y1="600" x2="1100" y2="800" stroke="black" />
+<text x="950" y="700" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 315</text>
+<text x="950" y="700" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 315</text>
+<line x1="1100" y1="500" x2="1100" y2="600" stroke="black" />
+<text x="1100" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 59</text>
+<text x="1100" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 59</text>
+<line x1="1100" y1="500" x2="1300" y2="600" stroke="black" />
+<text x="1200" y="550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 166</text>
+<text x="1200" y="550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 166</text>
+<line x1="1300" y1="600" x2="700" y2="900" stroke="black" />
+<text x="1000" y="750" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 243</text>
+<text x="1000" y="750" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 243</text>
+<line x1="1100" y1="800" x2="700" y2="900" stroke="black" />
+<text x="900" y="850" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 97</text>
+<text x="900" y="850" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 97</text>
+<line x1="1100" y1="800" x2="1400" y2="1100" stroke="black" />
+<text x="1250" y="950" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 262</text>
+<text x="1250" y="950" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 262</text>
+<line x1="1100" y1="800" x2="1200" y2="1200" stroke="black" />
+<text x="1150" y="1000" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 196</text>
+<text x="1150" y="1000" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 196</text>
+<line x1="200" y1="900" x2="500" y2="1000" stroke="black" />
+<text x="350" y="950" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 219</text>
+<text x="350" y="950" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 219</text>
+<line x1="200" y1="900" x2="200" y2="1100" stroke="black" />
+<text x="200" y="1000" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 136</text>
+<text x="200" y="1000" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 136</text>
+<line x1="200" y1="900" x2="900" y2="1300" stroke="black" />
+<text x="550" y="1100" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 534</text>
+<text x="550" y="1100" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 534</text>
+<line x1="200" y1="1100" x2="500" y2="1000" stroke="black" />
+<text x="350" y="1050" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 139</text>
+<text x="350" y="1050" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 139</text>
+<line x1="200" y1="1100" x2="200" y2="1500" stroke="black" />
+<text x="200" y="1300" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 184</text>
+<text x="200" y="1300" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 184</text>
+<line x1="1400" y1="1100" x2="1200" y2="1200" stroke="black" />
+<text x="1300" y="1150" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 149</text>
+<text x="1300" y="1150" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 149</text>
+<line x1="1400" y1="1100" x2="1300" y2="1500" stroke="black" />
+<text x="1350" y="1300" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 144</text>
+<text x="1350" y="1300" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 144</text>
+<line x1="700" y1="1200" x2="800" y2="600" stroke="black" />
+<text x="750" y="900" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 395</text>
+<text x="750" y="900" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 395</text>
+<line x1="700" y1="1200" x2="700" y2="1500" stroke="black" />
+<text x="700" y="1350" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 93</text>
+<text x="700" y="1350" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 93</text>
+<line x1="900" y1="1300" x2="700" y2="1500" stroke="black" />
+<text x="800" y="1400" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 180</text>
+<text x="800" y="1400" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 180</text>
+<line x1="1200" y1="1200" x2="1300" y2="1500" stroke="black" />
+<text x="1250" y="1350" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 111</text>
+<text x="1250" y="1350" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 111</text>
+<line x1="200" y1="1500" x2="500" y2="1000" stroke="black" />
+<text x="350" y="1250" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 258</text>
+<text x="350" y="1250" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 258</text>
+<line x1="200" y1="1500" x2="700" y2="1500" stroke="black" />
+<text x="450" y="1500" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 205</text>
+<text x="450" y="1500" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 205</text>
+<line x1="200" y1="1500" x2="400" y2="2100" stroke="black" />
+<text x="300" y="1800" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 217</text>
+<text x="300" y="1800" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 217</text>
+<line x1="200" y1="1500" x2="700" y2="2100" stroke="black" />
+<text x="450" y="1800" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 245</text>
+<text x="450" y="1800" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 245</text>
+<line x1="700" y1="1500" x2="700" y2="2100" stroke="black" />
+<text x="700" y="1800" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 205</text>
+<text x="700" y="1800" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 205</text>
+<line x1="700" y1="2100" x2="1000" y2="2200" stroke="black" />
+<text x="850" y="2150" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 205</text>
+<text x="850" y="2150" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 205</text>
+<line x1="1000" y1="1900" x2="1000" y2="2200" stroke="black" />
+<text x="1000" y="2050" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 157</text>
+<text x="1000" y="2050" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 157</text>
+<line x1="1000" y1="1900" x2="1200" y2="2200" stroke="black" />
+<text x="1100" y="2050" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >169 / 169</text>
+<text x="1100" y="2050" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >169 / 169</text>
+<line x1="1200" y1="2200" x2="1400" y2="2000" stroke="black" />
+<text x="1300" y="2100" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 199</text>
+<text x="1300" y="2100" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 199</text>
+<line x1="900" y1="1300" x2="1200" y2="1200" stroke="black" />
+<text x="1050" y="1250" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 167</text>
+<text x="1050" y="1250" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 167</text>
+<line x1="1200" y1="1200" x2="1000" y2="1900" stroke="black" />
+<text x="1100" y="1550" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >0 / 305</text>
+<text x="1100" y="1550" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >0 / 305</text>
+<line x1="1000" y1="1900" x2="900" y2="1300" stroke="black" />
+<text x="950" y="1600" stroke="DarkRed" stroke-width="1" fill="DarkRed" style="text-anchor: middle" >169 / 333</text>
+<text x="950" y="1600" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >169 / 333</text>
+<circle cx="800" cy="300" r="10" fill="pink" />
+<circle cx="800" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="800" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Amiens</text>
+<circle cx="800" cy="200" r="10" fill="pink" />
+<circle cx="800" cy="200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="800" y="230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Calais</text>
+<circle cx="900" cy="300" r="10" fill="pink" />
+<circle cx="900" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="900" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Lille</text>
+<circle cx="500" cy="400" r="10" fill="pink" />
+<circle cx="500" cy="400" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="500" y="430" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Caen</text>
+<circle cx="600" cy="300" r="10" fill="pink" />
+<circle cx="600" cy="300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="600" y="330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Rouen</text>
+<text x="800" y="570" stroke="Pink" stroke-width="1" fill="Pink" style="text-anchor: middle" >Flux max : 169</text>
+<text x="800" y="570" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Flux max : 169</text>
+<circle cx="800" cy="600" r="10" fill="Green" />
+<circle cx="800" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="800" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Paris</text>
+<circle cx="1100" cy="500" r="10" fill="pink" />
+<circle cx="1100" cy="500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1100" y="530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Metz</text>
+<circle cx="1100" cy="600" r="10" fill="pink" />
+<circle cx="1100" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1100" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nancy</text>
+<circle cx="1300" cy="600" r="10" fill="pink" />
+<circle cx="1300" cy="600" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1300" y="630" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Strasbourg</text>
+<circle cx="400" cy="700" r="10" fill="pink" />
+<circle cx="400" cy="700" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="400" y="730" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Rennes</text>
+<circle cx="1100" cy="800" r="10" fill="pink" />
+<circle cx="1100" cy="800" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1100" y="830" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Dijon</text>
+<circle cx="200" cy="900" r="10" fill="pink" />
+<circle cx="200" cy="900" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="200" y="930" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nantes</text>
+<circle cx="700" cy="900" r="10" fill="pink" />
+<circle cx="700" cy="900" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="930" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Besançon</text>
+<circle cx="200" cy="1100" r="10" fill="pink" />
+<circle cx="200" cy="1100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="200" y="1130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >LaRochelle</text>
+<circle cx="500" cy="1000" r="10" fill="pink" />
+<circle cx="500" cy="1000" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="500" y="1030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Poitiers</text>
+<circle cx="900" cy="1000" r="10" fill="pink" />
+<circle cx="900" cy="1000" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="900" y="1030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nevers</text>
+<circle cx="1400" cy="1100" r="10" fill="pink" />
+<circle cx="1400" cy="1100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1400" y="1130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Geneve</text>
+<circle cx="700" cy="1200" r="10" fill="pink" />
+<circle cx="700" cy="1200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="1230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Limoges</text>
+<circle cx="900" cy="1300" r="10" fill="pink" />
+<circle cx="900" cy="1300" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="900" y="1330" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >ClermondFerrant</text>
+<circle cx="1200" cy="1200" r="10" fill="pink" />
+<circle cx="1200" cy="1200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1200" y="1230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Lyon</text>
+<circle cx="200" cy="1500" r="10" fill="pink" />
+<circle cx="200" cy="1500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="200" y="1530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Bordeaux</text>
+<circle cx="700" cy="1500" r="10" fill="pink" />
+<circle cx="700" cy="1500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="1530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Brive</text>
+<circle cx="1300" cy="1500" r="10" fill="pink" />
+<circle cx="1300" cy="1500" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1300" y="1530" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Grenoble</text>
+<circle cx="400" cy="2100" r="10" fill="pink" />
+<circle cx="400" cy="2100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="400" y="2130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Pau</text>
+<circle cx="700" cy="2100" r="10" fill="pink" />
+<circle cx="700" cy="2100" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="700" y="2130" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Toulouse</text>
+<circle cx="1000" cy="1900" r="10" fill="pink" />
+<circle cx="1000" cy="1900" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1000" y="1930" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Montpellier</text>
+<circle cx="1000" cy="2200" r="10" fill="pink" />
+<circle cx="1000" cy="2200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1000" y="2230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Perpignan</text>
+<circle cx="1200" cy="2200" r="10" fill="DarkRed" />
+<circle cx="1200" cy="2200" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1200" y="2230" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Marseille</text>
+<circle cx="1400" cy="2000" r="10" fill="pink" />
+<circle cx="1400" cy="2000" r="10" fill="none" stroke="Black" stroke-width="1" />
+<text x="1400" y="2030" stroke="Black" stroke-width="0" fill="Black" style="text-anchor: middle" >Nice</text>
 
 
 </svg>
